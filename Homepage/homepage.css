@@ -12,7 +12,7 @@
   
     
     height: 70px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
 }
 .avis_logo{
@@ -206,4 +206,93 @@
     height: 25px;
     padding: 5px 0px 5px 0px;
     
+}
+#div_offers{
+    
+    width: 100%;
+    height: auto;
+    background-color: #e7e4e4;
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items: center;
+}
+#div_offers>div{
+    margin: 50px 0px;
+    width: 30%;
+    height: 80%;
+    
+    
+}
+#div_offers>div img{
+    
+    width: 100%;
+    margin-bottom: 40px;
+    
+}
+#div_offers>div img:hover{
+    cursor: grabbing;
+}
+#div_offers>div span{
+   
+    display: block;
+    height: 10px ;
+    width: 90px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #CE2127;
+    
+}
+#div_offers>div p{
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #CE2127;
+}
+#div_offers>div small{
+    line-height: 30px;
+    font-size: 14px;
+    color: #000000;
+}
+#home_footer{
+    display: flex;
+    justify-content: center;
+   
+    width: 100%;
+    height: 500px;
+    background-color: #CE2127;
+    /* border: 1px solid red; */
+}
+#home_footer>div{
+    padding: 60px 20px;
+    width: 27%;
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+#home_footer>div div{
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+#home_footer a{
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#home_footer span{
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#home_footer>div:nth-child(3){
+   text-align: center;
+   box-shadow: none;
+}
+#home_footer>div:nth-child(3) i{
+    font-size: 20px;
+    
+}
+#Get_in_touch{
+    padding: 6px 12px;
 }
