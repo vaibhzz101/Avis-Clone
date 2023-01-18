@@ -1,0 +1,213 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ background-color: rgb(206, 140, 140);
+ 
+}
+#head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12%;
+}
+#cross-cont{
+  width:10%;
+  display: flex;
+  justify-content: right;
+
+}
+
+#cross {
+   margin-top: -20%;
+    font-size: 40px;
+    color: rgb(41, 39, 39);
+    cursor: pointer;
+}
+
+.popup{
+    width: 40%;
+    background: linear-gradient(90deg,#36879b,#6698d1,rgb(70, 159, 159));
+    padding-bottom: 2%;
+    position: absolute;
+    top: 0%;
+    /* top:50%; */
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0.1); 
+  /*  for popop  I will uncomment this and comment next line*/
+   /* transform:translate(-50%,-30%) scale(1); */
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top:50%;
+    transform:translate(-50%,-30%) scale(1);
+    
+}
+
+#signUp_head {
+    /* border: 1px solid blue; */
+    text-align: center;
+    color: #dd4a39;
+    width:90%;
+
+
+}
+
+#signUp_head>h3 {
+    display: inline;
+    color: black;
+}
+
+#signUp_head>a {
+    text-decoration: none;
+    color: red;
+}
+
+
+
+#form {
+    /* border:2px dashed red; */
+    width: 85%;
+    margin: auto;
+
+}
+
+input {
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 8%;
+    border: none;
+    background-color: #e1dfdf;
+    display: block
+}
+
+#form #gender {
+
+    height: 1rem;
+    width: 10%;
+    display: inline;
+
+}
+
+#signup_but {
+    border: 1px solid red;
+    color: red;
+    font-weight: 600;
+    background: none;
+}
+
+#Fb_Gog_but {
+    /* border:1px solid green; */
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    text-align: center;
+    color: rgb(69, 66, 66);
+}
+
+#facebook {
+    background-color: #3b5a95;
+    display: flex;
+    justify-content: space-around;
+    width: 48%;
+    color: white;
+    border: none;
+    font-size: 80%;
+
+}
+
+#google {
+    background-color: #dd4a39;
+    display: flex;
+    justify-content: space-around;
+    width: 48%;
+    color: white;
+    border: none;
+    font-size: 80%;
+}
+
+.anchor {
+    margin-top: 6%;
+}
+
+.anchor>a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white
+}
+
+span {
+    color: red;
+}
+
+#clickme {
+    display: block;
+    color: red;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+}
+ /* for medium screen */
+@media screen and (min-width:641px) and (max-width:1007px) {
+    .popup{
+        width: 90%;
+        margin-top: 10%;
+    }
+    #Fb_Gog_but{
+        display:block;
+    }
+    #facebook{
+        width:90%;
+       margin:auto;
+       margin-top: 10%;
+   
+    }
+    #google{
+        width:90%;
+        margin:auto;
+    }
+    #signUp_head{
+        width:92%;
+
+    }
+    #signUp_head>h3 {
+    display: block;
+  
+}
+.anchor {
+    margin-top: 2%;
+}
+}
+ /* for small screen */
+@media screen and (max-width:640px) {
+    .popup{
+        width: 90%;
+    }
+    #Fb_Gog_but{
+        display:block;
+    }
+    #facebook{
+        width:90%;
+       margin:auto;
+       margin-top: 10%;
+   
+    }
+    #google{
+        width:90%;
+        margin:auto;
+    }
+    #signUp_head{
+        width:85%;
+    }
+    #signUp_head>h3 {
+    display: block;
+  
+}
+.anchor {
+    margin-top: 5%;
+}
+}
