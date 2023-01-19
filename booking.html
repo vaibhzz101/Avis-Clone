@@ -140,7 +140,7 @@
          image_url:
           "https://avis.co.in/upload/model/1010dzire.png",
         name: "DZIRE / ETIOS / AMAZE OR SIMILAR",
-        price: 11370,
+        price:  11370,
         strikedoffprice: "2599",
       },
       { id:2,
@@ -249,7 +249,7 @@
         brand.textContent=element.name;
 
         let prize=document.createElement("h4")
-        prize.textContent=element.price;
+        prize.textContent=`₹ ${element.price}` ;
 
         let bookbtn = document.createElement("button")
         bookbtn.textContent="Book"
