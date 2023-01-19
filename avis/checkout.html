@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhumoCar | Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div class="home-car-info">
+       <i onclick="window.location.href='index.html'">HOME</i>
+       <i>/</i>
+       <i>Car Information</i>
+    </div>
+    <div class="checkout-top">
+       <div>
+         <p>CAR INFORMATION</p>
+         <div>
+
+         </div>
+       </div>
+       <div>
+         <p>CAR UPGRADE AVAILABLE</p>
+         <div></div>
+       </div>
+    </div>
+
+</body>
+</html>
+<script src="checkout.js"></script>
+<script>
+    let car = JSON.parse(localStorage.getItem("car-array"));
+    console.log(car)
+</script>

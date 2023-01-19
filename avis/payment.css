@@ -1,0 +1,277 @@
+.payment-upper-design{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    background-color: rgb(218, 4, 4);
+}
+.payment-upper-design div:nth-child(1){
+     width: 5%;
+     background-color: black;
+     cursor: pointer;
+     text-align: center;
+}
+.payment-upper-design div:nth-child(2){
+     width: 35%;
+     background-color: black;
+}
+.payment-upper-design div:nth-child(1)>img{
+    width: 60%;
+    height: 100%;
+}
+.main-payment-section{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    
+}
+
+
+.payment-method-lable {
+    display: block;
+    background-color: rgb(242, 237, 231);
+    height: 40px;
+    width: 200px;
+    padding: 30px;
+    padding-bottom: 20px;
+    margin-top: -11px;
+    text-align: center;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .payment-method-lable input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+   
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid red;
+    margin: 30px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .payment-method-lable:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .payment-method-lable input:checked ~ .checkmark {
+    background-color: white;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .payment-method-lable input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .payment-method-lable .checkmark:after {
+      top: 4.5px;
+      left: 4.5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: red;
+  }
+
+  .table{
+    font-size: larger;
+  }
+  .table>tr{
+    margin: 100px;
+  }
+  .table-image{
+    height: 30px;
+  }
+  .table>tr>td:nth-child(1){
+    width: 200px;
+  }
+  .cardholder-name{
+    width: 250px;
+    height: 35px;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: large;
+    padding: 0px 30px;
+  }
+  #otp-box{
+    margin: 20px;
+    visibility: hidden;
+  }
+  #otp-box>input{
+    width: 200px;
+    height: 20px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    padding: 5px;
+    
+  }
+  #otp-box>button{
+    height: 33px;
+    padding: 5px;
+    font-weight: bold;
+    margin-left: -7px;
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  #otp-box>button:hover{
+    background-color:green;
+    color: white;
+  }
+  #otp-box>p{
+    color: green;
+    font-size: large;
+    font-weight: bold;
+  }
+  #payment-button{
+    padding: 10px 25px;
+    background-color: red;
+    color: white;
+    border: none;
+    width: auto;
+    border-radius: 5px;
+    margin-left: 10%;
+    font-size: large;
+    font-weight: bolder;
+  }
+  #payment-button:hover{
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: red;
+    cursor: pointer;
+  }
+  #net-banking{
+    width: 350px;
+    border: red solid 2px;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  #payment-method>h2{
+    color: red;
+  }
+
+  @media only screen and (max-width:600px){
+    .payment-upper-design{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      height: 40px;
+      background-color: rgb(218, 4, 4);
+  } 
+  .payment-upper-design div:nth-child(1){
+    width: 10%;
+    background-color: black;
+    cursor: pointer;
+    text-align: center;
+}
+.payment-upper-design div:nth-child(2){
+    width: 90%;
+    background-color:90%;
+    visibility: hidden;
+}
+.payment-upper-design div:nth-child(1)>img{
+   width: 70%;
+   height: 100%;
+}
+    .main-payment-section{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+   
+  }
+  .main-payment-section>div:nth-child(1){
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    gap: 10px;
+  }
+    
+.payment-method-lable {
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  margin: auto;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 20px 0px 0px 0px;
+  color: red;
+  width: 100%;
+}
+.payment-method-lable:hover{
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+.checkmark {
+ visibility: hidden;
+ height: 0;
+ width: 0px;
+ margin: 0px;
+}
+   
+.table{
+  font-size: large;
+}
+.table>tr{
+  margin: 0px;
+}
+.table-image{
+  height: 30px;
+  width: 100%;
+}
+.table>tr>td:nth-child(1){
+  width: auto;
+}
+.cardholder-name{
+  width: auto;
+  height: 35px;
+  border: 1px solid red;
+  border-radius: 5px;
+  font-size: large;
+  padding: 0px 30px;
+} 
+#payment-button{
+  margin-top: 40px;
+  margin-left: 30%;
+}
+
+  }

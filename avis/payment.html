@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      GhumoCar | Payment
+    </title>
+    <link rel="stylesheet" href="payment.css">
+    
+</head>
+<body>
+    <div class="payment-upper-design">
+        <div onclick="window.location.href='index.html' ">
+            <img src="https://as1.ftcdn.net/v2/jpg/01/98/91/58/1000_F_198915888_OpYSQ0FvfA6z85cWPJnUFp5jiJkfdhur.jpg" alt="">
+        </div>
+        <div></div>
+    </div>
+
+
+
+    <div class="main-payment-section">
+        <div>
+            <label class="payment-method-lable">Credit Card
+                <input type="radio" value="credit" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="payment-method-lable">Debit Card
+                <input type="radio" value="debit" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="payment-method-lable">Net Banking
+                <input type="radio" value="net" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="payment-method-lable">Wallet and UPI
+                <input type="radio" value="wallet" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              
+        </div>
+        <div id="payment-method">
+          
+        </div>
+    </div>
+   
+</body>
+</html>
+<script type="module">
+    let price=98767;
+    document.getElementById("payment-button").innerText=`Pay ${price}`
+    let paymentMethod =  document.querySelectorAll('input[name="radio"]');
+    
+   paymentMethod.forEach(payment =>{
+       payment.addEventListener("change", function(){
+           let selected = document.querySelector("input[name='radio']:checked")
+           if(selected.value=="credit"){
+             window.location.href="credit-card.html"
+                  
+           }
+          else if(selected.value=="debit"){
+             window.location.href="debit-card.html"
+                  
+           }
+          else if(selected.value=="net"){
+             window.location.href="net-banking.html"
+                  
+           }
+          else if(selected.value=="wallet"){
+             window.location.href="wallet.html"  
+           }
+          
+   })
+   })
+ 
+
+
+</script>

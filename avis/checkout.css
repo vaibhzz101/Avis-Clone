@@ -1,0 +1,13 @@
+.home-car-info{
+    display: flex;
+    gap: 10px;
+}
+.home-car-info>i:nth-child(3){
+    color: red;
+}
+.checkout-top{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    
+}
