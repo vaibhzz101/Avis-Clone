@@ -216,6 +216,7 @@ text-decoration: none;
     gap: 30px;
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 .card:nth-child(9){
     background-color: #ce2127;
@@ -278,9 +279,21 @@ button:hover{
 .card:nth-child(4)>h4{
     margin-top: 40px;
 }
-/* .card:nth-child(2)>h3{
-    margin-top: 20px;
+
+/*******************FILTER ***********************/
+.filter-condition{
+    padding: 20px;
+    height: 100px;
+    font-size: 15px;
+    /* font-weight: bold; */
 }
-.card:nth-child(4)>h3{
-    margin-top: 20px;
-} */
+.filter-condition select{
+    width: 120px;
+    padding: 0 0 0 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: #ce2127;
+    background: transparent;
+    cursor: pointer;
+}

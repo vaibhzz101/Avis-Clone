@@ -6,47 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVIS</title>
     <link rel="stylesheet" href="./style/booksing.css">
+    <link rel="stylesheet" href="./Homepage/homepage.css">
     <script src="https://kit.fontawesome.com/1dcb2e4769.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- HEADER -->
-    <nav>
-        <div id="navbar">
-            <div class="logo">
-                <a href="./index.html" > <img src="" alt="AVIS"></a>
-            </div>
-            <div class="menus">
-                <ul id="menuid">
-                    <li>
-                        <a href="#">Travel Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Bloggers Connect</a>
-                    </li>
-                    <li>
-                        <a href="#">AVIS Preffered</a>
-                    </li>
-                    <li>
-                        <a href="#">AVIS Safety Pledge</a>
-                    </li>
-                   <li class="helpNo">
-                    <span>
-                        <a href="9112345678">9112345678</a>
-                        <a href="9011223344">9011223344</a>
-                    </span>
-                   </li>
-                   <li class="store">
-                    <a href="#"><img src="#" alt="google play"></a>
-                    <a href="#"><img src="#" alt="IOS store"></a> 
-                    </li>
-                    <li class="login">
-                        <a href="#">Signup/Login</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- NAVBAR -->
+    <div class="header_login_signup maincolor">
+      <div class="avis_logo">
+          <H1>Avis Logo</H1>
 
-
-        </div>
+      </div>
+      <div class="nav_options ">
+          <div><a href="#">TRAVEL BLOG</a></div>
+          <div><a href="#">BLOGGERS</a></div>
+          <div><a href="#">AVIS PREFERRED</a></div>
+          <div><a href="#">AVIS SAFETY</a></div>
+          <div>
+              +91 124 4724 850
+              +91 882 6782 828
+          </div>
+          <div class="givespace">
+              <div>
+                  <a href="#" alt=""> <img src="https://www.avis.co.in/images/android.png" alt=""></a>
+              </div>
+              <div>
+                  <a href="#"  alt=""> <img src="https://www.avis.co.in/images/apple.png" alt=""></a>
+              </div>
+              
+             
+          </div>
+          <div class="LOGIN_SIGNUP"><a href="#">SIGN UP</a>
+          <a href="#">/LOG IN</a></div>
+          
+          
+          
+          
+      </div>
+  </div>
 
     </nav> 
         <!-- Banner -->
@@ -117,17 +113,108 @@
      </div>
        
        
-       <!--*************************************************************************************************** -->
-        <select id="filter">
-            <option value="">Filter By Category</option>
-            <option value="cars">Cars</option>
-            <option value="prize1">prize low to high</option>
-            <option value="prize2">prize high to low</option>
-          </select>
-        <!-- Car Section -->
+       <!--******************************************FILTER********************************************************* -->
+     <div class="filter-condition">
+        <span>View As a</span>
+        <select name="" id="select1">
+            <option value="Default">Default</option>
+            <option value="LowToHigh">Low to High</option>
+            <option value="HighToLow">High to Low</option>
+        </select>
+     </div>
+        <!-- ***********************************Car Section************************************************ -->
         <div id="car_container">
 
         </div>
+        <!-- *********************************************FOOTER***************************************** -->
+        <div id="home_footer">
+          <div>
+             <div>
+                 <a href="#">SELF DRIVE CAR RENTALS</a>
+             </div>
+             <div>
+                 <a href="#">CHAUFFEUR DRIVE CAR RENTALS
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">SELF DRIVE INTERNATIONAL
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">CORPORATE INFORMATION
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">GHUMOCAR SERVICES
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">OFFERS</a>
+             </div>
+          </div>
+          <div>
+             <div>
+                 <a href="#">WE ARE AVAILABLE HERE
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">GHUMOCAR VACATIONS
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">TERMS AND CONDITIONS</a>
+             </div>
+             <div>
+                 <a href="#">SELF DRIVE FAQS</a>
+             </div>
+             <div>
+                 <a href="#">SITEMAP</a>
+             </div>
+             <div>
+                 <a href="#">WHY GHUMOCAR
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">PARTNER WITH US</a>
+             </div>
+             
+          </div>
+          <div>
+             <div>  
+                 <a href="#">
+                     <i class="fab fa-twitter lil"> </i>
+                 </a>
+                 <a href="#">
+                     <i class="fab fa-facebook lil"> </i>
+                 </a>
+                 <a href="#">
+                     <i class="fab fa-linkedin lil"> </i>
+                 </a>
+                 <a href="#">
+                     <i class="fab fa-youtube lil"> </i>
+                 </a>
+                 <a href="#">
+                     <i class="fab fa-instagram lil"> </i>
+                 </a>
+             </div>
+             <div>
+                 <span> 
+                     <i class="fa fa-phone"> </i>
+                     +91 124 4724 850,+91 882 6782 828</span>
+             </div>
+             <div>
+                 <input type="submit" name="Getintouch" id="Get_in_touch" value="Get In Touch">
+             </div>
+          </div>
+     </div>
+ 
    
 </body>
 </html>
@@ -264,9 +351,30 @@
     card.append(img,brand,prize,bookbtn)
    container.append(card)        
     });
-  
+//   filterSorting
+let sort=document.getElementById("select1");
+sort.addEventListener("change", function(event){
+
+    // let selectedsort = document.querySelector("#select1").value;
+selectedsort=sort.value;
+// console.log(selectedsort)
+    if(selectedsort !== 'Default'){
+        if(selectedsort == 'LowToHigh'){
+            storedCar.sort(function(a,b){
+                return +a.price - +b.price;
+            })
+        }
+        else if(selectedsort == 'HighToLow'){
+            storedCar.sort(function(a,b){
+                return +b.price - +a.price;
+            })
+        }
+    }
+    localStorage.setItem("cars", JSON.stringify(carData))
+})
 
 
+console.log(storedCar)
 
 
 </script>
