@@ -1,0 +1,12 @@
+###
+GET https://63c67422dcdc478e15c1bf8d.mockapi.io/users
+
+###
+POST  https://63c67422dcdc478e15c1bf8d.mockapi.io/users
+Content-Type: application/json
+{
+    "lastname": "admin",
+    "email": "admin",
+    "password": "admin",
+    "id": "1"
+}
