@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="burgerMenu">
+        <aside>
+            <div class="top">
+                <div class="">
+                    <img src="" alt="">
+                </div>
+                <div class="close" id="clBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Home</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <h4>Sign In / Sign Up</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-percent"></i>
+                    <h4>Offers</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h4>Preferred</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-blog"></i>
+                    <h4>Travle Blogs</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h4>Refer And Earn</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>Support</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    <h4>Emergency No.</h4>
+                </a>
+            </div>
+        </aside>
+    </div>
+    <div>
+        <nav>
+            <div id="adminNav">
+                <div id="burgerBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div>
+                    
+                </div>
+                <div id="searchBar">
+                    <input type="text">
+                    <button id="searchBtn">Search</button>
+                </div>
+                <button id="logoutBtn">Log Out</button>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <main>
+            <h1 id="adminHeading">Admin Panel</h1>
+            <div class="allCard">
+                <div class="countCard">
+                    <i class="fa-solid fa-car"></i>
+                    <div class="t_nums" id="totalCar"></div>
+                    <h3>Total Cars</h3>
+                </div>
+                <div class="countCard">
+                    <i class="fa-solid fa-arrow-up-9-1"></i>
+                    <div class="t_nums" id="totalBooking"></div>
+                    <h3>Total Bookings</h3>
+                </div>
+                <div class="countCard">
+                    <i class="fa-solid fa-users"></i>
+                    <div class="t_nums" id="totalUser"></div>
+                    <h3>Total Users</h3>
+                </div>
+                
+                <div class="countCard">
+                    <i class="fa-solid fa-check"></i>
+                    <div class="t_nums" id="totalSale"></div>
+                    <h3>Sales Total</h3>
+                </div>
+            </div>
+            <table id="carTable">
+                
+            </table>
+        </main>
+    </div>
+
+</body>
+<script src="admin.js">
+</script>
+</html>
