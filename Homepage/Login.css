@@ -3,12 +3,12 @@ body {
 }
 
 
-#head {
+#log_head {
     display: flex;
     justify-content: space-between;
     margin-bottom: 12%;
 }
-#cross-cont{
+#log_cross-cont{
     /* border:1px solid red; */
   width:10%;
   display: flex;
@@ -16,16 +16,17 @@ body {
 
 }
 
-#cross {
-   margin-top: -20%;
+#log_cross {
     font-size: 40px;
     color: rgb(41, 39, 39);
     cursor: pointer;
 }
 
-.popup {
+.log_popup {
+    border-radius:20px;
     width: 40%;
-    background: linear-gradient(90deg, #89c8d8, #9ca0a5, rgb(101, 225, 225));
+    /* background: linear-gradient(90deg, #89c8d8, #9ca0a5, rgb(101, 225, 225)); */
+    background-color: rgba(255, 255, 255, 0.982);
     padding-bottom: 3%;
     position: absolute;
     top: 0;
@@ -36,9 +37,10 @@ body {
     /* transform: translate(-50%, -30%) scale(1); */
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
 }
 
-.open-popup {
+.log_open-popup {
     visibility: visible;
     top: 35%;
     transform: translate(-50%, -30%) scale(1);
@@ -46,46 +48,56 @@ body {
 }
 
 
-#signIn_head {
+#log_signIn_head {
 
     width:90%;
     /* border: 1px solid blue; */
     text-align: center;
     color: #dd4a39;
+   
   
 
 
 }
-
-#signIn_head>h3 {
-    display: inline;
-    color: black;
+#log_signIn_head>h1 {
+    margin-top: 5%;
+   margin-bottom: 5%;
 }
 
-#signIn_head>a {
+#log_signIn_head>h3 {
+    display: inline;
+    color: black; 
+}
+
+#log_signIn_head>a {
     text-decoration: none;
     color: red;
+    cursor: pointer;
+    
 }
 
 
 
-#form {
+#log_form {
     /* border:2px dashed red; */
     width: 85%;
     margin: auto;
+    margin-top:-5%;
 
 }
 
-input {
-    height: 2.5rem;
+ #log_form input {
+    font-size: 100%;
+    height: 2.7rem;
     width: 100%;
     margin-top: 8%;
     border: none;
     background-color: #e1dfdf;
-    display: block
+    display: block;
+    border-radius:10px;
 }
 
-#form #gender {
+#log_form #gender {
 
     height: 1rem;
     width: 10%;
@@ -93,14 +105,15 @@ input {
 
 }
 
-#Login_but {
+ #log_form #log_Login_but {
     border: 1px solid red;
     color: red;
     font-weight: 600;
-    background: none;
+    
+    
 }
 
-#Fb_Gog_but {
+#log_Fb_Gog_but {
     /* border:1px solid green; */
     width: 85%;
     margin: auto;
@@ -109,7 +122,7 @@ input {
 
 }
 
-#google {
+#log_google {
     background-color: #dd4a39;
     display: flex;
     justify-content: space-around;
@@ -117,9 +130,10 @@ input {
     color: white;
     border: none;
     font-size: 80%;
+    padding:3%;
 }
 
-#facebook {
+#log_facebook {
     background-color: #3b5a95;
     display: flex;
     justify-content: space-around;
@@ -127,30 +141,25 @@ input {
     color: white;
     border: none;
     font-size: 80%;
+    padding:3%;
 
 }
 
 
 
-h3 {
+#log_or {
+    margin-top: 5%;
+  margin-bottom: 5%;
     text-align: center;
     color: rgb(69, 66, 66);
 }
 
-#facebook {
-    background-color: #3b5a95;
 
-}
+/* .log_anchor {
+    margin-top: 0%;
+} */
 
-#google {
-    background-color: #dd4a39;
-}
-
-.anchor {
-    margin-top: 6%;
-}
-
-.anchor>a {
+.log_anchor>a {
     text-decoration: none;
     font-weight: 500;
     color: white
@@ -160,7 +169,7 @@ span {
     color: red;
 }
 
-#clickme {
+#log_clickme {
     display: block;
     color: red;
     font-size: 30px;
@@ -170,76 +179,76 @@ span {
 
  /* for medium screen */
 @media screen and (min-width:641px) and (max-width:1007px) {
-    .popup {
+    .log_popup {
         width: 90%;
         margin-top: 10%;
     }
 
-    #Fb_Gog_but {
+    #log_Fb_Gog_but {
         display: flex;
         justify-content: space-between;
     }
 
-    #facebook {
+    #log_facebook {
         width: 48%;
         margin: auto;
-        margin-top: 10%;
+      
 
     }
 
-    #google {
+    #log_google {
         width: 48%;
         margin: auto;
-        margin-top: 10%;
+        
 
     }
 
-    #signIp_head {
+    #log_signIp_head {
         width: 92%;
 
     }
 
-    #signIp_head>h3 {
+    #log_signIp_head>h3 {
         display: block;
 
     }
 
-    .anchor {
+    /* .log_anchor {
         margin-top: 2%;
-    }
+    } */
 }
  /* for small screen */
 @media screen and (max-width:640px) {
-    .popup {
+    .log_popup {
         width: 90%;
     }
 
-    #Fb_Gog_but {
+    #log_Fb_Gog_but {
         display: block;
     }
 
-    #facebook {
+    #log_facebook {
         width: 90%;
         margin: auto;
         margin-top: 10%;
 
     }
 
-    #google {
+    #log_google {
         width: 90%;
         margin: auto;
     }
 
-    #signIp_head {
+    #log_signIp_head {
         width: 85%;
     }
 
-    #signIp_head>h3 {
+    #log_signIp_head>h3 {
         display: block;
 
     }
 
-    .anchor {
+    /* .log_anchor {
         margin-top: 5%;
-    }
+    } */
 }
