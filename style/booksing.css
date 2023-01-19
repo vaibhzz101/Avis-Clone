@@ -188,7 +188,8 @@ text-decoration: none;
 /* ************************ */
 #car_container{
     margin-top: 50px;
-    width: 100%;
+    width: 85%;
+    align-items: center;
     margin: auto;
     /* display: flex; */
     display: grid;
@@ -198,9 +199,13 @@ text-decoration: none;
 }
 #car-container > div{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    padding: 10px;
+    padding: 5px;
     width: 100% ;
+ 
     
+}
+.card:hover{
+    background-color: rgb(230,216,215);
 }
 .card{
     width: 80%;
@@ -238,6 +243,13 @@ text-decoration: none;
 }
 img{
     width: 100%;
+    margin-top: 15px;
+}
+.card>h3{
+    margin-top: 20px;
+}
+.card>h4{
+    margin-top: 20px;
 }
 button{
 width: 100px;
@@ -249,8 +261,26 @@ font-size: 20px;
 font-family:'Times New Roman', Times, serif;
 border-radius: 3px;
 text-align: center;
-margin-top: 40px;
+margin-top: 20px;
 }
 button:hover{
     background-color: #0a0a23;
 }
+.card:nth-child(7)>h3{
+    margin-top: 0px;
+}
+.card:nth-child(8)>h3{
+    margin-top: 0px;
+}
+.card:nth-child(2)>h4{
+    margin-top: 40px;
+}
+.card:nth-child(4)>h4{
+    margin-top: 40px;
+}
+/* .card:nth-child(2)>h3{
+    margin-top: 20px;
+}
+.card:nth-child(4)>h3{
+    margin-top: 20px;
+} */
