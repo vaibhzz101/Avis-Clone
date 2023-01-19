@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      GhumoCar | Payment
+    </title>
+    <link rel="stylesheet" href="payment.css">
+    
+</head>
+<body>
+    <div class="payment-upper-design">
+        <div onclick="window.location.href='index.html' ">
+            <img src="https://as1.ftcdn.net/v2/jpg/01/98/91/58/1000_F_198915888_OpYSQ0FvfA6z85cWPJnUFp5jiJkfdhur.jpg" alt="">
+        </div>
+        <div></div>
+    </div>
+
+
+
+    <div class="main-payment-section">
+        <div>
+            <label class="payment-method-lable">Credit Card
+                <input type="radio" value="credit" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="payment-method-lable">Debit Card
+                <input type="radio"  checked="checked" value="debit" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="payment-method-lable">Net Banking
+                <input type="radio" value="net" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="payment-method-lable">Wallet and UPI
+                <input type="radio" value="wallet" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              
+        </div>
+        <div id="payment-method">
+            <table cellspacing="10">
+                <tbody class="table">
+                   <tr>
+                       <td>All cards accepted</td>
+                       <td>
+                           <img class="table-image" src="https://www.avis.co.in/images/card/debit-card.png" alt="">
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>Name</td>
+                       <td>
+                           <input id="cardholder-name" class="cardholder-name" placeholder="NAME ON CARD" value="" type="text">
+                       </td>
+                   </tr>
+                                              <tr>
+                       <td>Card No.</td>
+                       <td>
+                           <input type="number" value="" class="cardholder-name" placeholder="CARD NUMBER" id="card-number">
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>Expiry Date</td>
+                       <td> <input type="month" class="cardholder-name" id="exp-date"></td>
+                   </tr>
+                   <tr>
+                       <td>CVV</td>
+                       <td><input type="number" class="cardholder-name" id="cvv"></td>
+                   </tr>
+                </tbody>
+              </table>
+              <div id="otp-box">
+                <p>OTP Sent Successfully</p>
+                <input type="text" id="inter-otp" placeholder="Enter OTP" value="" >
+                <button id="validate-otp">Validate OTP</button>
+              </div>
+              <button id="payment-button">Pay ${price}</button>
+        </div>
+    </div>
+   
+</body>
+</html>
+<script type="module">
+   
+   let price=98767;
+   document.getElementById("payment-button").innerText=`Pay ${price}`
+    let paymentMethod =  document.querySelectorAll('input[name="radio"]');
+    
+   paymentMethod.forEach(payment =>{
+       payment.addEventListener("change", function(){
+           let selected = document.querySelector("input[name='radio']:checked")
+           if(selected.value=="credit"){
+             window.location.href="credit-card.html"
+                  
+           }
+          else if(selected.value=="debit"){
+             window.location.href="debit-card.html"
+                  
+           }
+          else if(selected.value=="net"){
+             window.location.href="net-banking.html"
+                  
+           }
+          else if(selected.value=="wallet"){
+             window.location.href="wallet.html"  
+           }
+          
+   })
+   })
+ 
+   document.getElementById("payment-button").addEventListener("click",function(){
+         let cNumber = document.getElementById("card-number").value;
+         let cvv = document.getElementById("cvv").value;
+         let expDate = document.getElementById("exp-date").value;
+         let[year,month] =  expDate.trim().split("-").map(Number);
+         let today = new Date()
+         console.log(today.getMonth()+1)
+         
+        if(cNumber.length != 16){
+            alert("Please Enter a Valid Card Number")
+        }
+        if(cvv.length  != 3){
+            alert("Please Enter a Valid CVV")
+         }
+       if((year < today.getFullYear() ) || month<today.getMonth()){
+           alert("Your Card Is Expired")
+       }
+       else{
+        //   generating random 4 digit number
+        var otp = Math.floor(100000 + Math.random() * 900000);   
+            otp = String(otp);
+            otp = otp.substring(0,4);
+           setTimeout(function(){
+            alert(`Your One Time Password OTP is ${otp}`)
+           },2000)
+          document.getElementById("otp-box").style.visibility="visible"
+          
+          
+          document.getElementById("validate-otp").addEventListener("click",function(){
+            let enteredOtp = document.getElementById("inter-otp").value;
+            if(enteredOtp == otp){
+             
+                alert("Payment Successfull You will be redirected to home page")
+           
+         }
+          })
+       
+
+       }
+   })
+
+</script>

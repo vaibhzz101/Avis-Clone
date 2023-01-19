@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      GhumoCar | Payment
+    </title>
+    <link rel="stylesheet" href="payment.css">
+    
+</head>
+<body>
+    <div class="payment-upper-design">
+        <div onclick="window.location.href='index.html' ">
+            <img src="https://as1.ftcdn.net/v2/jpg/01/98/91/58/1000_F_198915888_OpYSQ0FvfA6z85cWPJnUFp5jiJkfdhur.jpg" alt="">
+        </div>
+        <div></div>
+    </div>
+
+
+
+    <div class="main-payment-section">
+        <div>
+            <label class="payment-method-lable">Credit Card
+                <input type="radio" value="credit" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="payment-method-lable">Debit Card
+                <input type="radio" value="debit" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="payment-method-lable">Net Banking
+                <input type="radio" checked="checked" value="net" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="payment-method-lable">Wallet and UPI
+                <input type="radio" value="wallet" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              
+        </div>
+        <div id="payment-method">
+            <h2>Select Your Bank & Proceed</h2>
+            <select name="" id="net-banking">
+               <option value="0">-Select Bank-</option>
+               <option value="ADBB">Andhra Bank</option>
+               <option value="BOIB">Bank of India</option>
+               <option value="BOMB">Bank of Maharashtra</option>
+               <option value="CABB">Canara Bank</option>
+               <option value="CSBN">Catholic Syrian Bank</option>
+               <option value="CBIB">Central Bank Of India</option>
+               <option value="CITNB">Citibank Netbanking</option>
+               <option value="CUBB">City Union Bank</option>
+               <option value="CRPB">Corporation Bank</option>
+               <option value="CSMSNB">Cosmos Bank</option>
+               <option value="DCBCORP">DCB Bank - Corporate Netbanking </option>
+               <option value="DCBB">DCB Bank Limited</option>
+               <option value="DENN">Dena Bank</option>
+               <option value="DSHB">Deutsche Bank</option>
+               <option value="DLSB">Dhanlaxmi Bank</option>
+               <option value="FEDB">Federal Bank</option>
+               <option value="IDBB">IDBI Bank</option>
+               <option value="INDB">Indian Bank </option>
+               <option value="INOB">Indian Overseas Bank</option>
+               <option value="JAKB">Jammu and Kashmir Bank</option>
+              <option value="JSBNB">Janata Sahakari Bank Pune</option>
+               <option value="KRKB">Karnataka Bank</option>
+               <option value="KRVBC">Karur Vysya - Corporate Netbanking</option>
+               <option value="KRVB">Karur Vysya - Retail Netbanking</option>
+               <option value="LVCB">Lakshmi Vilas Bank - Corporate Netbanking</option>
+               <option value="LVRB">Lakshmi Vilas Bank - Retail Netbanking</option>
+               <option value="OBCB">Oriental Bank of Commerce</option>
+               <option value="PMNB">Punjab And Maharashtra Co-operative Bank Limited</option>
+               <option value="PSBNB">Punjab And Sind Bank</option>
+               <option value="CPNB">Punjab National Bank - Corporate Banking</option>
+               <option value="PNBB">Punjab National Bank - Retail Banking</option>
+               <option value="SRSWT">Saraswat Bank</option>
+               <option value="SVCNB">Shamrao Vithal Co-operative Bank Ltd.</option>
+               <option value="SOIB">South Indian Bank</option>
+               <option value="SBBJB">State Bank of Bikaner and Jaipur</option>
+               <option value="SBHB">State Bank of Hyderabad</option>
+               <option value="SBIB">State Bank of India</option>
+               <option value="SBMB">State Bank of Mysore</option>
+               <option value="SBPB">State Bank of Patiala</option>
+               <option value="SBTB">State Bank of Travancore</option>
+               <option value="SYNDB">Syndicate Bank</option>
+               <option value="TMBB">Tamilnad Mercantile Bank</option>
+               <option value="UCOB">UCO Bank</option>
+               <option value="UBIBC">Union Bank - Corporate Netbanking</option>
+              <option value="UNIB">United Bank Of India</option>
+              <option value="VJYB">Vijaya Bank</option>
+       
+            </select>
+            <button id="payment-button">Pay ${price}</button>
+        </div>
+    </div>
+   
+</body>
+</html>
+<script type="module">
+     let price=98767;
+     document.getElementById("payment-button").innerText=`Pay ${price}`
+    let paymentMethod =  document.querySelectorAll('input[name="radio"]');
+    
+   paymentMethod.forEach(payment =>{
+       payment.addEventListener("change", function(){
+           let selected = document.querySelector("input[name='radio']:checked")
+           if(selected.value=="credit"){
+             window.location.href="credit-card.html"
+                  
+           }
+          else if(selected.value=="debit"){
+             window.location.href="debit-card.html"
+                  
+           }
+          else if(selected.value=="net"){
+             window.location.href="net-banking.html"
+                  
+           }
+          else if(selected.value=="wallet"){
+             window.location.href="wallet.html"  
+           }
+          
+   })
+   })
+ 
+</script>
