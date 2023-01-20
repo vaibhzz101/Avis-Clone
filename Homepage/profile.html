@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./profile.css">
+</head>
+<body>
+    <div class="header_login_signup maincolor">
+       
+        <div class="nav_options">
+            <div class="avis_logo">
+              <a href="./homepage.html"><h1>GHUMOCAR</h1></a>
+            </div>
+            <div><a href="#">TRAVEL BLOG</a></div>
+            <div><a href="#">BLOGGERS</a></div>
+            <div><a href="#">AVIS PREFERRED</a></div>
+            <div><a href="#">AVIS SAFETY</a></div>
+            <div>
+                +91 124 4724 850<br>
+                +91 882 6782 828
+            </div>
+            <div class="givespace">
+                <div>
+                    <a href="#" alt=""> <img src="https://www.avis.co.in/images/android.png" alt=""></a>
+                </div>
+                <div>
+                    <a href="#"  alt=""> <img src="https://www.avis.co.in/images/apple.png" alt=""></a>
+                </div>
+                
+               
+            </div>
+            <div id="last" class="LOGIN_SIGNUP">
+                <div>
+                    <div id="hoverme" >
+                        <a href="#">SIGN UP</a>
+                        <a href="#">/LOG IN</a>
+                    </div>
+                    <div class="submenu">
+                        <a id="profile" href="#">PROFILE</a> <br> <br>
+                        <a id="logout" href="#">LOGOUT</a>
+                      </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+
+        
+        <main>
+            <h1>MY PROFILE</h1>
+        </main>
+        <section>
+            <div class="first">
+                <div>
+                    <span>FULL NAME:-</span><span id="firstname"></span><span id="lastname"></span><br>
+
+                </div>
+                <div>
+                    <span>GENDER:-</span><span id="gender"></span>
+                </div>
+                <div>
+                    <span>EMAIL ID:-</span><span id="email"></span>
+
+                </div>
+                <div>
+                    <span>MOBILE:-</span ><span id="mobile"></span>
+
+                </div>
+                <div>
+                    <span >DATE OF BIRTH:-</span><span id="DOB"></span>
+
+                </div>
+                
+                
+            </div>
+    
+            <div class="second">
+               
+                <div class="image-wrap">
+                    <div class="rect" style="background-image:url(https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2Fyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)"></div>
+                    <div class="rect" style="background-image:url(https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2Fyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)"></div>
+                    <div class="seq" style="background-image:url(https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)"></div>
+                    <!-- <div class="rect" style="background-image:url(https://www.ikea.com/in/en/profile/558de95264a0f9501533593ab355259e.jpg)"></div> -->
+                </div>
+               <div class="image-wrap">
+                <div class="seq" style="background-image:url(https://images.unsplash.com/photo-1462396881884-de2c07cb95ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)"></div>
+                <div class="seq" style="background-image:url(https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60)"></div>
+                <div class="rect" style="background-image:url(https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)"></div>
+                <!-- <div class="seq" style="background-image:url(https://www.ikea.com/in/en/profile/3e48e8734c5c5751bd6b21045258bfac.jpg)"></div> -->
+                <!-- <div class="rect" style="background-image:url(https://www.ikea.com/in/en/profile/6c9a5b763c764348260c1831ee856f56.jpg)"></div> -->
+
+               </div>
+  
+            </div>
+            
+        </section>
+    </div>
+
+
+    
+</body>
+<script>
+    let data  = JSON.parse(localStorage.getItem("loginUser")) ||null; 
+
+
+    let sidepopup = document.querySelector(".submenu")
+    let profile = document.getElementById("profile");
+    let logout = document.getElementById("logout");
+     
+   let user = document.getElementById("hoverme")
+   user.innerHTML = `Welcome, ${data.firstname} ${data.lastname}`
+     logout.addEventListener("click",()=>{
+       
+        localStorage.removeItem("loginUser");
+        location.href = "./profile.html"
+        console.log(data)
+      console.log("OK")
+     })
+    
+    profile.addEventListener("click",()=>{
+        location.href = "./profile.html"
+    })
+
+
+    let firstname = document.getElementById("firstname")
+    let lastname = document.getElementById("lastname")
+    let gender = document.getElementById("gender")
+    let email = document.getElementById("email")
+    let mobile = document.getElementById("mobile")
+    let DOB = document.getElementById("DOB") 
+
+
+firstname.innerHTML = data.firstname
+lastname.innerHTML = data.lastname
+gender.innerHTML = data.gender
+email.innerHTML = data.email
+mobile.innerHTML = data.mobile
+DOB.innerHTML = data.DOB
+</script>
+</html>
