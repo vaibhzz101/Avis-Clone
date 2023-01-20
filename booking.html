@@ -9,8 +9,37 @@
     <link rel="stylesheet" href="./Homepage/homepage.css">
     <script src="https://kit.fontawesome.com/1dcb2e4769.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    @media screen and (min-width: 100px) and (max-width: 600px){
+    #car_container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+   .menu{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width: 100px) and (max-width: 600px){
+    .menu{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+    #car_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+</style>
 <body>
     <!-- NAVBAR -->
+    <nav>
     <div class="header_login_signup maincolor">
       <div class="avis_logo">
           <H1>Avis Logo</H1>
@@ -50,7 +79,7 @@
         <div class="menu">
             <ul>
                 <li>
-                    <i class="fa-solid fa-house-chimney"></i>
+                   <a href="./Homepage/homepage.html"> <i class="fa-solid fa-house-chimney"></i></a>
                 </li>
                 <li>
                     <a href="#">SELF-DRIVE INDIA </a>
@@ -116,10 +145,10 @@
        <!--******************************************FILTER********************************************************* -->
      <div class="filter-condition">
         <span>View As a</span>
-        <select name="" id="select1">
+        <select id="select">
             <option value="Default">Default</option>
-            <option value="LowToHigh">Low to High</option>
             <option value="HighToLow">High to Low</option>
+            <option value="LowToHigh">Low to High</option>
         </select>
      </div>
         <!-- ***********************************Car Section************************************************ -->
@@ -307,26 +336,16 @@
 
    localStorage.setItem("cars", JSON.stringify(carData))
    let storedCar = JSON.parse(localStorage.getItem("cars"))
-   console.log(storedCar)
+   displayData(storedCar)
 
 
-//     let cars=fetch("url")
-//     .then((res)=>res.json())
-//     .then((res)=>{
-//         let cdata=res.data
-//         fetvhedData=res.data
 
-//         displeyData(cdata)
-//     })
-//   .catch((error)=>{
-//     console.log(error)
-//   })
-//   function displayData(data){
-//     let container = document.getElementById("car_container");
-//     container.innerHTML=null;
-
+function displayData(storedCar){
+    let container = document.getElementById("car_container");
+    container.innerHTML=null;
+    
     storedCar.forEach((element) => {
-        let container = document.getElementById("car_container");
+  
         let card = document.createElement("div")
         card.setAttribute("class","card")
         let img=document.createElement("img")
@@ -345,19 +364,23 @@
         // a.setAttribute("href","#")
 
     bookbtn.addEventListener("click", function(){
-        let book=JSON.parse(localStorage.getItem("book"))||[];
+        let book=JSON.parse(localStorage.getItem("bookings"))||[];
+        book.push(element)
+        localStorage.setItem("bookings", JSON.stringify(book))
+        window.location.href="./avis/payment.html";
+
 
     })
     card.append(img,brand,prize,bookbtn)
    container.append(card)        
     });
 //   filterSorting
-let sort=document.getElementById("select1");
+let sort=document.getElementById("select");
 sort.addEventListener("change", function(event){
 
     // let selectedsort = document.querySelector("#select1").value;
 selectedsort=sort.value;
-// console.log(selectedsort)
+console.log(selectedsort)
     if(selectedsort !== 'Default'){
         if(selectedsort == 'LowToHigh'){
             storedCar.sort(function(a,b){
@@ -373,8 +396,10 @@ selectedsort=sort.value;
     localStorage.setItem("cars", JSON.stringify(carData))
 })
 
+}
 
-console.log(storedCar)
+
+displayData(storedCar)
 
 
 </script>
