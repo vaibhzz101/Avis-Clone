@@ -16,9 +16,20 @@
     display: flex;
 }
 .avis_logo{
+    display: flex;
+    justify-content: center;
     margin: auto;
     width: 20%;
     color: white;
+}
+#logores{
+    width: 60px;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+#contacts{
+
 }
 .nav_options{
    
@@ -26,7 +37,7 @@
     
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    width: 80%;
+    
 
     
 }
@@ -56,11 +67,20 @@
 .LOGIN_SIGNUP{
     background-color: #a40c12;
 }
+#contacts a{
+    display: block;
+}
 .givespace{
     
     display: flex;
     
     justify-content: space-evenly;
+}
+@media screen and (min-width:768px)  and (max-width:980px) {
+    .nav_options>div{
+        font-size: 10px;
+    }
+   
 }
 .givespace div{
     padding: 0px 10px;
@@ -184,16 +204,32 @@
 #actual_search ul select{
     text-align: center;
     border-radius: 5px;
-    width: 120px;
+    width: 100px;
     height: 40px;
     padding: 5px 20px 5px 8px;
 }
 #actual_search ul input{
     text-align: center;
     border-radius: 5px;
-    width: 120px;
+    width: 100px;
     height: 40px;
     padding: 5px 20px 5px 8px;
+}
+@media screen and (min-width:768px)  and (max-width:980px) {
+    #actual_search ul input{
+        
+        border-radius: 5px;
+        width: 70px;
+        height: 30px;
+        padding: 5px 20px 5px 8px;
+    }
+    #actual_search ul select{
+        
+        width: 70px;
+        height: 30px;
+        padding: 5px 20px 5px 8px;
+    }
+   
 }
 #actual_search p{
     color: #FFFFFF;
@@ -259,7 +295,7 @@
     justify-content: center;
    
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-color: #CE2127;
     /* border: 1px solid red; */
 }
