@@ -175,3 +175,196 @@ if(data!=null){
 }
 
 
+//------------------------------------------------------------------------------------------------------------------------------//
+let customerquery=JSON.parse(localStorage.getItem("rentalcarquery"))||[];
+//homepage gaurav
+let airport=document.getElementById("airport");
+let withincity=document.getElementById("withincity");
+let outstation=document.getElementById("outstation");
+let onewaytransfer=document.getElementById("onewaytransfer");
+let radios=document.getElementsByClassName("radio1");
+
+//---------------------------------function to calculate days from dates-------------------
+// function subtractDates(date1, date2) {
+//     var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+//     var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+//     return diffDays;
+// }
+//-----------------------------------------------------------------------------------------
+for(let element of radios){
+    element.addEventListener("change",()=>{
+        if(element.value=="A"){
+            airport.style.display="block";
+            let airport_origin_city=document.getElementById("airport_origin_city");
+            let transferttype=document.getElementById("transferttype");
+            let PICKUP_ADDRESS=document.getElementById("PICKUP_ADDRESS");
+            let DROP_ADDRESS=document.getElementById("DROP_ADDRESS");
+            let START_DATE=document.getElementById("START_DATE");
+            let airportSEARCH=document.getElementById("airportSEARCH");
+            airportSEARCH.onclick=function AS(){
+                console.log("hello")
+                let obj={
+                    createdAt:new Date(),
+                    rentaltype:"Airport",
+                    transferttype:transferttype.value,
+                    origincity: airport_origin_city.value,
+                    pickupadd:PICKUP_ADDRESS.value,
+                    dropadd:DROP_ADDRESS.value,
+                    startdate:START_DATE.value,    
+                };
+                console.log(obj)
+                
+                
+                localStorage.setItem("rentalcarquery",JSON.stringify(obj));
+            }
+            
+
+
+            withincity.style.display="none";
+            outstation.style.display="none"
+            onewaytransfer.style.display="none";
+           }else{
+            airport.style.display="none";
+            
+           }
+        if(element.value=="B"){
+
+             withincity.style.display="block";
+
+      
+             let within_origin_city=document.getElementById("within_origin_city");
+             
+             let WITHINCITY_PICKUP_ADDRESS=document.getElementById("WITHINCITY_PICKUP_ADDRESS");
+             let WITHINCITY_START_DATE=document.getElementById("WITHINCITY_START_DATE");
+             let WITHINCITY_END_DATE=document.getElementById("WITHINCITY_END_DATE");
+             let SEARCH=document.getElementById("withinsearchbutton");
+             SEARCH.onclick=function WIC(){
+
+                //calculating date in days  OR RENT DURATION
+            
+                function subtractDates(date1, date2) {
+                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+                    return diffDays;
+                }
+                let date1=new Date(WITHINCITY_START_DATE.value);
+                let date2=new Date(WITHINCITY_END_DATE.value);
+                let rentduration=subtractDates(date1,date2);
+                
+                //
+                let obj={
+                    createdAt:new Date(),
+                    rentaltype:"withincity",
+                    origincity: within_origin_city.value,
+                    pickupadd:WITHINCITY_PICKUP_ADDRESS.value,
+                    startdate:WITHINCITY_START_DATE.value,
+                    end_date:WITHINCITY_END_DATE.value,
+                    rentduration:rentduration+" days"
+                    
+                };
+                console.log(obj)
+                
+                
+                localStorage.setItem("rentalcarquery",JSON.stringify(obj));
+                
+            }
+            
+            
+             
+
+             airport.style.display="none";
+             outstation.style.display="none"
+             onewaytransfer.style.display="none";
+        }else{
+            
+            withincity.style.display="none";
+            
+        }
+        if(element.value=="C"){
+            outstation.style.display="block";
+
+            let outstation_origin_city=document.getElementById("outstation_origin_city");
+            let outTO_CITY=document.getElementById("outTO_CITY");
+            let outpickup_ADDRESS=document.getElementById("outpickup_ADDRESS");
+            let out_START_DATE=document.getElementById("out_START_DATE");
+            let out_END_DATE=document.getElementById("out_END_DATE");
+            let outstationSEARCH=document.getElementById("outstationSEARCH");
+
+            function subtractDates(date1, date2) {
+                var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+                return diffDays;
+            }
+                let date1=new Date(out_START_DATE.value);
+                let date2=new Date(out_END_DATE.value);
+                let rentduration=subtractDates(date1,date2);
+            outstationSEARCH.onclick=()=>{
+                let obj={
+                    createdAt:new Date(),
+                    rentaltype:"OUTSTATION",
+                    origincity: outstation_origin_city.value,
+                    tocity:outTO_CITY.value,
+                    pickupadd:outpickup_ADDRESS.value,
+                    startdate:out_START_DATE.value,
+                    end_date:out_END_DATE.value,
+                    rentduration:rentduration+" days"
+                    
+                };
+                console.log(obj)
+                
+                
+                localStorage.setItem("rentalcarquery",JSON.stringify(obj));
+            }
+
+
+            airport.style.display="none";
+            withincity.style.display="none";
+            onewaytransfer.style.display="none";
+       }else{
+            
+            outstation.style.display="none"
+            
+       }
+       if(element.value=="D"){
+            onewaytransfer.style.display="block";
+
+            let onewaytransfer_origin_city=document.getElementById("onewaytransfer_origin_city");
+            let oneway_tocity=document.getElementById("oneway_tocity");
+            let oneway_pickupadd=document.getElementById("oneway_pickupadd");
+            let oneway_START_DATE=document.getElementById("oneway_START_DATE");
+            let onewaySEARCH=document.getElementById("onewaySEARCH");
+  
+            onewaySEARCH.onclick=()=>{
+                let obj={
+                    createdAt:new Date(),
+                    rentaltype:"OneWayTransfer",
+                    tocity:oneway_tocity.value,
+                    origincity: onewaytransfer_origin_city.value,
+                    pickupadd:oneway_pickupadd.value,
+                    startdate:oneway_START_DATE.value,
+                    
+                    
+                    
+                };
+                console.log(obj)
+                
+                
+                localStorage.setItem("rentalcarquery",JSON.stringify(obj));
+                
+            }
+
+
+            airport.style.display="none";
+            withincity.style.display="none";
+            outstation.style.display="none"
+       }else{
+            
+            onewaytransfer.style.display="none";
+       }
+       
+    })
+}
+
+
+let fromcity=document.getElementById("origin_city");
+

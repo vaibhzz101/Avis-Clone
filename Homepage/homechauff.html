@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./homepage.css">
     <link rel="stylesheet" href="./Login.css">
     <link rel="stylesheet" href="./signup.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 
 </head>
 <body>
@@ -40,7 +41,7 @@
             <input type="date" placeholder="DOB" name="fbirth_date" id="birthdate"><span id="date_error"></span> <br>
 
             <input type="radio" name="gender" id="gender" value="male"><label for="">MALE</label><br>
-            <input type="radio" name="gender" id="gender" value="female"><label for="">FEMALE</label><br>
+            <input type="radio" name="gender" id="gender2" value="female"><label for="">FEMALE</label><br>
             <span id="gender_error"></span>
 
             <input type="password" placeholder="PASSWORD" name="fpassword" id="password"><span
@@ -175,11 +176,11 @@
             <div id="below_choose_drive">
                 <div>
                     <ul>
-                        <li><a role="tab" href="#"><input class="radio1"name="CHAUFFEUR" type="radio" >AIRPORT AND RAILWAY TRANSFERS</a></li>
-                        <li><a role="tab" href="#"><input class="radio1"name="CHAUFFEUR" type="radio" >WITHIN CITY</a></li>
-                        <li><a role="tab" href="#"><input class="radio1"name="CHAUFFEUR" type="radio" >OUTSTATION</a></li>
-                        <li><a role="tab" href="#"><input class="radio1"name="CHAUFFEUR" type="radio" >ONE-WAY INTERCITY TRANSFER</a></li>
-                        
+                        <li><a role="tab" href="#"><input class="radio1" name="CHAUFFEUR" value="A" type="radio" checked>AIRPORT AND RAILWAY TRANSFERS</a></li>
+                        <li><a role="tab" href="#"><input class="radio1" name="CHAUFFEUR" value="B" type="radio" >WITHIN CITY</a></li>
+                        <li><a role="tab" href="#"><input class="radio1" name="CHAUFFEUR" value="C" type="radio" >OUTSTATION</a></li>
+                        <li><a role="tab" href="#"><input class="radio1" name="CHAUFFEUR" value="D" type="radio" >ONE-WAY INTERCITY TRANSFER</a></li>
+                    
                     </ul>
                 </div>
                 <div id="actual_search">
@@ -187,25 +188,26 @@
                         <ul id="ulresponsive">
                             <li>
                                <div>
-                                <select name="ORIGIN CITY" id="origin_city" required>
+                                <select name="ORIGIN CITY" id="airport_origin_city" required>
                                     <option selected="selected" value="0">ORIGIN CITY</option>
-                                    <option value="1" >Agra</option>
-                                    <option value="2">Ahmedabad</option>
-                                    <option value="3">Bengaluru</option>
-                                    <option value="4">Bhuvneshwar</option>
-                                    <option value="5">Chandigarh</option>
-                                    <option value="6">Chennai</option>
-                                    <option value="7">Delhi-NCR</option>
-                                    <option value="8">Gurugram</option>
-                                    <option value="9">Hyderabad</option>
-                                    <option value="10">Jaipur</option>
-                                    <option value="11">Kochi</option>
-                                    <option value="12">Kolkata</option>
-                                    <option value="13">Mumbai</option>
-                                    <option value="14">Noida</option>
-                                    <option value="15">Pune</option>
-                                    <option value="16">Udaipur</option>
-                                    <option value="17">Vadodara</option>
+                                    
+                                    <option value="Agra" >Agra</option>
+                                    <option value="Ahmedabad">Ahmedabad</option>
+                                    <option value="Bengaluru">Bengaluru</option>
+                                    <option value="Bhuvneshwar">Bhuvneshwar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Delhi-NCR">Delhi-NCR</option>
+                                    <option value="Gurugram">Gurugram</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Jaipur">Jaipur</option>
+                                    <option value="Kochi">Kochi</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Noida">Noida</option>
+                                    <option value="Pune">Pune</option>
+                                    <option value="Udaipur">Udaipur</option>
+                                    <option value="Vadodara">Vadodara</option>
                                 </select>
                                </div>
                                <span>Select City</span>
@@ -249,7 +251,7 @@
                              
                              
                              <li>
-                                <input type="submit" name="SEARCH" id="SEARCH">
+                                <input type="submit" name="SEARCH" id="airportSEARCH">
                          
                              </li>
                         </ul>
@@ -259,25 +261,25 @@
                         <ul id="ulresponsive">
                             <li>
                                <div>
-                                <select name="ORIGIN CITY" id="origin_city" required>
+                                <select name="ORIGIN CITY" id="within_origin_city" required>
                                     <option selected="selected" value="0">ORIGIN CITY</option>
-                                    <option value="1" >Agra</option>
-                                    <option value="2">Ahmedabad</option>
-                                    <option value="3">Bengaluru</option>
-                                    <option value="4">Bhuvneshwar</option>
-                                    <option value="5">Chandigarh</option>
-                                    <option value="6">Chennai</option>
-                                    <option value="7">Delhi-NCR</option>
-                                    <option value="8">Gurugram</option>
-                                    <option value="9">Hyderabad</option>
-                                    <option value="10">Jaipur</option>
-                                    <option value="11">Kochi</option>
-                                    <option value="12">Kolkata</option>
-                                    <option value="13">Mumbai</option>
-                                    <option value="14">Noida</option>
-                                    <option value="15">Pune</option>
-                                    <option value="16">Udaipur</option>
-                                    <option value="17">Vadodara</option>
+                                    <option value="Agra" >Agra</option>
+                                    <option value="Ahmedabad">Ahmedabad</option>
+                                    <option value="Bengaluru">Bengaluru</option>
+                                    <option value="Bhuvneshwar">Bhuvneshwar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Delhi-NCR">Delhi-NCR</option>
+                                    <option value="Gurugram">Gurugram</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Jaipur">Jaipur</option>
+                                    <option value="Kochi">Kochi</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Noida">Noida</option>
+                                    <option value="Pune">Pune</option>
+                                    <option value="Udaipur">Udaipur</option>
+                                    <option value="Vadodara">Vadodara</option>
                                 </select>
                                </div>
                         
@@ -307,8 +309,9 @@
                              </li>
                              
                              <li>
-                                <input type="submit" name="SEARCH" id="SEARCH">
-                         
+                                <input type="submit" name="SEARCH" id="withinsearchbutton" >
+
+                                <!-- <button type="submit" id="searchbutton">SEARCH</button> -->
                              </li>
                         </ul>
 
@@ -317,25 +320,25 @@
                         <ul id="ulresponsive">
                             <li>
                                <div>
-                                <select name="ORIGIN CITY" id="origin_city">
+                                <select name="ORIGIN CITY" id="outstation_origin_city">
                                     <option selected="selected" value="0">ORIGIN CITY</option>
-                                    <option value="1" >Agra</option>
-                                    <option value="2">Ahmedabad</option>
-                                    <option value="3">Bengaluru</option>
-                                    <option value="4">Bhuvneshwar</option>
-                                    <option value="5">Chandigarh</option>
-                                    <option value="6">Chennai</option>
-                                    <option value="7">Delhi-NCR</option>
-                                    <option value="8">Gurugram</option>
-                                    <option value="9">Hyderabad</option>
-                                    <option value="10">Jaipur</option>
-                                    <option value="11">Kochi</option>
-                                    <option value="12">Kolkata</option>
-                                    <option value="13">Mumbai</option>
-                                    <option value="14">Noida</option>
-                                    <option value="15">Pune</option>
-                                    <option value="16">Udaipur</option>
-                                    <option value="17">Vadodara</option>
+                                    <option value="Agra" >Agra</option>
+                                    <option value="Ahmedabad">Ahmedabad</option>
+                                    <option value="Bengaluru">Bengaluru</option>
+                                    <option value="Bhuvneshwar">Bhuvneshwar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Delhi-NCR">Delhi-NCR</option>
+                                    <option value="Gurugram">Gurugram</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Jaipur">Jaipur</option>
+                                    <option value="Kochi">Kochi</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Noida">Noida</option>
+                                    <option value="Pune">Pune</option>
+                                    <option value="Udaipur">Udaipur</option>
+                                    <option value="Vadodara">Vadodara</option>
                                 </select>
                                </div>
                         
@@ -344,7 +347,7 @@
 
                                 <div>
                                 
-                                 <input type="text" name="DELIVERY ADDRESS" id="TO_CITY" placeholder="TO CITY">
+                                 <input type="text" name="DELIVERY ADDRESS" id="outTO_CITY" placeholder="TO CITY">
                                 </div>
                          
                              </li>
@@ -352,25 +355,27 @@
 
                                 <div>
                                 
-                                 <input type="text" name="DELIVERY ADDRESS" id="DELIVERY_ADDRESS" placeholder="DELIVERY ADDRESS">
+                                 <input type="text" name="PICKUP ADDRESS" id="outpickup_ADDRESS" placeholder="PICKUP ADDRESS">
                                 </div>
                          
                              </li>
                              <li>
                                 <div>
-                                 <input type="text" name="START DATE" id="START_DATE" placeholder="START DATE" src="">
+                                 <input type="date" name="START DATE" id="out_START_DATE" value="2023-01-23" min="2023-01-20" required>
                                 </div>
+                                <span>Start Date</span>
                          
                              </li>
                              <li>
                                 <div>
-                                    <input type="text" name="END DATE" id="END_DATE" placeholder="END DATE " >
+                                    <input type="date" name="END DATE" id="out_END_DATE" value="2023-01-24" min="2023-01-20" max="2024-01-20" required>
                                 </div>
+                                <span>End Date</span>
                          
                              </li>
                              
                              <li>
-                                <input type="submit" name="SEARCH" id="SEARCH">
+                                <input type="submit" name="SEARCH" id="outstationSEARCH">
                          
                              </li>
                         </ul>
@@ -380,25 +385,25 @@
                         <ul id="ulresponsive">
                             <li>
                                <div>
-                                <select name="ORIGIN CITY" id="origin_city">
+                                <select name="ORIGIN CITY" id="onewaytransfer_origin_city">
                                     <option selected="selected" value="0">ORIGIN CITY</option>
-                                    <option value="1" >Agra</option>
-                                    <option value="2">Ahmedabad</option>
-                                    <option value="3">Bengaluru</option>
-                                    <option value="4">Bhuvneshwar</option>
-                                    <option value="5">Chandigarh</option>
-                                    <option value="6">Chennai</option>
-                                    <option value="7">Delhi-NCR</option>
-                                    <option value="8">Gurugram</option>
-                                    <option value="9">Hyderabad</option>
-                                    <option value="10">Jaipur</option>
-                                    <option value="11">Kochi</option>
-                                    <option value="12">Kolkata</option>
-                                    <option value="13">Mumbai</option>
-                                    <option value="14">Noida</option>
-                                    <option value="15">Pune</option>
-                                    <option value="16">Udaipur</option>
-                                    <option value="17">Vadodara</option>
+                                    <option value="Agra" >Agra</option>
+                                    <option value="Ahmedabad">Ahmedabad</option>
+                                    <option value="Bengaluru">Bengaluru</option>
+                                    <option value="Bhuvneshwar">Bhuvneshwar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Delhi-NCR">Delhi-NCR</option>
+                                    <option value="Gurugram">Gurugram</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Jaipur">Jaipur</option>
+                                    <option value="Kochi">Kochi</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Noida">Noida</option>
+                                    <option value="Pune">Pune</option>
+                                    <option value="Udaipur">Udaipur</option>
+                                    <option value="Vadodara">Vadodara</option>
                                 </select>
                                </div>
                         
@@ -407,25 +412,34 @@
 
                                 <div>
                                 
-                                 <input type="text" name="DELIVERY ADDRESS" id="DELIVERY_ADDRESS" placeholder="DELIVERY ADDRESS">
+                                 <input type="text" name="DELIVERY ADDRESS" id="oneway_tocity" placeholder="TO CITY">
+                                </div>
+                         
+                             </li>
+                             <li>
+
+                                <div>
+                                
+                                 <input type="text" name="DELIVERY ADDRESS" id="oneway_pickupadd" placeholder="PICKUP ADDRESS">
                                 </div>
                          
                              </li>
                              <li>
                                 <div>
-                                 <input type="text" name="START DATE" id="START_DATE" placeholder="START DATE" src="">
+                                 <input type="date" name="START DATE" id="oneway_START_DATE" value="2023-01-23" min="2023-01-20" required>
                                 </div>
+                                <span>Start Date</span>
                          
                              </li>
-                             <li>
+                             <!-- <li>
                                 <div>
                                     <input type="text" name="END DATE" id="END_DATE" placeholder="END DATE " >
                                 </div>
                          
-                             </li>
+                             </li> -->
                              
                              <li>
-                                <input type="submit" name="SEARCH" id="SEARCH">
+                                <input type="submit" name="SEARCH" id="onewaySEARCH">
                          
                              </li>
                         </ul>
@@ -469,6 +483,34 @@
                 <br>
                 <small>Get upto 30% Off</small>
             </p>
+        </div>
+
+    </div>
+    <div id="appsection">
+        <div>
+            <div>
+                
+                UNLOCK THE WORLD OF BENEFITS WITH THE NEW AVIS APP.
+                <br>
+                <span>DOWNLOAD TO GET UPTO 55 % OFF ON YOUR FIRST SELF-DRIVE BOOKING.</span>
+            </div>
+            <div>
+                <img id="imagegif" src="https://www.avis.co.in/images/avis-walkthrough-animation.gif" alt="appgif">
+                <img id="blackcar" src="https://www.avis.co.in/images/bottom-car.png" alt="blackcar">
+            </div>
+            <div>
+                <a href="#">
+                    <img src="https://www.avis.co.in/images/play.png" alt="">
+                    Get it on t it on 
+                    <span>GOOGLE PLAY</span>
+                </a>
+                <br>
+                <a href="#">
+                    <img  src="https://www.avis.co.in/images/ios.png" alt="">
+                    Get it on t it on 
+                    <span>APP STORE</span>
+                </a>
+            </div>
         </div>
 
     </div>
@@ -563,4 +605,8 @@
 
 </body>
 </html>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script defer
+    src="https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key=AIzaSyBaQop3M7aYo9fcx0Xfh-sXOxY5i-lzp6k&callback=initMap"
+    type="text/javascript"></script> -->
 <script src="./homepage.js"></script>
