@@ -16,9 +16,20 @@
     display: flex;
 }
 .avis_logo{
+    display: flex;
+    justify-content: center;
     margin: auto;
     width: 20%;
     color: white;
+}
+#logores{
+    width: 60px;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+#contacts{
+
 }
 .nav_options{
    
@@ -26,7 +37,7 @@
     
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    width: 80%;
+    
 
     
 }
@@ -56,11 +67,20 @@
 .LOGIN_SIGNUP{
     background-color: #a40c12;
 }
+#contacts a{
+    display: block;
+}
 .givespace{
     
     display: flex;
     
     justify-content: space-evenly;
+}
+@media screen and (min-width:768px)  and (max-width:980px) {
+    .nav_options>div{
+        font-size: 10px;
+    }
+   
 }
 .givespace div{
     padding: 0px 10px;
@@ -73,13 +93,14 @@
     display: flex;
     align-items: center;
 }
-.bg_banner_image>div{
+ .bg_banner_image>div{
     margin: auto;
-    width: 60%;
+    width: 75%;
     height: 250px;
    
     
-}.bg_banner_image a{
+}
+.bg_banner_image a{
     text-decoration: none;
     
 }
@@ -141,7 +162,7 @@
 }
 #choose_drive a{
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: 12px;
     margin: auto;
     
 }
@@ -149,6 +170,7 @@
     
     padding-left: 35px;
 }
+
 #inner_search_func ul{
     
     display: flex;
@@ -171,6 +193,17 @@
     margin: 2px 15px;
     display: inline-block;
 }
+#below_choose_drive div:nth-child(1) a{
+    font-size: 11px;
+    
+}
+#SEARCH{
+background-color: #CE2127;
+color: #FFFFFF;
+text-align: center;
+
+border: 0px
+}
 #below_choose_drive li a{
     color: #FFFFFF;
     font-size: 12px;
@@ -186,14 +219,50 @@
     border-radius: 5px;
     width: 120px;
     height: 40px;
-    padding: 5px 20px 5px 8px;
+    padding: 5px 20px 5px 5px;
+    text-align: left;
 }
 #actual_search ul input{
     text-align: center;
     border-radius: 5px;
     width: 120px;
     height: 40px;
-    padding: 5px 20px 5px 8px;
+    padding: 5px 20px 5px 5px;
+}
+#airport{
+    display: none;
+}
+#actual_search span{
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+    margin: auto;
+}
+#withincity{
+    display: none;
+}
+#outstation{
+    display: block;
+}
+#onewaytransfer{
+    display: none;
+}
+@media screen and (min-width:768px)  and (max-width:980px) {
+    #actual_search ul input{
+        
+        border-radius: 5px;
+        width: 70px;
+        height: 30px;
+        padding: 5px 20px 5px 8px;
+    }
+    #actual_search ul select{
+        
+        width: 70px;
+        height: 30px;
+        padding: 5px 20px 5px 8px;
+    }
+   
 }
 #actual_search p{
     color: #FFFFFF;
@@ -259,7 +328,7 @@
     justify-content: center;
    
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-color: #CE2127;
     /* border: 1px solid red; */
 }
