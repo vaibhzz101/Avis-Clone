@@ -1,0 +1,146 @@
+
+body{
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background:linear-gradient(90deg,rgb(245, 123, 123),rgb(174, 54, 54),red)
+}
+.nav_options{
+    background-color: #CE2127;
+    height:10vh;
+   
+     display: flex;
+     justify-content: space-between;
+    
+
+}
+.nav_options>div{
+    color:white;
+   text-align: center;
+   width:30%;
+   border:1px solid rgb(172, 27, 27);
+   display:flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.nav_options>div>a{
+    font-size:.8rem;
+    color:white;
+text-decoration: none;
+
+}
+.nav_options>.avis_logo{
+ width:50%;
+ color: whitesmoke;
+ 
+}
+
+/* // last popup */
+#last{
+    background-color: #a40c12;
+    position: relative; 
+    display: inline-block;
+}
+#last>div{
+    margin-top:13%;
+    
+}
+#last>div>div>a{
+    
+    color:white;
+    text-decoration: none;
+}
+.submenu{
+    margin-top:20px;
+    display: none;
+    background-color: whitesmoke;
+    font-size: 14px;
+    color:black;
+   border-radius:20px;
+    padding:25px;
+    z-index:1; 
+  }
+   #last>div>.submenu>a{
+    color:#090909;
+    margin-bottom:10px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    
+  }
+  #last> div>.submenu>a:hover{
+    color:red;
+    text-decoration: underline;
+  }
+  #last:hover .submenu{
+    display: block;
+    cursor: pointer;
+ }
+
+ /* //profile */
+ #firstname,#gender,#mobile,#email,#DOB{
+    color:rgb(118, 43, 8);
+    margin-left:5%;
+    text-decoration: underline;
+ }
+ #lastname{
+    color:rgb(118, 43, 8);
+    margin-left: 2%;
+    text-decoration: underline;
+ }
+main>h1{
+    color:rgb(89, 3, 25);
+    text-align: center;
+    font-style:italic;
+   font-size: 2.5rem;
+}
+ span{
+    /* margin:20px; */
+   font-size: 2rem;
+ }
+ section{
+   
+    display:flex;
+    justify-content: space-around;
+ }
+ .first{
+   margin-left:2%;
+   margin-top:2%;
+    width:40%
+ }
+ .first>div{
+    margin-bottom:10%;
+ }
+
+ .second{
+    display: flex;
+   width:50%;
+  
+}
+.image-wrap{
+    
+    width:80%;
+    margin-right: 10px;
+   
+}
+.image-wrap div {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    margin-bottom: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.seq {
+    height: 14rem;
+   
+}
+.rect{
+    height:11rem;
+}
+
+ 
+
