@@ -166,21 +166,154 @@
             </div>
             <div id="choose_drive">
                 <div >
-                <a role="tab" href="#"><input class="radio1" name="trip1" type="radio" checked > SELF DRIVE <span>〉</span></a> 
+                <a role="tab" href="#"><input class="radio1" name="trip1" type="radio" > SELF DRIVE <span>〉</span></a> 
                 </div>
                 <div >
-                <a role="tab" href="#"><input class="radio1"name="trip1" type="radio" > CHAUFFEUR DRIVE <span>〉</span></a>
+                <a role="tab" href="#"><input class="radio1"name="trip1" type="radio" checked> CHAUFFEUR DRIVE <span>〉</span></a>
                 </div>
             </div>
             <div id="below_choose_drive">
                 <div>
                     <ul>
-                        <li><a role="tab" href="#"><input class="radio1"name="trip2" type="radio" checked>REGULAR </a></li>
-                        <li><a role="tab" href="#"><input class="radio1" name="trip2" type="radio">AVIX FLEX (7 DAYS AND ABOVE)</a></li>
+                        <li><a role="tab" href="#"><input class="radio1"name="CHAUFFEUR" type="radio" >AIRPORT AND RAILWAY TRANSFERS</a></li>
+                        <li><a role="tab" href="#"><input class="radio1"name="CHAUFFEUR" type="radio" >WITHIN CITY</a></li>
+                        <li><a role="tab" href="#"><input class="radio1"name="CHAUFFEUR" type="radio" >OUTSTATION</a></li>
+                        <li><a role="tab" href="#"><input class="radio1"name="CHAUFFEUR" type="radio" >ONE-WAY INTERCITY TRANSFER</a></li>
+                        
                     </ul>
                 </div>
                 <div id="actual_search">
-                    <div>
+                    <div id="airport">
+                        <ul id="ulresponsive">
+                            <li>
+                               <div>
+                                <select name="ORIGIN CITY" id="origin_city" required>
+                                    <option selected="selected" value="0">ORIGIN CITY</option>
+                                    <option value="1" >Agra</option>
+                                    <option value="2">Ahmedabad</option>
+                                    <option value="3">Bengaluru</option>
+                                    <option value="4">Bhuvneshwar</option>
+                                    <option value="5">Chandigarh</option>
+                                    <option value="6">Chennai</option>
+                                    <option value="7">Delhi-NCR</option>
+                                    <option value="8">Gurugram</option>
+                                    <option value="9">Hyderabad</option>
+                                    <option value="10">Jaipur</option>
+                                    <option value="11">Kochi</option>
+                                    <option value="12">Kolkata</option>
+                                    <option value="13">Mumbai</option>
+                                    <option value="14">Noida</option>
+                                    <option value="15">Pune</option>
+                                    <option value="16">Udaipur</option>
+                                    <option value="17">Vadodara</option>
+                                </select>
+                               </div>
+                               <span>Select City</span>
+                        
+                            </li>
+                            <li>
+                                <div>
+                                    <select name="transfertype" id="transferttype" required>
+                                            <option value="0">TRANSFER TYPE</option>
+                                            <option value="1">AIRPORT/RAILWAY DROP</option>
+                                            <option value="2">AIRPORT/RAILWAY PICK-UP</option>
+                                    </select>
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                
+                                <div>
+                                
+                                 <input type="text" name="PICKUP ADDRESS" id="PICKUP_ADDRESS" placeholder="PICKUP ADDRESS" required>
+                                </div>
+                         
+                             </li>
+                             <li>
+                                
+                                <div>
+                                
+                                 <input type="text" name="DROP ADDRESS" id="DROP_ADDRESS" placeholder="DROP ADDRESS" required>
+                                </div>
+                         
+                             </li>
+                             <li>
+                                <div>
+                                    
+                                 <input type="date" value="2023-01-23" name="START" id="START_DATE" min="2023-01-20" required>
+                                 
+                                </div>
+                                <span>Start Date</span>
+                         
+                             </li>
+                             
+                             
+                             <li>
+                                <input type="submit" name="SEARCH" id="SEARCH">
+                         
+                             </li>
+                        </ul>
+
+                    </div>
+                    <div id="withincity">
+                        <ul id="ulresponsive">
+                            <li>
+                               <div>
+                                <select name="ORIGIN CITY" id="origin_city" required>
+                                    <option selected="selected" value="0">ORIGIN CITY</option>
+                                    <option value="1" >Agra</option>
+                                    <option value="2">Ahmedabad</option>
+                                    <option value="3">Bengaluru</option>
+                                    <option value="4">Bhuvneshwar</option>
+                                    <option value="5">Chandigarh</option>
+                                    <option value="6">Chennai</option>
+                                    <option value="7">Delhi-NCR</option>
+                                    <option value="8">Gurugram</option>
+                                    <option value="9">Hyderabad</option>
+                                    <option value="10">Jaipur</option>
+                                    <option value="11">Kochi</option>
+                                    <option value="12">Kolkata</option>
+                                    <option value="13">Mumbai</option>
+                                    <option value="14">Noida</option>
+                                    <option value="15">Pune</option>
+                                    <option value="16">Udaipur</option>
+                                    <option value="17">Vadodara</option>
+                                </select>
+                               </div>
+                        
+                            </li>
+                            
+                            <li>
+
+                                <div>
+                                
+                                 <input type="text" name="PICK-UP ADDRESS" id="WITHINCITY_PICKUP_ADDRESS" placeholder="PICK-UP ADDRESS" required>
+                                </div>
+                         
+                             </li>
+                             <li>
+                                <div>
+                                 <input type="date" name="START DATE" id="WITHINCITY_START_DATE" value="2023-01-23" min="2023-01-20" required>
+                                </div>
+                                <span>Start Date</span>
+                         
+                             </li>
+                             <li>
+                                <div>
+                                    <input type="date" name="END DATE" id="WITHINCITY_END_DATE" value="2023-01-24" min="2023-01-20" max="2024-01-20" required>
+                                </div>
+                                <span>End Date</span>
+                         
+                             </li>
+                             
+                             <li>
+                                <input type="submit" name="SEARCH" id="SEARCH">
+                         
+                             </li>
+                        </ul>
+
+                    </div>
+                    <div id="outstation">
                         <ul id="ulresponsive">
                             <li>
                                <div>
@@ -208,8 +341,72 @@
                         
                             </li>
                             <li>
-                                
+
                                 <div>
+                                
+                                 <input type="text" name="DELIVERY ADDRESS" id="TO_CITY" placeholder="TO CITY">
+                                </div>
+                         
+                             </li>
+                            <li>
+
+                                <div>
+                                
+                                 <input type="text" name="DELIVERY ADDRESS" id="DELIVERY_ADDRESS" placeholder="DELIVERY ADDRESS">
+                                </div>
+                         
+                             </li>
+                             <li>
+                                <div>
+                                 <input type="text" name="START DATE" id="START_DATE" placeholder="START DATE" src="">
+                                </div>
+                         
+                             </li>
+                             <li>
+                                <div>
+                                    <input type="text" name="END DATE" id="END_DATE" placeholder="END DATE " >
+                                </div>
+                         
+                             </li>
+                             
+                             <li>
+                                <input type="submit" name="SEARCH" id="SEARCH">
+                         
+                             </li>
+                        </ul>
+
+                    </div>
+                    <div id="onewaytransfer">
+                        <ul id="ulresponsive">
+                            <li>
+                               <div>
+                                <select name="ORIGIN CITY" id="origin_city">
+                                    <option selected="selected" value="0">ORIGIN CITY</option>
+                                    <option value="1" >Agra</option>
+                                    <option value="2">Ahmedabad</option>
+                                    <option value="3">Bengaluru</option>
+                                    <option value="4">Bhuvneshwar</option>
+                                    <option value="5">Chandigarh</option>
+                                    <option value="6">Chennai</option>
+                                    <option value="7">Delhi-NCR</option>
+                                    <option value="8">Gurugram</option>
+                                    <option value="9">Hyderabad</option>
+                                    <option value="10">Jaipur</option>
+                                    <option value="11">Kochi</option>
+                                    <option value="12">Kolkata</option>
+                                    <option value="13">Mumbai</option>
+                                    <option value="14">Noida</option>
+                                    <option value="15">Pune</option>
+                                    <option value="16">Udaipur</option>
+                                    <option value="17">Vadodara</option>
+                                </select>
+                               </div>
+                        
+                            </li>
+                            <li>
+
+                                <div>
+                                
                                  <input type="text" name="DELIVERY ADDRESS" id="DELIVERY_ADDRESS" placeholder="DELIVERY ADDRESS">
                                 </div>
                          
@@ -235,7 +432,7 @@
 
                     </div>
                         
-                        <p>GHUMOCAR Self Drive Benefits: Free car delivery and collection | Unlimited Kilometres | Complimentary Wi-Fi*</p>
+                        <p>Avis Self Drive Benefits: Free car delivery and collection | Unlimited Kilometres | Complimentary Wi-Fi*</p>
 
                 </div>
                 
