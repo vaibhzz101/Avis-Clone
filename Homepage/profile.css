@@ -1,5 +1,6 @@
 
 body{
+    height: 100vh;
     font-family: sans-serif;
     margin: 0px;
     padding: 0px;
@@ -12,9 +13,10 @@ body{
    
      display: flex;
      justify-content: space-between;
-    
+    /* display:none; */
 
 }
+
 .nav_options>div{
     color:white;
    text-align: center;
@@ -78,20 +80,35 @@ text-decoration: none;
  }
 
  /* //profile */
+ .data{
+    /* border:1px solid red; */
+    width:120%;
+    font-size: 150%;
+    font-style: oblique;
+    padding:10px;
+    border-radius:20px;
+    background:linear-gradient(rgb(244, 92, 72),rgb(175, 200, 196));
+    padding-left:5%;
+    padding-right:5%;
+ }
  #firstname,#gender,#mobile,#email,#DOB{
-    color:rgb(118, 43, 8);
-    margin-left:5%;
+    font-size: 150%;
+    background:linear-gradient(rgb(233, 96, 77),rgb(230, 227, 230));
+    font-style: italic;
+    padding:10px;
+    padding-left:5%;
+    padding-right:5%;
+    border-radius:20px;
+    margin-left:3%;
     text-decoration: underline;
+    color:rgb(88, 7, 24)
  }
- #lastname{
-    color:rgb(118, 43, 8);
-    margin-left: 2%;
-    text-decoration: underline;
- }
+ 
+
 main>h1{
     color:rgb(89, 3, 25);
-    text-align: center;
-    font-style:italic;
+    margin-left:8%;
+    font-style:oblique;
    font-size: 2.5rem;
 }
  span{
@@ -104,6 +121,7 @@ main>h1{
     justify-content: space-around;
  }
  .first{
+    
    margin-left:2%;
    margin-top:2%;
     width:40%
@@ -132,15 +150,170 @@ main>h1{
     margin-bottom: 0.4rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+
 }
 
 .seq {
-    height: 14rem;
+    height: 12rem;
    
 }
 .rect{
-    height:11rem;
+    height:10rem;
 }
 
- 
+.nav_options2{
+    /* border:5px solid black; */
+    background-color: #CE2127;
+    display:flex;
+    flex-direction: column;
+    display:none;
+    height:10vh;
+    padding-top:20px;
+    
+   
+
+}
+.nav_options2>span{
+   /* border:1px solid white; */
+   font-size:50px;
+   color:white;
+
+}
+
+#burgerbtn{
+margin-left:10%
+    
+}
+#home{
+  
+margin-left:60%;
+} 
+
+.top{
+    background-color: #ce2127;
+    display: flex;
+    justify-content: space-between;
+    height:10vh;
+    align-items: center;
+    /* padding: 0px 20px; */
+}
+.close i{
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+#burgerMenu{
+   
+    width: 70%;
+    transition: 0.3s ease-in-out;
+    z-index: 2;
+    position: absolute;
+    background-color: #fff;
+}
+
+.brgrMenus{
+    display: flex;
+    color: rgb(50, 50, 50);
+    border-bottom: 1px solid rgb(202, 202, 202);
+    padding: 25px 25px;
+    font-size: 20px;
+    align-items: center;
+}
+.brgrMenus i{
+    font-size: 200%;
+}
+.brgrMenus:hover{
+    color: #ce2127;
+    margin-left: 5%;
+    transition: 0.5s;
+}
+.brgrMenus i{
+    width: 12%;
+}
+.brgrMenus h4{
+    font-weight: 100;
+    font-size: 23px;
+}
+
+
+@media screen and (min-width:641px)  and (max-width:1000px) {
+    .nav_options{
+        display:none;
+    }
+    .nav_options2{
+        display:block;
+    }
+    section{
+        display:flex;
+        justify-content: space-around;
+        flex-direction: column;
+     }
+     .second{
+        width:100%;
+     }
+     .first{
+        width:60%;
+       /* border:2px solid green; */
+       margin: auto;
+     }
+     main>h1{
+        margin-left:30%;
+     }
+     #burgerMenu{
+        width:100%
+     }
+
+}
+
+@media screen and (max-width:640px){
+    .nav_options{
+        display:none;
+    }
+    .nav_options2{
+        display:block;
+    }
+    #home{
+  
+        margin-left:40%;
+        }
+        section{
+            display:flex;
+            justify-content: space-around;
+            flex-direction: column;
+         }
+         .second{
+            width:100%;
+         }
+         .first{
+            width:100%;
+           /* border:2px solid green; */
+           margin: auto;
+         }
+         main>h1{
+            margin-left:20%;
+         }
+         /* .data{
+            display:none
+         } */
+         #burgerMenu{
+            width:100%
+         }
+         .brgrMenus h4{
+           margin-left: 10%;;
+        }
+}
+@media screen and (max-width:384px){
+ .data{
+            display:none
+         }
+         #burgerMenu{
+            width:100%
+         }
+         .brgrMenus h4{
+            margin-left: 40%;;
+         }
+}
+
+
 
