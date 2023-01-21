@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car | Bookings</title>
-    <link rel="stylesheet" href="./style/booksing.css">
-    <link rel="stylesheet" href="./Homepage/homepage.css">
+    <link rel="stylesheet" href="../css/booksing.css">
+    <link rel="stylesheet" href="../css/homepage.css">
     
     <script src="https://kit.fontawesome.com/1dcb2e4769.js" crossorigin="anonymous"></script>
 </head>
@@ -55,7 +55,7 @@
     <nav>
    
     <!-- sign up -->
-    <div class="popup" id="popup">
+    <!-- <div class="popup" id="popup">
         <div id="head">
             <div id="signUp_head">
                 <h1>SIGN UP</h1>
@@ -114,10 +114,10 @@
         </div>
 
 
-    </div>
+    </div> -->
 
   <!-- //login -->
-    <div class="log_popup" id="log_popup">
+    <!-- <div class="log_popup" id="log_popup">
         <div id="log_head">
             <div id="log_signIn_head">
                 <h1>LOG IN</h1>
@@ -158,11 +158,11 @@
             </button>
         </div>
 
-    </div>
+    </div> -->
 <!-- homepage starts -->
     <div class="header_login_signup maincolor">
         <div class="avis_logo">
-            <a href="./Homepage/homepage.html">GHOOMOCAR
+            <a href="./homechauff.html">GHOOMOCAR
                 <!-- <img id="logores" src="https://i.ibb.co/CtxTp8s/ghumocar-1.jpg" alt="ghumocar-1" border="0"> -->
             </a>
 
@@ -241,26 +241,26 @@
         <form action="">
             <div class="input-box">
                 <span>ORIGIN CITY</span>
-                <input type="search" name="" id="" placeholder="Search Places">
+                <input type="search" name="" id="origincity" placeholder="Search Places">
             </div>
 
             <div class="input-box">
                 <span>TO CITY</span>
-                <input type="search" name="" id="" placeholder="Search Places">
+                <input type="search" name="" id="tocity" placeholder="Search Places">
             </div>
 
             <div class="input-box">
                 <span>PICK-UP ADDRESS</span>
-                <input type="search" name="" id="" placeholder="Search Places">
+                <input type="search" name="" id="pickupadd" placeholder="Search Places">
             </div>
             
             <div class="input-box">
                 <span>START DATE</span>
-                <input type="date" name="" id="" >
+                <input type="date" name="" id="startdate" >
             </div>
             <div class="input-box">
                 <span>END DATE</span>
-                <input type="date" name="" id="">
+                <input type="date" name="" id="enddate">
             </div>
             <input type="submit" name="SEARCH" id="" class="btn">
         </form>
@@ -383,6 +383,10 @@
         name: "DZIRE / ETIOS / AMAZE OR SIMILAR",
         price:  11370,
         strikedoffprice: "2599",
+        transmission:"Manual",
+        doors:4,
+        seat:4,
+        luggage:2,
       },
       { id:2,
         image_url:
@@ -390,6 +394,10 @@
         name: "CITY OR SIMILAR",
         price: 14699,
         strikedoffprice: 999,
+        transmission:"Manual",
+        doors:4,
+        seat:4,
+        luggage:2,
       },
       { id:3,
         image_url:
@@ -397,62 +405,94 @@
         name: "COROLLA ALTIS OR SIMILAR",
         price: 20000,
         strikedoffprice: 2099,
+        transmission:"Manual",
+        doors:4,
+        seat:4,
+        luggage:2,
       },
       {
-         id:5,
+         id:4,
         image_url:
           "https://avis.co.in/upload/model/12786Crystasimilar_nav.png",
         name: "INNOVA CRYSTA",
-        price: 20000,
+        price: 24000,
         strikedoffprice: 799,
+        transmission:"Manual",
+        doors:4,
+        seat:4,
+        luggage:2,
       },
-      { id:6,
+      { id:5,
         image_url:
           "https://avis.co.in/upload/model/1014camry1.png",
           name: "CAMRY / ACCORD OR SIMILAR",
         price: 26240,
         strikedoffprice: 3599,
+        transmission:"Manual",
+        doors:4,
+        seat:4,
+        luggage:2,
       },
       {
-         id:7,
+         id:6,
         image_url:
           "https://avis.co.in/upload/model/10151022BMW5series.png",
         name: "BMW 5 SERIES OR SIMILAR",
         price: 51200,
         strikedoffprice: 3199,
+        transmission:"Manual",
+        doors:4,
+        seat:4,
+        luggage:2,
       },
-      { id:8,
+      { id:7,
         image_url:
           "https://avis.co.in/upload/model/MERCEDES-E-CLASS10878400-40e3-48fd-8c78-2eef8c9f0d05%20(2).png",
         name: "MERCEDES E CLASS OR SIMILAR",
         price: 63200,
         strikedoffprice: 3199,
+        transmission:"Automatic",
+        doors:2,
+        seat:2,
+        luggage:0,
       },
       {
-         id:9,
+         id:8,
         image_url:
           "https://avis.co.in/upload/model/2010Merc-Benz---S---350-New-Shape.png",
         name: "MERCEDES- S 350",
         price: 174080,
         strikedoffprice: 1099,
+        transmission:"Automatic",
+        doors:2,
+        seat:2,
+        luggage:0,
       },
      
       {
-         id:11,
+         id:9,
         image_url:
           "https://avis.co.in/upload/model/2018Merc-Benz-S-500.png",
         name: "MERCEDES-S 500",
         price: 291680,
         strikedoffprice: 1440,
+        transmission:"Automatic",
+        doors:2,
+        seat:2,
+        luggage:0,
       },
 
       {
-         id:12,
+         id:10,
         image_url:
           "https://avis.co.in/upload/model/2017Merc-Benz-S-500-Maybach.png",
         name: "MAYBACH-S 500",
         price: 354560,
         strikedoffprice: 1440,
+        transmission:"Automatic",
+        doors:2,
+        seat:2,
+        luggage:0,
       },
       
       
@@ -489,10 +529,12 @@ function displayData(storedCar){
         // a.setAttribute("href","#")
 
     bookbtn.addEventListener("click", function(){
-        let book=JSON.parse(localStorage.getItem("bookings"))||[];
-        book.push(element)
-        localStorage.setItem("bookings", JSON.stringify(book))
-        window.location.href="./avis/wallet.html";
+        // let book=JSON.parse(localStorage.getItem("book"));
+        // book.push(element);
+        
+        localStorage.setItem("book", JSON.stringify(element));
+        
+        window.location.href="checkout.html";
     })
     card.append(img,brand,prize,bookbtn)
    container.append(card)        
@@ -529,169 +571,6 @@ displayData(storedCar)
 
 
 
-// log in
-
-let log_myform = document.getElementById("log_form")
-
-let log_email_error = document.getElementById("log_email_error")
-
-let log_password_error = document.getElementById("log_password_error")
-
-
-log_myform.addEventListener("submit", (e) => {
-    e.preventDefault();
-    var userData = {
-
-        email: log_myform.log_email.value,
-        password: log_myform.log_password.value,
-    }
-
-    //    validation of form
-
-    if (userData.email !== "" && userData.password.length !== 0) {
-        log_email_error.innerHTML = null; log_password_error.innerHTML = null;
-        login_User(userData)
-    } else {
-        userData.email == "" ? log_email_error.innerHTML = "*Enter Email!"
-            : log_email_error.innerHTML = null;
-
-        userData.password.length == 0 ? log_password_error.innerHTML = "*Enter Password!"
-            : log_password_error.innerHTML = null;
-    }
-
-
-})
-
-
-function login_User(obj) {
-    fetch("https://63c67422dcdc478e15c1bf8d.mockapi.io/users")
-        .then(responseObject => responseObject.json())
-        .then((data) => {
-            //   console.log(data)
-            let flag = false;
-            var element = "";
-            data.forEach((item) => {
-                if (item.email == obj.email && item.password == obj.password) {
-                    element = item;
-                    flag = true;
-
-                }
-            })
-            if (flag == true) {
-                 localStorage.setItem("loginUser",JSON.stringify(element))
-                alert(`Congratulation ${element.firstname} ${element.lastname}, Explore your dream journey with GhumOCaR`)
-                log_closePopup()
-                login_name.innerHTML=`Welcome, ${element.firstname} ${element.lastname}`;
-
-            } else {
-                log_password_error.innerHTML = "Username and password may be incorrect!"
-            }
-        })
-
-}
-
-
-let log_popup = document.getElementById("log_popup");
-
-function log_openPopup() {
-    log_popup.classList.add("log_open-popup");
-}
-function log_closePopup() {
-    log_popup.classList.remove("log_open-popup");
-}
-
-//sign up 
-
-
-let myform = document.getElementById("form")
-// let cpassword = document.getElementById("cpassword")
-
-let first_name_error = document.getElementById("first_error")
-let last_name_error = document.getElementById("last_error")
-let mobile_error = document.getElementById("mobile_error")
-let email_error = document.getElementById("email_error")
-let date_error = document.getElementById("date_error")
-let password_error = document.getElementById("password_error")
-let cpassword_error = document.getElementById("cpassword_error")
-let gender_error = document.getElementById("gender_error")
-
-myform.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    var userData = {
-        firstname: myform.firstname.value,
-        lastname: myform.lastname.value,
-        email: myform.email.value,
-        mobile: myform.mobile.value,
-        DOB: myform.birthdate.value,
-        gender: myform.gender.value,
-        password: myform.password.value,
-
-    }
-
-    //    validation of form
-    if (userData.firstname !== "" && userData.lastname !== "" && userData.email !== "" && userData.email !== "" && userData.mobile.length == 10 && userData.DOB !== "" && userData.gender !== "" && userData.password.length >= 6 && myform.cpassword.value == userData.password) {
-        first_name_error.innerHTML = null; date_error.innerHTML = null; gender_error.innerHTML = null;
-        last_name_error.innerHTML = null; password_error.innerHTML = null; cpassword_error.innerHTML = null;
-        email_error.innerHTML = null; mobile_error.innerHTML = null;
-
-        alert(`Hey ${userData.firstname} ${userData.lastname}! You Signed Up Successfully.`)
-        SignUp_user(userData)
-
-    } else {
-        userData.firstname == "" ? first_name_error.innerHTML = "*Enter First Name!"
-            : first_name_error.innerHTML = null;
-
-        userData.lastname == "" ? last_name_error.innerHTML = "*Enter Last Name!"
-            : last_name_error.innerHTML = null;
-
-        userData.email == "" ? email_error.innerHTML = "*Enter Email!"
-            : email_error.innerHTML = null;
-
-        userData.mobile.length == 0 ? mobile_error.innerHTML = "*Enter Mobile Number!"
-            : userData.mobile.length != 10 ? mobile_error.innerHTML = "*Mobile Number should be 10 digit."
-                : mobile_error.innerHTML = null;
-
-        userData.DOB == "" ? date_error.innerHTML = "*Enter Date of Birth!"
-            : date_error.innerHTML = null;
-        userData.gender == "" ? gender_error.innerHTML = "*Fill the gender" : gender_error.innerHTML = null;
-
-        userData.password.length == 0 ? password_error.innerHTML = "*Enter Password!"
-            : userData.password.length < 6 ? password_error.innerHTML = "*Password length should be greater than or equal to 6."
-                : password_error.innerHTML = null;
-
-        cpassword.value !== userData.password ? cpassword_error.innerHTML = "*Password & confirm password must be equal!"
-            : cpassword_error.innerHTML = null;
-    }
-
-
-})
-
-
-function SignUp_user(obj) {
-    fetch("https://63c67422dcdc478e15c1bf8d.mockapi.io/users", {
-        method: "POST",
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(obj)
-    }
-    )
-        .then(responseObject => responseObject.json())
-        .then((data) => {
-            console.log(data)
-            // location.href = "./home.html"
-        })
-}
-
-
-
-let popup = document.getElementById("popup");
-
-function openPopup() {
-  popup.classList.add("open-popup");
-}
-function closePopup() {
-  popup.classList.remove("open-popup");
-}
 
 
 //homepage
@@ -703,6 +582,24 @@ if(data!=null){
     login_name.innerHTML=`Welcome, ${data.firstname} ${data.lastname}`;
 }
 
+
+
+//get from local storage
+let lsdata=JSON.parse(localStorage.getItem("rentalcarquery"))||{};
+
+let origincity=document.getElementById("origincity");
+let tocity=document.getElementById("tocity");
+let pickupadd=document.getElementById("pickupadd");
+let startdate=document.getElementById("startdate");
+let enddate=document.getElementById("enddate");
+
+origincity.value=lsdata.origincity;
+tocity.value=lsdata.tocity;
+pickupadd.value=lsdata.pickupadd;
+startdate.value=lsdata.startdate;
+enddate.value=lsdata.end_date;
+
+console.log(lsdata.origincity)
 
 
 

@@ -259,8 +259,13 @@ border: 0px
     height: 40px;
     padding: 5px 20px 5px 5px;
 }
-#airport{
-    display: block;
+#actual_search ul li:nth-last-child(1) input{
+    background-color: #CE2127;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    text-align: center;
+    
 }
 #actual_search span{
     font-size: 12px;
@@ -268,6 +273,9 @@ border: 0px
     text-align: center;
     /* color: #FFFFFF; */
     padding: 5px;
+}
+#airportSEARCH{
+    margin-top: 5px;
 }
 #withincity{
     display: none;
