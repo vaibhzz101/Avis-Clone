@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="../css/profile.css">
 </head>
 
 <body>
@@ -72,7 +72,7 @@
 
         <div class="nav_options">
          <div class="avis_logo">
-              <a href="./homepage.html"><h1>GHUMOCAR</h1></a>
+              <a href="homechauff.html"><h1>GHUMOCAR</h1></a>
             </div>
             <div><a href="#">TRAVEL BLOG</a></div>
             <div><a href="#">BLOGGERS</a></div>
@@ -203,7 +203,7 @@
     logout.addEventListener("click", () => {
 
         localStorage.removeItem("loginUser");
-        location.href = "./profile.html"
+        window.location.href = "./homechauff.html"
         console.log(data)
         console.log("OK")
     })

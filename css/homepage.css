@@ -96,6 +96,9 @@
 .LOGIN_SIGNUP{
     background-color: #a40c12;
 }
+#pro{
+    font-size: 1.8rem;
+}
 #contacts a{
     display: block;
 }

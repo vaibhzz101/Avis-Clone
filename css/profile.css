@@ -5,7 +5,8 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background:linear-gradient(90deg,rgb(245, 123, 123),rgb(174, 54, 54),red)
+    background:linear-gradient(rgb(236, 157, 157),rgb(219, 199, 199))
+    
 }
 .nav_options{
     background-color: #CE2127;
@@ -35,8 +36,8 @@ text-decoration: none;
 .nav_options>.avis_logo{
  width:50%;
  color: whitesmoke;
- 
 }
+
 
 /* // last popup */
 #last{
