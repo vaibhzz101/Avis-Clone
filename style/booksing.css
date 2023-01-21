@@ -17,6 +17,29 @@
     /* padding: 0 0 0 25px;
     line-height: 70px; */
 }
+.avis_logo{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 20%;
+    color: white;
+    text-decoration: none;
+
+}
+.avis_logo a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold
+    ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+#logores{
+    width: 60px;
+    height: 100%;
+    border-radius: 50%;
+    
+}
 
 #menuid{
     display: flex;
@@ -299,4 +322,487 @@ button:hover{
     color: #ce2127;
     background: transparent;
     cursor: pointer;
+}
+/* signup */
+#cross-cont{
+    width:10%;
+    display: flex;
+    justify-content: right;
+  
+  }
+  
+  #cross {
+      font-size: 40px;
+      color: rgb(41, 39, 39);
+      cursor: pointer;
+  }
+  
+  .popup{
+      border-radius:20px;
+      width: 40%;
+      /* background: linear-gradient(90deg,#36879b,#6698d1,rgb(70, 159, 159)); */
+      background-color: rgba(255, 255, 255, 0.982);
+      padding-bottom: 2%;
+      position: absolute;
+      top: 0%;
+      /* top:50%; */
+      left: 50%;
+      transform: translate(-50%, -50%)scale(0.1); 
+    /*  for popop  I will uncomment this and comment next line*/
+     /* transform:translate(-50%,-30%) scale(1); */
+      visibility: hidden;
+      transition: transform 0.4s,top 0.4s;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+  }
+  
+  .open-popup {
+      visibility: visible;
+      top:50%;
+      transform:translate(-50%,-30%) scale(1);
+      
+  }
+  
+  #signUp_head {
+      /* border: 1px solid blue; */
+      text-align: center;
+      color: #dd4a39;
+      width:90%;
+  
+  
+  }
+  #signUp_head>h1 {
+      margin-top: 5%;
+     margin-bottom: 5%;
+  }
+  
+  #signUp_head>h3 {
+      display: inline;
+      color: black;
+      
+  }
+  
+  #signUp_head>a {
+      text-decoration: none;
+      color: red;
+      cursor: pointer;
+  }
+  
+  
+  
+  #form {
+      /* border:2px dashed red; */
+      width: 85%;
+      margin: auto;
+  
+  }
+  
+   #form input {
+      /* height: 2.5rem;
+      width: 100%;
+      margin-top: 8%;
+      border: none;
+      background-color: #e1dfdf;
+      display: block */
+      padding-left:10px;
+      font-size: 100%;
+      height: 2.7rem;
+      width: 100%;
+      margin-top: 8%;
+      border: none;
+      background-color: #e1dfdf;
+      display: block;
+      border-radius:10px;
+  }
+  
+  #form #gender {
+  
+      height: 1rem;
+      width: 10%;
+      display: inline;
+  
+  }
+  
+  #form #signup_but {
+      border: 1px solid red;
+      color: red;
+      font-weight: 600;
+      background: none;
+  }
+  
+  #Fb_Gog_but {
+      /* border:1px solid green; */
+      width: 85%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  #or {
+      margin-top: 5%;
+      margin-bottom: 5%;
+      text-align: center;
+      color: rgb(69, 66, 66);
+  }
+  
+  #facebook {
+      background-color: #3b5a95;
+      display: flex;
+      justify-content: space-around;
+      width: 48%;
+      color: white;
+      border: none;
+      font-size: 80%;
+      padding:3%;
+  
+  }
+  
+  #google {
+      background-color: #dd4a39;
+      display: flex;
+      justify-content: space-around;
+      width: 48%;
+      color: white;
+      border: none;
+      font-size: 80%;
+      padding:3%;
+  }
+  
+  /* .anchor {
+      margin-top: 6%;
+  } */
+  
+  .anchor>a {
+      text-decoration: none;
+      font-weight: 500;
+      color: white
+  }
+  
+  span {
+      color: red;
+  }
+  
+  #clickme {
+      display: block;
+      color: red;
+      font-size: 30px;
+      position: absolute;
+      top: 10px;
+  }
+   /* for medium screen */
+  @media screen and (min-width:641px) and (max-width:1007px) {
+      .popup{
+          width: 90%;
+          margin-top: 10%;
+      }
+      #Fb_Gog_but{
+          display:block;
+      }
+      #facebook{
+          font-size: 1.5rem;
+          width:100%;
+         margin:auto;
+         margin-top: 10%;
+     
+      }
+      #google{
+          font-size: 1.5rem;
+          width:100%;
+          margin:auto;
+      }
+      #signUp_head{
+          width:92%;
+  
+      }
+      #signUp_head>h3 {
+      display: block;
+    
+  }
+  /* .anchor {
+      margin-top: 2%;
+  } */
+  }
+   /* for small screen */
+  @media screen and (max-width:640px) {
+      .popup{
+          width: 90%;
+      }
+      #Fb_Gog_but{
+          display:block;
+      }
+      #facebook{
+          width:90%;
+         margin:auto;
+         margin-top: 10%;
+     
+      }
+      #google{
+          width:90%;
+          margin:auto;
+      }
+      #signUp_head{
+          width:85%;
+      }
+      #signUp_head>h3 {
+      display: block;
+    
+  }
+  .anchor {
+      margin-top: 5%;
+  }
+  }
+  /* login */
+  
+#log_head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12%;
+}
+#log_cross-cont{
+    /* border:1px solid red; */
+  width:10%;
+  display: flex;
+  justify-content: right;
+
+}
+
+#log_cross {
+    font-size: 40px;
+    color: rgb(41, 39, 39);
+    cursor: pointer;
+}
+
+.log_popup {
+    border-radius:20px;
+    width: 40%;
+    /* background: linear-gradient(90deg, #89c8d8, #9ca0a5, rgb(101, 225, 225)); */
+    background-color: rgba(255, 255, 255, 0.982);
+    padding-bottom: 3%;
+    position: absolute;
+    top: 0;
+    /* top: 35%; */
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0.1);  
+   /*  for popop  I will uncomment this and comment next line*/
+    /* transform: translate(-50%, -30%) scale(1); */
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+
+.log_open-popup {
+    visibility: visible;
+    top: 35%;
+    transform: translate(-50%, -30%) scale(1);
+
+}
+
+
+#log_signIn_head {
+
+    width:90%;
+    /* border: 1px solid blue; */
+    text-align: center;
+    color: #dd4a39;
+   
+  
+
+
+}
+#log_signIn_head>h1 {
+    margin-top: 5%;
+   margin-bottom: 5%;
+}
+
+#log_signIn_head>h3 {
+    display: inline;
+    color: black; 
+}
+
+#log_signIn_head>a {
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+    
+}
+
+
+
+#log_form {
+    /* border:2px dashed red; */
+    width: 85%;
+    margin: auto;
+    margin-top:-5%;
+
+}
+
+ #log_form input {
+    padding-left:10px;
+    font-size: 100%;
+    height: 2.7rem;
+    width: 100%;
+    margin-top: 8%;
+    border: none;
+    background-color: #e1dfdf;
+    display: block;
+    border-radius:10px;
+}
+
+#log_form #gender {
+
+    height: 1rem;
+    width: 10%;
+    display: inline;
+
+}
+
+ #log_form #log_Login_but {
+    border: 1px solid red;
+    color: red;
+    font-weight: 600;
+    
+    
+}
+
+#log_Fb_Gog_but {
+    /* border:1px solid green; */
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#log_google {
+    background-color: #dd4a39;
+    display: flex;
+    justify-content: space-around;
+    width: 48%;
+    color: white;
+    border: none;
+    font-size: 80%;
+    padding:3%;
+}
+
+#log_facebook {
+    background-color: #3b5a95;
+    display: flex;
+    justify-content: space-around;
+    width: 48%;
+    color: white;
+    border: none;
+    font-size: 80%;
+    padding:3%;
+
+}
+
+
+
+#log_or {
+    margin-top: 5%;
+  margin-bottom: 5%;
+    text-align: center;
+    color: rgb(69, 66, 66);
+}
+
+
+/* .log_anchor {
+    margin-top: 0%;
+} */
+
+.log_anchor>a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white
+}
+
+span {
+    color: red;
+}
+
+#log_clickme {
+    display: block;
+    color: red;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+}
+#log_head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12%;
+}
+ /* for medium screen */
+@media screen and (min-width:641px) and (max-width:1007px) {
+    .log_popup {
+        width: 90%;
+        margin-top: 10%;
+    }
+
+    #log_Fb_Gog_but {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #log_facebook {
+        width: 48%;
+        margin: auto;
+      
+
+    }
+
+    #log_google {
+        width: 48%;
+        margin: auto;
+        
+
+    }
+
+    #log_signIp_head {
+        width: 92%;
+
+    }
+
+    #log_signIp_head>h3 {
+        display: block;
+
+    }
+
+    /* .log_anchor {
+        margin-top: 2%;
+    } */
+}
+ /* for small screen */
+@media screen and (max-width:640px) {
+    .log_popup {
+        width: 90%;
+    }
+
+    #log_Fb_Gog_but {
+        display: block;
+    }
+
+    #log_facebook {
+        width: 90%;
+        margin: auto;
+        margin-top: 10%;
+
+    }
+
+    #log_google {
+        width: 90%;
+        margin: auto;
+    }
+
+    #log_signIp_head {
+        width: 85%;
+    }
+
+    #log_signIp_head>h3 {
+        display: block;
+
+    }
+
+    /* .log_anchor {
+        margin-top: 5%;
+    } */
 }
