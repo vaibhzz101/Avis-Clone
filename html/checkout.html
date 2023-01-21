@@ -1,35 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GhumoCar | Checkout</title>
-    <link rel="stylesheet" href="checkout.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./Css-1/checkout.css" />
+  </head>
+
+  <body>
     <div class="home-car-info">
-       <i onclick="window.location.href='index.html'">HOME</i>
-       <i>/</i>
-       <i>Car Information</i>
+      <i onclick="window.location.href='index.html'">HOME</i>
+      <i>/</i>
+      <i>Car Information</i>
     </div>
     <div class="checkout-top">
-       <div>
-         <p>CAR INFORMATION</p>
-         <div>
+      <div class="car-information">
+        <p>CAR INFORMATION</p>
+        <div class="car-information-image">
+          <div>
+            <p id="rental-car-name"></p>
+            <img id="rental-car-image" alt="" />
+            <p>Basic Rental : <span id="rental-car-price"></span></p>
+            <div id="selected-car1">SELECTED</div>
+          </div>
+          <div>
+            <div>
+              <img src="https://www.avis.co.in/images/transmisson.png" alt="" />
+              <p>Transmission</p>
+              <p id="rental-car-transmission"></p>
+            </div>
+            <div>
+              <img src="https://www.avis.co.in/images/door.png" alt="" />
+              <p>Doors</p>
+              <p id="rental-car-doors"></p>
+            </div>
+            <div>
+              <img src="https://www.avis.co.in/images/seat.png" alt="" />
+              <p>Seating Capacity</p>
+              <p id="rental-car-seat"></p>
+            </div>
+            <div>
+              <img src="https://www.avis.co.in/images/suitcase.png" alt="" />
+              <p>Luggage</p>
+              <p id="rental-car-luggage"></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-         </div>
-       </div>
-       <div>
-         <p>CAR UPGRADE AVAILABLE</p>
-         <div></div>
-       </div>
+      <!-- ..................upgrade car complete div starts from here ............... -->
+
+      <div class="car-upgrad">
+        <p>CAR UPGRADE AVAILABLE</p>
+        <div class="car-upgrad-image">
+          <div>
+            <p id="upgrad-car-name"></p>
+            <img id="upgrad-car-image" alt="" />
+            <p>
+              Basic Rental : <span id="upgrad-car-price1"></span>
+              <span id="upgrad-car-price"></span>
+            </p>
+            <div id="upgrad-car">UPGRADE</div>
+          </div>
+          <div>
+            <div>
+              <img src="https://www.avis.co.in/images/transmisson.png" alt="" />
+              <p>Transmission</p>
+              <p id="upgrad-car-transmission"></p>
+            </div>
+            <div>
+              <img src="https://www.avis.co.in/images/door.png" alt="" />
+              <p>Doors</p>
+              <p id="upgrad-car-doors"></p>
+            </div>
+            <div>
+              <img src="https://www.avis.co.in/images/seat.png" alt="" />
+              <p>Seating Capacity</p>
+              <p id="upgrad-car-seat"></p>
+            </div>
+            <div>
+              <img src="https://www.avis.co.in/images/suitcase.png" alt="" />
+              <p>Luggage</p>
+              <p id="upgrad-car-luggage"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-</body>
+    <!-------- discount --------->
+
+    <div class="discount">
+      <h2>DISCOUNTS</h2>
+      <div>
+        <div>
+          <input type="checkbox" id="checkbox" />
+          <lable for="checkbox"
+            >Promo Code/Discount Coupon/Voucher Coupon</lable
+          >
+        </div>
+        <div class="discount-input">
+          <input
+            id="discount"
+            value=""
+            type="text"
+            placeholder="Enter Promo Code"
+          />
+          <button onclick="discountFn()">Apply</button>
+        </div>
+      </div>
+    </div>
+
+    <!-------------- new booking detail ----------------->
+
+    <div class="new-booking-detail">
+      <p>NEW BOOKING DETAILS</p>
+      <div class="booking-detail">
+        <div>
+          <img id="booked-car-image" alt="" />
+          <p id="booked-car-name"></p>
+        </div>
+        <div class="start-end">
+          <div>
+            <h3>START</h3>
+            <h3>END</h3>
+          </div>
+          <div>
+            <p>
+              <span id="start-date">Start Date</span>
+              <br />
+              <span id="start-time">Start Time</span>
+            </p>
+            <p>
+              <span id="end-date">End Date</span>
+              <br />
+              <span id="end-time">End Time</span>
+            </p>
+          </div>
+        </div>
+        <div class="order-sumary">
+          <div>
+            <p>Basic Rental</p>
+            <p id="final-rental-price">456</p>
+          </div>
+          <hr />
+          <div>
+            <p>GST<span>(12%)</span></p>
+            <p id="gst-price"></p>
+          </div>
+          <hr />
+          <div>
+            <p>Discount</p>
+            <p id="discount-price">₹0</p>
+          </div>
+          <hr />
+          <div>
+            <p>Total</p>
+            <p id="final-booking-price"></p>
+          </div>
+          <hr />
+          <button id="confirm-booking-btn">CONFIRM BOOKING</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
 <script src="checkout.js"></script>
 <script>
-    let car = JSON.parse(localStorage.getItem("car-array"));
-    console.log(car)
+  let bookedCar = JSON.parse(localStorage.getItem("booking"));
+  let uCar = JSON.parse(localStorage.getItem("car-array"));
+  let randomImage = Math.floor(Math.random() * uCar.length);
+  let upgradeCar = uCar[randomImage];
+  console.log(upgradeCar);
+  console.log(bookedCar);
+
+  let rentCarImage = document.getElementById("rental-car-image");
+  rentCarImage.setAttribute("src", bookedCar.image_url);
+
+  let rentCarName = document.getElementById("rental-car-name");
+  rentCarName.innerText = bookedCar.name;
+
+  let rentCarPrice = document.getElementById("rental-car-price");
+  rentCarPrice.innerText = `₹ ${bookedCar.price}`;
+
+  let rentCarTrans = document.getElementById("rental-car-transmission");
+  rentCarTrans.innerText = `${bookedCar.transmission}`;
+
+  let rentCarDoor = document.getElementById("rental-car-doors");
+  rentCarDoor.innerText = bookedCar.doors;
+
+  let rentCarSeat = document.getElementById("rental-car-seat");
+  rentCarSeat.innerText = bookedCar.seat;
+
+  let rentCarLugg = document.getElementById("rental-car-luggage");
+  rentCarLugg.innerText = bookedCar.luggage;
+
+  //  ........car upgrade part dom starts from here .............
+
+  let upgradCarImage = document.getElementById("upgrad-car-image");
+  upgradCarImage.setAttribute("src", upgradeCar.image_url);
+
+  let upgradCarName = document.getElementById("upgrad-car-name");
+  upgradCarName.innerText = upgradeCar.name;
+
+  let upgradCarPrice = document.getElementById("upgrad-car-price");
+  upgradCarPrice.innerText = `₹ ${upgradeCar.price}`;
+
+  let upgradCarTrans = document.getElementById("upgrad-car-transmission");
+  upgradCarTrans.innerText = `${upgradeCar.transmission}`;
+
+  let upgradCarDoor = document.getElementById("upgrad-car-doors");
+  upgradCarDoor.innerText = upgradeCar.doors;
+
+  let upgradCarSeat = document.getElementById("upgrad-car-seat");
+  upgradCarSeat.innerText = upgradeCar.seat;
+
+  let upgradCarLugg = document.getElementById("upgrad-car-luggage");
+  upgradCarLugg.innerText = upgradeCar.luggage;
+
+  let disPrice = bookedCar.price;
+  let upgradCar = document.querySelector("#upgrad-car");
+  let selectedCar = document.querySelector("#selected-car1");
+  upgradCar.addEventListener("click", function () {
+    upgradCar.style.backgroundColor = "red";
+    upgradCar.innerText = "SELECTED";
+    selectedCar.innerText = "UPGRADE";
+    document.querySelector(".car-upgrad-image").style.border = "3px solid red";
+    document.querySelector(".car-information-image").style.border = "none";
+    selectedCar.style.backgroundColor = "rgb(64, 64, 64)";
+    document.getElementById("booked-car-name").innerText =
+      upgradCarName.innerText;
+    document
+      .getElementById("booked-car-image")
+      .setAttribute("src", upgradeCar.image_url);
+    document.getElementById(
+      "final-rental-price"
+    ).innerText = `₹ ${upgradeCar.price}`;
+    disPrice = upgradeCar.price;
+    document.getElementById("gst-price").innerText = `+ ₹${gstCalculator(
+      upgradeCar.price
+    )}`;
+
+    if (temp) {
+      document.getElementById("discount-price").innerText = `- ₹${discountCal(
+        disPrice
+      )}`;
+    } else {
+      document.getElementById("discount-price").innerText = `- ₹0`;
+    }
+    document.getElementById("final-booking-price").innerText = `₹ ${
+      upgradeCar.price + gstCalculator(upgradeCar.price) - discountCal(disPrice)
+    }`;
+  });
+
+  selectedCar.addEventListener("click", function () {
+    selectedCar.style.backgroundColor = "red";
+    document.querySelector(".car-information-image").style.border =
+      "3px solid red";
+    document.querySelector(".car-upgrad-image").style.border = "none";
+    upgradCar.style.backgroundColor = "rgb(64, 64, 64)";
+    upgradCar.innerText = "UPGRADE";
+    selectedCar.innerText = "SELECTED";
+    document.getElementById("booked-car-name").innerText =
+      rentCarName.innerText;
+    document
+      .getElementById("booked-car-image")
+      .setAttribute("src", bookedCar.image_url);
+    document.getElementById(
+      "final-rental-price"
+    ).innerText = `₹ ${bookedCar.price}`;
+    disPrice = bookedCar.price;
+    document.getElementById("gst-price").innerText = ` + ₹${gstCalculator(
+      bookedCar.price
+    )}`;
+    if (temp) {
+      document.getElementById("discount-price").innerText = `- ₹${discountCal(
+        disPrice
+      )}`;
+    } else {
+      document.getElementById("discount-price").innerText = `- ₹0`;
+    }
+    document.getElementById("final-booking-price").innerText = `₹ ${
+      bookedCar.price + gstCalculator(bookedCar.price - discountCal(disPrice))
+    }`;
+  });
+
+  // appendeing data to new booking details
+  document.getElementById("booked-car-name").innerText = bookedCar.name;
+  document
+    .getElementById("booked-car-image")
+    .setAttribute("src", bookedCar.image_url);
+  document.getElementById(
+    "final-rental-price"
+  ).innerText = `₹ ${bookedCar.price}`;
+  document.getElementById("gst-price").innerText = `+  ₹${gstCalculator(
+    bookedCar.price
+  )}`;
+  document.getElementById("final-booking-price").innerText = `₹ ${
+    bookedCar.price + gstCalculator(bookedCar.price)
+  }`;
+
+  function gstCalculator(x) {
+    return Math.ceil(x * 0.12);
+  }
+
+  function discountCal(x) {
+    return Math.floor(x * 0.2);
+  }
+  let temp = false;
+
+  function discountFn() {
+    let discount = document.getElementById("discount").value;
+    if (discount == "masai20") {
+      alert(
+        `CongraTulation ! You Got A Discount of ₹ ${discountCal(disPrice)}`
+      );
+      document.getElementById("discount-price").innerText = `- ₹ ${discountCal(
+        disPrice
+      )}`;
+      document.getElementById("final-booking-price").innerText = `₹ ${
+        bookedCar.price +
+        gstCalculator(bookedCar.price) -
+        discountCal(bookedCar.price)
+      }`;
+      temp = true;
+    } else {
+      alert("Envalid Promocode");
+    }
+    document.getElementById("discount").value = "";
+  }
+
+  document
+    .getElementById("confirm-booking-btn")
+    .addEventListener("click", function () {
+      let finalBookedPrice = document.getElementById(
+        "final-booking-price"
+      ).innerText;
+      localStorage.setItem("purchace", JSON.stringify(finalBookedPrice));
+    });
 </script>
