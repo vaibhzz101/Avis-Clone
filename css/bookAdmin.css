@@ -1,0 +1,23 @@
+section{
+    display: flex;
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
+}
+table{
+    width: 100%;
+    /* margin-left: 40px; */
+}
+th{
+    font-size: 22px;
+    padding: 10px 4px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+.CD{
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    color:crimson;
+    letter-spacing: 1px;
+}

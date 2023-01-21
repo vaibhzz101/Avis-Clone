@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/userAdmin.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="burgerMenu">
+        <aside>
+            <div class="top">
+                <div class="">
+                    <img src="" alt="">
+                </div>
+                <div class="close" id="clBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div>
+                <a class="brgrMenus" href="admin.html">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Dashboard</h4>
+                </a>
+                <a class="brgrMenus" href="carAdmin.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <h4>Cars</h4>
+                </a>
+                <a class="brgrMenus" href="bookAdmin.html">
+                    <i class="fa-solid fa-percent"></i>
+                    <h4>Bookings</h4>
+                </a>
+                <a class="brgrMenus" href="userAdmin.html">
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h4>Users</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-blog"></i>
+                    <h4>Sales</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h4>Offers</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>Support</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    <h4>Emergency No.</h4>
+                </a>
+            </div>
+        </aside>
+    </div>
+    <div class="navDiv">
+        <nav>
+            <div id="adminNav">
+                <div id="burgerBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <!-- BURGER END -->
+                <div id="searchBar">
+                    <input type="text">
+                    <button id="searchBtn">Search</button>
+                </div>
+                <button id="logoutBtn">Log Out</button>
+            </div>
+        </nav>
+    </div>
+    <div class="flex">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Gender</th>
+                    <th>Date Of Birth</th>
+                </tr>
+            </thead>
+            <tbody id="allUserTable">
+
+            </tbody>
+        </table>
+        <div class="frm">
+            <form id="carForm" action="">
+                <h1>Add New User</h1>
+                <div><label>ID : </label><input id="userID" type="number" name="id" required></div>
+                <div><label>First Name : </label><input id="carImg" type="url" name="fName" required></div>
+                <div><label>Last Name : </label><input id="carCompany" type="text" name="lName"></div>
+                <div><label>Email : </label><input id="carYr" type="number" name="email" required></div>
+                <div><label>Mobile : </label><input id="carModel" type="text" name="mobile"></div>
+                <div><label>DOB : </label><input id="carName" type="text" name="dob"></div>
+                <div><label>Gender : </label><input id="carRate" type="number" name="gender"></div>
+                <input class="submit" type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../script/userAdmin.js"></script>
+</html>
