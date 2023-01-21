@@ -1,17 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="./profile.css">
 </head>
+
 <body>
+
     <div class="header_login_signup maincolor">
-       
+        <div id="burgerMenu">
+            <aside>
+                <div class="top">
+                    <div class="">
+                        <img src="" alt="">
+                    </div>
+                    <div class="close" id="clBtn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div id="side">
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <h4>Home</h4>
+                    </a>
+                    <a class="brgrMenus"  href="#">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <h4>Sign In / Sign Up</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-percent"></i>
+                        <h4>Offers</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h4>Preferred</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-blog"></i>
+                        <h4>Travel Blogs</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h4>Refer And Earn</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-headset"></i>
+                        <h4>Support</h4>
+                    </a>
+
+                </div>
+            </aside>
+        </div>
+
+        <div class="nav_options2">
+
+            <span id="burgerbtn" class="two">
+                <i class="fa-solid fa-bars"></i>
+            </span>
+        
+            <span id="home" class="two">
+                <i class="fa-solid fa-house"></i>
+            </span>
+
+        </div>
+
+
         <div class="nav_options">
-            <div class="avis_logo">
+         <div class="avis_logo">
               <a href="./homepage.html"><h1>GHUMOCAR</h1></a>
             </div>
             <div><a href="#">TRAVEL BLOG</a></div>
@@ -43,85 +103,112 @@
                         <a id="logout" href="#">LOGOUT</a>
                       </div>
                 </div>
-            </div>
-            
-            
-            
+            </div> 
+
         </div>
 
-        
         <main>
             <h1>MY PROFILE</h1>
         </main>
         <section>
             <div class="first">
                 <div>
-                    <span>FULL NAME:-</span><span id="firstname"></span><span id="lastname"></span><br>
+                    <span class ="data">Name:-</span><span id="firstname"></span><br>
 
                 </div>
                 <div>
-                    <span>GENDER:-</span><span id="gender"></span>
+                    <span class ="data" >Gender:-</span><span id="gender"></span>
                 </div>
                 <div>
-                    <span>EMAIL ID:-</span><span id="email"></span>
+                    <span class ="data" >Email id:-</span><span id="email"></span>
 
                 </div>
                 <div>
-                    <span>MOBILE:-</span ><span id="mobile"></span>
+                    <span class ="data" >Mobile:-</span><span id="mobile"></span>
 
                 </div>
                 <div>
-                    <span >DATE OF BIRTH:-</span><span id="DOB"></span>
+                    <span class ="data" >Date of birth:-</span><span id="DOB"></span>
 
                 </div>
-                
-                
+
+
             </div>
-    
+
             <div class="second">
-               
+
                 <div class="image-wrap">
-                    <div class="rect" style="background-image:url(https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2Fyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)"></div>
-                    <div class="rect" style="background-image:url(https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2Fyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)"></div>
-                    <div class="seq" style="background-image:url(https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)"></div>
+                    <div class="rect"
+                        style="background-image:url(https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2Fyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)">
+                    </div>
+                    <div class="rect"
+                        style="background-image:url(https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2Fyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)">
+                    </div>
+                    <div class="seq"
+                        style="background-image:url(https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)">
+                    </div>
                     <!-- <div class="rect" style="background-image:url(https://www.ikea.com/in/en/profile/558de95264a0f9501533593ab355259e.jpg)"></div> -->
                 </div>
-               <div class="image-wrap">
-                <div class="seq" style="background-image:url(https://images.unsplash.com/photo-1462396881884-de2c07cb95ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)"></div>
-                <div class="seq" style="background-image:url(https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60)"></div>
-                <div class="rect" style="background-image:url(https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)"></div>
-                <!-- <div class="seq" style="background-image:url(https://www.ikea.com/in/en/profile/3e48e8734c5c5751bd6b21045258bfac.jpg)"></div> -->
-                <!-- <div class="rect" style="background-image:url(https://www.ikea.com/in/en/profile/6c9a5b763c764348260c1831ee856f56.jpg)"></div> -->
+                <div class="image-wrap">
+                    <div class="seq"
+                        style="background-image:url(https://images.unsplash.com/photo-1462396881884-de2c07cb95ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)">
+                    </div>
+                    <div class="seq"
+                        style="background-image:url(https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60)">
+                    </div>
+                    <div class="rect"
+                        style="background-image:url(https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)">
+                    </div>
+                    <!-- <div class="seq" style="background-image:url(https://www.ikea.com/in/en/profile/3e48e8734c5c5751bd6b21045258bfac.jpg)"></div> -->
+                    <!-- <div class="rect" style="background-image:url(https://www.ikea.com/in/en/profile/6c9a5b763c764348260c1831ee856f56.jpg)"></div> -->
 
-               </div>
-  
+                </div>
+
             </div>
-            
+
         </section>
     </div>
 
 
-    
+
 </body>
 <script>
-    let data  = JSON.parse(localStorage.getItem("loginUser")) ||null; 
+    let closeBtn = document.getElementById('clBtn');
+    let burgerBtn = document.getElementById('burgerBtn')
+    let burgerMenu = document.getElementById('burgerMenu')
+    burgerMenu.style.display = 'none'
+
+    if (burgerMenu.style.display == 'none') {
+        burgerbtn.addEventListener('click', () => {
+            // burgerBtn.style.display = 'none'
+            burgerMenu.style.display = 'block'
+        })
+    }
+    closeBtn.addEventListener('click', () => {
+        console.log("OK")
+        burgerMenu.style.display = 'none'
+        // burgerBtn.style.display = 'block'
+    })
+
+
+    let data = JSON.parse(localStorage.getItem("loginUser")) || null;
 
 
     let sidepopup = document.querySelector(".submenu")
     let profile = document.getElementById("profile");
     let logout = document.getElementById("logout");
-     
-   let user = document.getElementById("hoverme")
-   user.innerHTML = `Welcome, ${data.firstname} ${data.lastname}`
-     logout.addEventListener("click",()=>{
-       
+
+    let user = document.getElementById("hoverme")
+    user.innerHTML = `Welcome, ${data.firstname} ${data.lastname}`
+    logout.addEventListener("click", () => {
+
         localStorage.removeItem("loginUser");
         location.href = "./profile.html"
         console.log(data)
-      console.log("OK")
-     })
-    
-    profile.addEventListener("click",()=>{
+        console.log("OK")
+    })
+
+    profile.addEventListener("click", () => {
         location.href = "./profile.html"
     })
 
@@ -131,14 +218,23 @@
     let gender = document.getElementById("gender")
     let email = document.getElementById("email")
     let mobile = document.getElementById("mobile")
-    let DOB = document.getElementById("DOB") 
+    let DOB = document.getElementById("DOB")
 
 
-firstname.innerHTML = data.firstname
-lastname.innerHTML = data.lastname
-gender.innerHTML = data.gender
-email.innerHTML = data.email
-mobile.innerHTML = data.mobile
-DOB.innerHTML = data.DOB
+    firstname.innerHTML = `${data.firstname}
+     ${data.lastname}`
+    
+    gender.innerHTML = data.gender
+    email.innerHTML = data.email
+    mobile.innerHTML = data.mobile
+    DOB.innerHTML = data.DOB
+
+
+
+
+
+
+
 </script>
+
 </html>
