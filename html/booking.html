@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car | Bookings</title>
+    <link rel="stylesheet" href="./style/booksing.css">
+    <link rel="stylesheet" href="./Homepage/homepage.css">
+    
+    <script src="https://kit.fontawesome.com/1dcb2e4769.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @media screen and (min-width: 100px) and (max-width: 600px){
+    #car_container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+   .menu{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width: 100px) and (max-width: 600px){
+    .menu{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+    #car_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width: 100px) and (max-width: 600px) {
+    .menu{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .menu{
+        display: none;
+    }
+}
+
+</style>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+   
+    <!-- sign up -->
+    <div class="popup" id="popup">
+        <div id="head">
+            <div id="signUp_head">
+                <h1>SIGN UP</h1>
+                <h3>ALREADY REGISTERED?</h3>
+                <a href="#" onclick="log_openPopup()" >LOG IN</a>
+            </div>
+            <div id="cross-cont">
+             <p id="cross" onclick="closePopup()">⨉</p>
+            </div>
+        </div>
+      
+     
+        <form action="" id="form">
+
+            <input type="text" placeholder="FIRST NAME" name="ffirst_name" id="firstname"><span id="first_error"></span>
+
+            <input type="text" placeholder="LAST NAME" name="flast_name" id="lastname"><span id="last_error"></span>
+
+            <input type="email" placeholder="EMAIL" name="femail" id="email"><span id="email_error"></span>
+
+            <input type="number" placeholder="MOBILE NO." name="fmobile" id="mobile"><span id="mobile_error"></span>
+
+            <input type="date" placeholder="DOB" name="fbirth_date" id="birthdate"><span id="date_error"></span> <br>
+
+            <input type="radio" name="gender" id="gender" value="male"><label for="">MALE</label><br>
+            <input type="radio" name="gender" id="gender" value="female"><label for="">FEMALE</label><br>
+            <span id="gender_error"></span>
+
+            <input type="password" placeholder="PASSWORD" name="fpassword" id="password"><span
+                id="password_error"></span>
+
+            <input type="password" placeholder="CONFIRM PASSWORD" name="fcpasspwrd" id="cpassword"><span
+                id="cpassword_error"></span>
+
+            <input id="signup_but" type="submit" value="SIGN UP">
+        </form>
+        <h3 id="or">---OR---</h3>
+        <div id="Fb_Gog_but">
+
+            <button id="google">
+                <div>
+                    <b>
+                        <p>G</p>
+                    </b>
+                </div>
+                <div class="anchor"><a href="">LOG IN WITH GOOGLE</a></div>
+            </button>
+            <button id="facebook">
+                <div>
+                    <b>
+                        <p>f</p>
+                    </b>
+                </div>
+                <div class="anchor"><a href="">LOG IN WITH FACEBOOK</a></div>
+            </button>
+        </div>
+
+
+    </div>
+
+  <!-- //login -->
+    <div class="log_popup" id="log_popup">
+        <div id="log_head">
+            <div id="log_signIn_head">
+                <h1>LOG IN</h1>
+                <h3>NEW TO AVIS?</h3>
+                <a href="#" onclick="openPopup()" >SIGN UP</a>
+            </div>
+            <div id="log_cross-cont">
+                <p id="log_cross" onclick="log_closePopup()">⨉</p>
+            </div>
+        </div>
+
+        <form action="" id="log_form">
+            <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS" name="femail" id="log_email"><span id="log_email_error"></span>
+
+            <input type="password" placeholder="ENTER YOUR PASSWORD" name="fpassword" id="log_password"><span
+                id="log_password_error"></span>
+
+            <input id="log_Login_but" type="submit" value="LOG IN">
+        </form>
+        <h3 id="log_or">---OR---</h3>
+        <div id="log_Fb_Gog_but">
+
+            <button id="log_google">
+                <div>
+                    <b>
+                        <p>G</p>
+                    </b>
+                </div>
+                <div class="log_anchor"><a href="">LOG IN WITH GOOGLE</a></div>
+            </button>
+            <button id="log_facebook">
+                <div>
+                    <b>
+                        <p>f</p>
+                    </b>
+                </div>
+                <div class="log_anchor"><a href="">LOG IN WITH FACEBOOK</a></div>
+            </button>
+        </div>
+
+    </div>
+<!-- homepage starts -->
+    <div class="header_login_signup maincolor">
+        <div class="avis_logo">
+            <a href="./Homepage/homepage.html">GHOOMOCAR
+                <!-- <img id="logores" src="https://i.ibb.co/CtxTp8s/ghumocar-1.jpg" alt="ghumocar-1" border="0"> -->
+            </a>
+
+        </div>
+        <div class="nav_options ">
+            <div><a href="#">TRAVEL BLOG</a></div>
+            <div><a href="#">BLOGGERS</a></div>
+            <div><a href="#">AVIS PREFERRED</a></div>
+            <div><a href="#">AVIS SAFETY</a></div>
+            <div id="contacts">
+                <div>
+                    <a href="#">+91 124 4724 850</a>
+                </div>
+                
+                
+            </div>
+            <div class="givespace">
+                <div>
+                    <a href="#" alt=""> <img src="https://www.avis.co.in/images/android.png" alt=""></a>
+                </div>
+                <div>
+                    <a href="#"  alt=""> <img src="https://www.avis.co.in/images/apple.png" alt=""></a>
+                </div>
+                
+               
+            </div>
+            <div class="LOGIN_SIGNUP"><a href="#" onclick="openPopup()">SIGN UP</a>
+            <a href="#" onclick="log_openPopup()">/LOG IN</a></div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+    </nav> 
+        <!-- Banner -->
+        <!-- *************************************************************************************************************** -->
+        <div class="menu">
+            <ul class="press">
+                <li>
+                   <a href="./Homepage/homepage.html"> <i class="fa-solid fa-house-chimney"></i></a>
+                </li>
+                <li>
+                    <a href="#">SELF-DRIVE INDIA </a>
+                </li>
+
+              <li>
+                <a href="#">OUTSTATION</a>
+              <div class="submenu">
+        
+                  <ul >
+                      <li><a href="#">AIRPORT & RAILWAY TRANSFER</a></li>
+                      <li><a href="#">WITHIN CITY</a></li>
+                      <li><a href="#">OUTSTATION</a></li>
+                      <li><a href="#">ONE-WAY INTERCITY TRANSFER</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <a href="#">SELF-DRIVE INTERNATIONAL</a>
+              </li>
+
+                <li>
+                
+                    <a href="#">CHAUFFEUR DRIVE TRANSFER</a>
+              
+                </li>
+            </ul>
+        </div>
+        <!-- *************************************************************************************************************** -->
+       
+       <!-- ********************************************Form******************************************************** -->
+     <div class="form-container">
+        <form action="">
+            <div class="input-box">
+                <span>ORIGIN CITY</span>
+                <input type="search" name="" id="" placeholder="Search Places">
+            </div>
+
+            <div class="input-box">
+                <span>TO CITY</span>
+                <input type="search" name="" id="" placeholder="Search Places">
+            </div>
+
+            <div class="input-box">
+                <span>PICK-UP ADDRESS</span>
+                <input type="search" name="" id="" placeholder="Search Places">
+            </div>
+            
+            <div class="input-box">
+                <span>START DATE</span>
+                <input type="date" name="" id="" >
+            </div>
+            <div class="input-box">
+                <span>END DATE</span>
+                <input type="date" name="" id="">
+            </div>
+            <input type="submit" name="SEARCH" id="" class="btn">
+        </form>
+     </div>
+       
+       
+       <!--******************************************FILTER********************************************************* -->
+     <div class="filter-condition">
+        <span>View As a</span>
+        <select id="select">
+            <option value="Default">Default</option>
+            <option value="HighToLow">High to Low</option>
+            <option value="LowToHigh">Low to High</option>
+        </select>
+     </div>
+        <!-- ***********************************Car Section************************************************ -->
+        <div id="car_container">
+
+        </div>
+        <!-- *********************************************FOOTER***************************************** -->
+        <div id="home_footer">
+          <div>
+             <div>
+                 <a href="#">SELF DRIVE CAR RENTALS</a>
+             </div>
+             <div>
+                 <a href="#">CHAUFFEUR DRIVE CAR RENTALS
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">SELF DRIVE INTERNATIONAL
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">CORPORATE INFORMATION
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">GHUMOCAR SERVICES
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">OFFERS</a>
+             </div>
+          </div>
+          <div>
+             <div>
+                 <a href="#">WE ARE AVAILABLE HERE
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">GHUMOCAR VACATIONS
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">TERMS AND CONDITIONS</a>
+             </div>
+             <div>
+                 <a href="#">SELF DRIVE FAQS</a>
+             </div>
+             <div>
+                 <a href="#">SITEMAP</a>
+             </div>
+             <div>
+                 <a href="#">WHY GHUMOCAR
+                     <i class="fa fa-angle-down"> </i>
+                 </a>
+             </div>
+             <div>
+                 <a href="#">PARTNER WITH US</a>
+             </div>
+             
+          </div>
+          <div>
+             <div>  
+                 <a href="#">
+                     <i class="fab fa-twitter lil"> </i>
+                 </a>
+                 <a href="#">
+                     <i class="fab fa-facebook lil"> </i>
+                 </a>
+                 <a href="#">
+                     <i class="fab fa-linkedin lil"> </i>
+                 </a>
+                 <a href="#">
+                     <i class="fab fa-youtube lil"> </i>
+                 </a>
+                 <a href="#">
+                     <i class="fab fa-instagram lil"> </i>
+                 </a>
+             </div>
+             <div>
+                 <span> 
+                     <i class="fa fa-phone"> </i>
+                     +91 124 4724 850,+91 882 6782 828</span>
+             </div>
+             <div>
+                 <input type="submit" name="Getintouch" id="Get_in_touch" value="Get In Touch">
+             </div>
+          </div>
+     </div>
+ 
+   
+</body>
+</html>
+<script>
+
+
+ let carData = [
+      {
+         id:1,
+         image_url:
+          "https://avis.co.in/upload/model/1010dzire.png",
+        name: "DZIRE / ETIOS / AMAZE OR SIMILAR",
+        price:  11370,
+        strikedoffprice: "2599",
+      },
+      { id:2,
+        image_url:
+          "https://avis.co.in/upload/model/10121012Honda-City.png",
+        name: "CITY OR SIMILAR",
+        price: 14699,
+        strikedoffprice: 999,
+      },
+      { id:3,
+        image_url:
+          "https://avis.co.in/upload/model/1013corolla.png",
+        name: "COROLLA ALTIS OR SIMILAR",
+        price: 20000,
+        strikedoffprice: 2099,
+      },
+      {
+         id:5,
+        image_url:
+          "https://avis.co.in/upload/model/12786Crystasimilar_nav.png",
+        name: "INNOVA CRYSTA",
+        price: 20000,
+        strikedoffprice: 799,
+      },
+      { id:6,
+        image_url:
+          "https://avis.co.in/upload/model/1014camry1.png",
+          name: "CAMRY / ACCORD OR SIMILAR",
+        price: 26240,
+        strikedoffprice: 3599,
+      },
+      {
+         id:7,
+        image_url:
+          "https://avis.co.in/upload/model/10151022BMW5series.png",
+        name: "BMW 5 SERIES OR SIMILAR",
+        price: 51200,
+        strikedoffprice: 3199,
+      },
+      { id:8,
+        image_url:
+          "https://avis.co.in/upload/model/MERCEDES-E-CLASS10878400-40e3-48fd-8c78-2eef8c9f0d05%20(2).png",
+        name: "MERCEDES E CLASS OR SIMILAR",
+        price: 63200,
+        strikedoffprice: 3199,
+      },
+      {
+         id:9,
+        image_url:
+          "https://avis.co.in/upload/model/2010Merc-Benz---S---350-New-Shape.png",
+        name: "MERCEDES- S 350",
+        price: 174080,
+        strikedoffprice: 1099,
+      },
+     
+      {
+         id:11,
+        image_url:
+          "https://avis.co.in/upload/model/2018Merc-Benz-S-500.png",
+        name: "MERCEDES-S 500",
+        price: 291680,
+        strikedoffprice: 1440,
+      },
+
+      {
+         id:12,
+        image_url:
+          "https://avis.co.in/upload/model/2017Merc-Benz-S-500-Maybach.png",
+        name: "MAYBACH-S 500",
+        price: 354560,
+        strikedoffprice: 1440,
+      },
+      
+      
+   ];
+
+
+   localStorage.setItem("cars", JSON.stringify(carData))
+   let storedCar = JSON.parse(localStorage.getItem("cars"))
+   displayData(storedCar)
+
+
+
+function displayData(storedCar){
+    let container = document.getElementById("car_container");
+    container.innerHTML=null;
+    
+    storedCar.forEach((element) => {
+  
+        let card = document.createElement("div")
+        card.setAttribute("class","card")
+        let img=document.createElement("img")
+        img.setAttribute("src", element.image_url)
+
+        let brand = document.createElement("h3")
+        brand.textContent=element.name;
+
+        let prize=document.createElement("h4")
+        prize.textContent=`₹ ${element.price}` ;
+
+        let bookbtn = document.createElement("button")
+        bookbtn.textContent="Book"
+
+        // let book=document.createElement("a")
+        // a.setAttribute("href","#")
+
+    bookbtn.addEventListener("click", function(){
+        let book=JSON.parse(localStorage.getItem("bookings"))||[];
+        book.push(element)
+        localStorage.setItem("bookings", JSON.stringify(book))
+        window.location.href="./avis/wallet.html";
+    })
+    card.append(img,brand,prize,bookbtn)
+   container.append(card)        
+    });
+//   filterSorting
+let sort=document.getElementById("select");
+sort.addEventListener("change", function(event){
+
+    // let selectedsort = document.querySelector("#select1").value;
+selectedsort=sort.value;
+console.log(selectedsort)
+    if(selectedsort !== 'Default'){
+        if(selectedsort == 'LowToHigh'){
+            storedCar.sort(function(a,b){
+                return +a.price - +b.price;
+            })
+        }
+        else if(selectedsort == 'HighToLow'){
+            storedCar.sort(function(a,b){
+                return +b.price - +a.price;
+            })
+        }
+    }
+    localStorage.setItem("cars", JSON.stringify(carData))
+})
+
+}
+
+
+displayData(storedCar)
+
+
+
+
+
+
+// log in
+
+let log_myform = document.getElementById("log_form")
+
+let log_email_error = document.getElementById("log_email_error")
+
+let log_password_error = document.getElementById("log_password_error")
+
+
+log_myform.addEventListener("submit", (e) => {
+    e.preventDefault();
+    var userData = {
+
+        email: log_myform.log_email.value,
+        password: log_myform.log_password.value,
+    }
+
+    //    validation of form
+
+    if (userData.email !== "" && userData.password.length !== 0) {
+        log_email_error.innerHTML = null; log_password_error.innerHTML = null;
+        login_User(userData)
+    } else {
+        userData.email == "" ? log_email_error.innerHTML = "*Enter Email!"
+            : log_email_error.innerHTML = null;
+
+        userData.password.length == 0 ? log_password_error.innerHTML = "*Enter Password!"
+            : log_password_error.innerHTML = null;
+    }
+
+
+})
+
+
+function login_User(obj) {
+    fetch("https://63c67422dcdc478e15c1bf8d.mockapi.io/users")
+        .then(responseObject => responseObject.json())
+        .then((data) => {
+            //   console.log(data)
+            let flag = false;
+            var element = "";
+            data.forEach((item) => {
+                if (item.email == obj.email && item.password == obj.password) {
+                    element = item;
+                    flag = true;
+
+                }
+            })
+            if (flag == true) {
+                 localStorage.setItem("loginUser",JSON.stringify(element))
+                alert(`Congratulation ${element.firstname} ${element.lastname}, Explore your dream journey with GhumOCaR`)
+                log_closePopup()
+                login_name.innerHTML=`Welcome, ${element.firstname} ${element.lastname}`;
+
+            } else {
+                log_password_error.innerHTML = "Username and password may be incorrect!"
+            }
+        })
+
+}
+
+
+let log_popup = document.getElementById("log_popup");
+
+function log_openPopup() {
+    log_popup.classList.add("log_open-popup");
+}
+function log_closePopup() {
+    log_popup.classList.remove("log_open-popup");
+}
+
+//sign up 
+
+
+let myform = document.getElementById("form")
+// let cpassword = document.getElementById("cpassword")
+
+let first_name_error = document.getElementById("first_error")
+let last_name_error = document.getElementById("last_error")
+let mobile_error = document.getElementById("mobile_error")
+let email_error = document.getElementById("email_error")
+let date_error = document.getElementById("date_error")
+let password_error = document.getElementById("password_error")
+let cpassword_error = document.getElementById("cpassword_error")
+let gender_error = document.getElementById("gender_error")
+
+myform.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    var userData = {
+        firstname: myform.firstname.value,
+        lastname: myform.lastname.value,
+        email: myform.email.value,
+        mobile: myform.mobile.value,
+        DOB: myform.birthdate.value,
+        gender: myform.gender.value,
+        password: myform.password.value,
+
+    }
+
+    //    validation of form
+    if (userData.firstname !== "" && userData.lastname !== "" && userData.email !== "" && userData.email !== "" && userData.mobile.length == 10 && userData.DOB !== "" && userData.gender !== "" && userData.password.length >= 6 && myform.cpassword.value == userData.password) {
+        first_name_error.innerHTML = null; date_error.innerHTML = null; gender_error.innerHTML = null;
+        last_name_error.innerHTML = null; password_error.innerHTML = null; cpassword_error.innerHTML = null;
+        email_error.innerHTML = null; mobile_error.innerHTML = null;
+
+        alert(`Hey ${userData.firstname} ${userData.lastname}! You Signed Up Successfully.`)
+        SignUp_user(userData)
+
+    } else {
+        userData.firstname == "" ? first_name_error.innerHTML = "*Enter First Name!"
+            : first_name_error.innerHTML = null;
+
+        userData.lastname == "" ? last_name_error.innerHTML = "*Enter Last Name!"
+            : last_name_error.innerHTML = null;
+
+        userData.email == "" ? email_error.innerHTML = "*Enter Email!"
+            : email_error.innerHTML = null;
+
+        userData.mobile.length == 0 ? mobile_error.innerHTML = "*Enter Mobile Number!"
+            : userData.mobile.length != 10 ? mobile_error.innerHTML = "*Mobile Number should be 10 digit."
+                : mobile_error.innerHTML = null;
+
+        userData.DOB == "" ? date_error.innerHTML = "*Enter Date of Birth!"
+            : date_error.innerHTML = null;
+        userData.gender == "" ? gender_error.innerHTML = "*Fill the gender" : gender_error.innerHTML = null;
+
+        userData.password.length == 0 ? password_error.innerHTML = "*Enter Password!"
+            : userData.password.length < 6 ? password_error.innerHTML = "*Password length should be greater than or equal to 6."
+                : password_error.innerHTML = null;
+
+        cpassword.value !== userData.password ? cpassword_error.innerHTML = "*Password & confirm password must be equal!"
+            : cpassword_error.innerHTML = null;
+    }
+
+
+})
+
+
+function SignUp_user(obj) {
+    fetch("https://63c67422dcdc478e15c1bf8d.mockapi.io/users", {
+        method: "POST",
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(obj)
+    }
+    )
+        .then(responseObject => responseObject.json())
+        .then((data) => {
+            console.log(data)
+            // location.href = "./home.html"
+        })
+}
+
+
+
+let popup = document.getElementById("popup");
+
+function openPopup() {
+  popup.classList.add("open-popup");
+}
+function closePopup() {
+  popup.classList.remove("open-popup");
+}
+
+
+//homepage
+
+let data  = JSON.parse(localStorage.getItem("loginUser")) ||null; 
+let login_name = document.querySelector(".LOGIN_SIGNUP")
+
+if(data!=null){
+    login_name.innerHTML=`Welcome, ${data.firstname} ${data.lastname}`;
+}
+
+
+
+
+
+</script>

@@ -214,9 +214,8 @@ for(let element of radios){
                     startdate:START_DATE.value,    
                 };
                 console.log(obj)
-                
-                
                 localStorage.setItem("rentalcarquery",JSON.stringify(obj));
+                window.location.href = 'booking.html'
             }
             
 
@@ -354,9 +353,8 @@ for(let element of radios){
                     
                 };
                 console.log(obj)
-                
-                
                 localStorage.setItem("rentalcarquery",JSON.stringify(obj));
+                window.location.href = '../sty'
                 
             }
 
