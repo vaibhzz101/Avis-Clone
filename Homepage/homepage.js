@@ -183,6 +183,7 @@ let withincity=document.getElementById("withincity");
 let outstation=document.getElementById("outstation");
 let onewaytransfer=document.getElementById("onewaytransfer");
 let radios=document.getElementsByClassName("radio1");
+let requiredalert=document.getElementsByClassName("requiredalert");
 
 //---------------------------------function to calculate days from dates-------------------
 // function subtractDates(date1, date2) {
@@ -192,7 +193,7 @@ let radios=document.getElementsByClassName("radio1");
 // }
 //-----------------------------------------------------------------------------------------
 for(let element of radios){
-    element.addEventListener("change",()=>{
+    element.addEventListener("click",()=>{
         if(element.value=="A"){
             airport.style.display="block";
             let airport_origin_city=document.getElementById("airport_origin_city");
@@ -330,6 +331,12 @@ for(let element of radios){
 
             let onewaytransfer_origin_city=document.getElementById("onewaytransfer_origin_city");
             let oneway_tocity=document.getElementById("oneway_tocity");
+            // var autocomplete = new google.maps.places.Autocomplete(oneway_tocity);
+            // autocomplete.addListener('place_changed', function() {
+            //     var place = autocomplete.getPlace();
+            //     console.log(place);
+            // });
+
             let oneway_pickupadd=document.getElementById("oneway_pickupadd");
             let oneway_START_DATE=document.getElementById("oneway_START_DATE");
             let onewaySEARCH=document.getElementById("onewaySEARCH");

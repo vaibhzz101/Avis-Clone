@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./homepage.css">
     <link rel="stylesheet" href="./Login.css">
     <link rel="stylesheet" href="./signup.css">
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmnHBNW3DDxmN1WeCmkMh9c6EelomWa3Y&libraries=places&callback=Autocomplete"></script> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 
 </head>
@@ -122,7 +123,7 @@
 <!-- homepage starts -->
     <div class="header_login_signup maincolor">
         <div class="avis_logo">
-            <a href="#"><img id="logores" src="https://i.ibb.co/CtxTp8s/ghumocar-1.jpg" alt="ghumocar-1" border="0"></a>
+            <a href="#">GHUMOCAR</a>
 
         </div>
         <div class="nav_options ">
@@ -156,6 +157,9 @@
         </div>
     </div>
     <div class="bg_banner_image">
+        <div>
+
+        
         <div id="inner_search_func">
             <div id="search_container">
                 <div >
@@ -187,7 +191,7 @@
                     <div id="airport">
                         <ul id="ulresponsive">
                             <li>
-                               <div>
+                               <div><span class="requiredalert"></span>
                                 <select name="ORIGIN CITY" id="airport_origin_city" required>
                                     <option selected="selected" value="0">ORIGIN CITY</option>
                                     
@@ -214,7 +218,7 @@
                         
                             </li>
                             <li>
-                                <div>
+                                <div><span class="requiredalert"></span>
                                     <select name="transfertype" id="transferttype" required>
                                             <option value="0">TRANSFER TYPE</option>
                                             <option value="1">AIRPORT/RAILWAY DROP</option>
@@ -225,7 +229,7 @@
                             </li>
                             <li>
                                 
-                                <div>
+                                <div><span class="requiredalert"></span>
                                 
                                  <input type="text" name="PICKUP ADDRESS" id="PICKUP_ADDRESS" placeholder="PICKUP ADDRESS" required>
                                 </div>
@@ -233,14 +237,14 @@
                              </li>
                              <li>
                                 
-                                <div>
+                                <div><span class="requiredalert"></span>
                                 
                                  <input type="text" name="DROP ADDRESS" id="DROP_ADDRESS" placeholder="DROP ADDRESS" required>
                                 </div>
                          
                              </li>
                              <li>
-                                <div>
+                                <div><span class="requiredalert"></span>
                                     
                                  <input type="date" value="2023-01-23" name="START" id="START_DATE" min="2023-01-20" required>
                                  
@@ -260,7 +264,7 @@
                     <div id="withincity">
                         <ul id="ulresponsive">
                             <li>
-                               <div>
+                               <div><span class="requiredalert"></span>
                                 <select name="ORIGIN CITY" id="within_origin_city" required>
                                     <option selected="selected" value="0">ORIGIN CITY</option>
                                     <option value="Agra" >Agra</option>
@@ -287,21 +291,21 @@
                             
                             <li>
 
-                                <div>
+                                <div><span class="requiredalert"></span>
                                 
                                  <input type="text" name="PICK-UP ADDRESS" id="WITHINCITY_PICKUP_ADDRESS" placeholder="PICK-UP ADDRESS" required>
                                 </div>
                          
                              </li>
                              <li>
-                                <div>
+                                <div><span class="requiredalert"></span>
                                  <input type="date" name="START DATE" id="WITHINCITY_START_DATE" value="2023-01-23" min="2023-01-20" required>
                                 </div>
                                 <span>Start Date</span>
                          
                              </li>
                              <li>
-                                <div>
+                                <div><span class="requiredalert"></span>
                                     <input type="date" name="END DATE" id="WITHINCITY_END_DATE" value="2023-01-24" min="2023-01-20" max="2024-01-20" required>
                                 </div>
                                 <span>End Date</span>
@@ -319,8 +323,8 @@
                     <div id="outstation">
                         <ul id="ulresponsive">
                             <li>
-                               <div>
-                                <select name="ORIGIN CITY" id="outstation_origin_city">
+                               <div><span class="requiredalert"></span>
+                                <select name="ORIGIN CITY" id="outstation_origin_city" required>
                                     <option selected="selected" value="0">ORIGIN CITY</option>
                                     <option value="Agra" >Agra</option>
                                     <option value="Ahmedabad">Ahmedabad</option>
@@ -345,29 +349,29 @@
                             </li>
                             <li>
 
-                                <div>
+                                <div><span class="requiredalert"></span>
                                 
-                                 <input type="text" name="DELIVERY ADDRESS" id="outTO_CITY" placeholder="TO CITY">
+                                 <input type="text" name="DELIVERY ADDRESS" id="outTO_CITY" placeholder="TO CITY" required>
                                 </div>
                          
                              </li>
                             <li>
 
-                                <div>
+                                <div><span class="requiredalert"></span>
                                 
-                                 <input type="text" name="PICKUP ADDRESS" id="outpickup_ADDRESS" placeholder="PICKUP ADDRESS">
+                                 <input type="text" name="PICKUP ADDRESS" id="outpickup_ADDRESS" placeholder="PICKUP ADDRESS" required>
                                 </div>
                          
                              </li>
                              <li>
-                                <div>
+                                <div><span class="requiredalert"></span>
                                  <input type="date" name="START DATE" id="out_START_DATE" value="2023-01-23" min="2023-01-20" required>
                                 </div>
                                 <span>Start Date</span>
                          
                              </li>
                              <li>
-                                <div>
+                                <div><span class="requiredalert"></span>
                                     <input type="date" name="END DATE" id="out_END_DATE" value="2023-01-24" min="2023-01-20" max="2024-01-20" required>
                                 </div>
                                 <span>End Date</span>
@@ -384,7 +388,7 @@
                     <div id="onewaytransfer">
                         <ul id="ulresponsive">
                             <li>
-                               <div>
+                               <div><span class="requiredalert"></span>
                                 <select name="ORIGIN CITY" id="onewaytransfer_origin_city">
                                     <option selected="selected" value="0">ORIGIN CITY</option>
                                     <option value="Agra" >Agra</option>
@@ -410,22 +414,22 @@
                             </li>
                             <li>
 
-                                <div>
+                                <div><span class="requiredalert"></span>
                                 
-                                 <input type="text" name="DELIVERY ADDRESS" id="oneway_tocity" placeholder="TO CITY">
+                                 <input type="text" name="DELIVERY ADDRESS" id="oneway_tocity" placeholder="TO CITY" required>
                                 </div>
                          
                              </li>
                              <li>
 
-                                <div>
+                                <div><span class="requiredalert"></span>
                                 
-                                 <input type="text" name="DELIVERY ADDRESS" id="oneway_pickupadd" placeholder="PICKUP ADDRESS">
+                                 <input type="text" name="DELIVERY ADDRESS" id="oneway_pickupadd" placeholder="PICKUP ADDRESS" required>
                                 </div>
                          
                              </li>
                              <li>
-                                <div>
+                                <div><span class="requiredalert"></span>
                                  <input type="date" name="START DATE" id="oneway_START_DATE" value="2023-01-23" min="2023-01-20" required>
                                 </div>
                                 <span>Start Date</span>
@@ -446,13 +450,13 @@
 
                     </div>
                         
-                        <p>Avis Self Drive Benefits: Free car delivery and collection | Unlimited Kilometres | Complimentary Wi-Fi*</p>
+                        <p >Avis Self Drive Benefits: Free car delivery and collection | Unlimited Kilometres | Complimentary Wi-Fi*</p>
 
                 </div>
                 
             </div>
         </div>
-            
+    </div>   
         
         
     </div>
@@ -460,8 +464,8 @@
         <marquee direction="left">
             
                 Important Update : 
-                     We are delighted to inform you  that we have resumed our chauffeur  rental services  across all cities in India. We as a responsible business and your trusted mobility partner is  taking all necessary safety precautions  to ensure a safe ride for you.
-            
+                <strong>     We are delighted to inform you  that we have resumed our chauffeur  rental services  across all cities in India. We as a responsible business and your trusted mobility partner is  taking all necessary safety precautions  to ensure a safe ride for you.
+                </strong>
         </marquee>
 
     </div>
@@ -490,9 +494,9 @@
         <div>
             <div>
                 
-                UNLOCK THE WORLD OF BENEFITS WITH THE NEW AVIS APP.
+                <span> UNLOCK THE WORLD OF BENEFITS WITH THE NEW AVIS APP.</span>
                 <br>
-                <span>DOWNLOAD TO GET UPTO 55 % OFF ON YOUR FIRST SELF-DRIVE BOOKING.</span>
+                DOWNLOAD TO GET UPTO 55 % OFF ON YOUR FIRST SELF-DRIVE BOOKING.
             </div>
             <div>
                 <img id="imagegif" src="https://www.avis.co.in/images/avis-walkthrough-animation.gif" alt="appgif">
@@ -605,8 +609,5 @@
 
 </body>
 </html>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script defer
-    src="https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key=AIzaSyBaQop3M7aYo9fcx0Xfh-sXOxY5i-lzp6k&callback=initMap"
-    type="text/javascript"></script> -->
+
 <script src="./homepage.js"></script>
