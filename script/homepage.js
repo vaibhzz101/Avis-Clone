@@ -266,7 +266,7 @@ for(let element of radios){
                 
                 
                 localStorage.setItem("rentalcarquery",JSON.stringify(obj));
-                
+                window.location.href = 'booking.html'
             }
             
             
@@ -302,9 +302,9 @@ for(let element of radios){
                 let obj={
                     createdAt:new Date(),
                     rentaltype:"OUTSTATION",
-                    origincity: outstation_origin_city.value,
-                    tocity:outTO_CITY.value,
-                    pickupadd:outpickup_ADDRESS.value,
+                    origincity: outstation_origin_city.value.toUpperCase(),
+                    tocity:outTO_CITY.value.toUpperCase(),
+                    pickupadd:outpickup_ADDRESS.value.toUpperCase(),
                     startdate:out_START_DATE.value,
                     end_date:out_END_DATE.value,
                     rentduration:rentduration+" days"
@@ -314,6 +314,7 @@ for(let element of radios){
                 
                 
                 localStorage.setItem("rentalcarquery",JSON.stringify(obj));
+                window.location.href = 'booking.html'
             }
 
 
@@ -354,7 +355,7 @@ for(let element of radios){
                 };
                 console.log(obj)
                 localStorage.setItem("rentalcarquery",JSON.stringify(obj));
-                window.location.href = '../sty'
+                window.location.href = 'booking.html'
                 
             }
 

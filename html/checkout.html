@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GhumoCar | Checkout</title>
-    <link rel="stylesheet" href="./Css-1/checkout.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
   </head>
 
   <body>
@@ -168,9 +168,10 @@
 </html>
 <script src="checkout.js"></script>
 <script>
-  let bookedCar = JSON.parse(localStorage.getItem("booking"));
-  let uCar = JSON.parse(localStorage.getItem("car-array"));
-  let randomImage = Math.floor(Math.random() * uCar.length);
+  let bookedCar = JSON.parse(localStorage.getItem("book"));
+  let uCar = JSON.parse(localStorage.getItem("cars"));
+  let randomImage = bookedCar.id;
+  console.log(randomImage)
   let upgradeCar = uCar[randomImage];
   console.log(upgradeCar);
   console.log(bookedCar);
@@ -338,5 +339,6 @@
         "final-booking-price"
       ).innerText;
       localStorage.setItem("purchace", JSON.stringify(finalBookedPrice));
+      window.location.href="credit-card.html";
     });
 </script>
