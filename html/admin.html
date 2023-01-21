@@ -7,10 +7,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <!-- BURGER START -->
     <div id="burgerMenu">
         <aside>
             <div class="top">
@@ -22,29 +25,29 @@
                 </div>
             </div>
             <div>
-                <a class="brgrMenus" href="#">
+                <a class="brgrMenus" href="admin.html">
                     <i class="fa-solid fa-house"></i>
-                    <h4>Home</h4>
+                    <h4>Dashboard</h4>
                 </a>
-                <a class="brgrMenus" href="#">
+                <a class="brgrMenus" href="carAdmin.html">
                     <i class="fa-solid fa-user-plus"></i>
-                    <h4>Sign In / Sign Up</h4>
+                    <h4>Cars</h4>
                 </a>
-                <a class="brgrMenus" href="#">
+                <a class="brgrMenus" href="bookAdmin.html">
                     <i class="fa-solid fa-percent"></i>
-                    <h4>Offers</h4>
+                    <h4>Bookings</h4>
                 </a>
-                <a class="brgrMenus" href="#">
+                <a class="brgrMenus" href="userAdmin.html">
                     <i class="fa-solid fa-asterisk"></i>
-                    <h4>Preferred</h4>
+                    <h4>Users</h4>
                 </a>
                 <a class="brgrMenus" href="#">
                     <i class="fa-solid fa-blog"></i>
-                    <h4>Travle Blogs</h4>
+                    <h4>Sales</h4>
                 </a>
                 <a class="brgrMenus" href="#">
                     <i class="fa-solid fa-asterisk"></i>
-                    <h4>Refer And Earn</h4>
+                    <h4>Offers</h4>
                 </a>
                 <a class="brgrMenus" href="#">
                     <i class="fa-solid fa-headset"></i>
@@ -57,15 +60,13 @@
             </div>
         </aside>
     </div>
-    <div>
+    <div class="navDiv">
         <nav>
             <div id="adminNav">
                 <div id="burgerBtn">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-                <div>
-                    
-                </div>
+                <!-- BURGER END -->
                 <div id="searchBar">
                     <input type="text">
                     <button id="searchBtn">Search</button>
@@ -78,28 +79,37 @@
         <main>
             <h1 id="adminHeading">Admin Panel</h1>
             <div class="allCard">
-                <div class="countCard">
-                    <i class="fa-solid fa-car"></i>
-                    <div class="t_nums" id="totalCar"></div>
-                    <h3>Total Cars</h3>
-                </div>
-                <div class="countCard">
-                    <i class="fa-solid fa-arrow-up-9-1"></i>
-                    <div class="t_nums" id="totalBooking"></div>
-                    <h3>Total Bookings</h3>
-                </div>
-                <div class="countCard">
-                    <i class="fa-solid fa-users"></i>
-                    <div class="t_nums" id="totalUser"></div>
-                    <h3>Total Users</h3>
-                </div>
+                <a class="countCard" href="carAdmin.html">
+                    <div>
+                        <i class="fa-solid fa-car"></i>
+                        <div class="t_nums" id="totalCar"></div>
+                        <h3>Total Cars</h3>
+                    </div>
+                </a>
+                <a class="countCard" href="bookAdmin.html">
+                    <div>
+                        <i class="fa-solid fa-arrow-up-9-1"></i>
+                        <div class="t_nums" id="totalBooking"></div>
+                        <h3>Total Bookings</h3>
+                    </div>
+                </a>
+                <a class="countCard" href="userAdmin.html">
+                    <div>
+                        <i class="fa-solid fa-users"></i>
+                        <div class="t_nums" id="totalUser"></div>
+                        <h3>Total Users</h3>
+                    </div>
+                </a>
+                <a class="countCard" href="#">
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        <div class="t_nums" id="totalSale"></div>
+                        <h3>Sales Total</h3>
+                    </div>
+                </a>
                 
-                <div class="countCard">
-                    <i class="fa-solid fa-check"></i>
-                    <div class="t_nums" id="totalSale"></div>
-                    <h3>Sales Total</h3>
-                </div>
             </div>
+            <div id="barchart_values" style="width: 900px; height: 300px;"></div>
             <table id="carTable">
                 
             </table>
@@ -107,6 +117,6 @@
     </div>
 
 </body>
-<script src="admin.js">
+<script src="../script/admin.js">
 </script>
 </html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/carAdmin.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="burgerMenu_2">
+        <aside>
+            <div class="top">
+                <div class="">
+                    <img src="" alt="">
+                </div>
+                <div class="close" id="clBtn_2">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div>
+                <a class="brgrMenus" href="admin.html">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Dashboard</h4>
+                </a>
+                <a class="brgrMenus" href="carAdmin.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <h4>Cars</h4>
+                </a>
+                <a class="brgrMenus" href="bookAdmin.html">
+                    <i class="fa-solid fa-percent"></i>
+                    <h4>Bookings</h4>
+                </a>
+                <a class="brgrMenus" href="userAdmin.html">
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h4>Users</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-blog"></i>
+                    <h4>Sales</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-recycle"></i>
+                    <h4>Deleted Cars</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-trash"></i>
+                    <h4>Deleted Users</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    <h4>Ongoing Offers</h4>
+                </a>
+            </div>
+        </aside>
+    </div>
+    <div class="navDiv">
+        <nav>
+            <div id="adminNav_2">
+                <div id="burgerBtn_2">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div>
+                    
+                </div>
+                <div id="searchBar_2">
+                    <input type="text">
+                    <button id="searchBtn_2">Search</button>
+                </div>
+                <button id="logoutBtn_2">Log Out</button>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <section>
+            <table>
+                <thead>
+                    <tr><th colspan="4">ALL Car Details</th></tr>
+                    <tr>
+                        <th>Manufractured By</th>
+                        <th>Model Name</th>
+                        <th>Registration Year</th>
+                        <th>KM Rate</th>
+                    </tr>
+                </thead>
+                <tbody id="carTable">
+                    
+                </tbody>
+            </table>
+            <div class="frm">
+                <form id="carForm" action="">
+                    <h1>Add New Car</h1>
+                    <div><label>ID : </label><input id="carID" type="number" name="id"></div>
+                    <div><label>Image URL : </label><input id="carImg" type="url" name="img"></div>
+                    <div><label>Company : </label><input id="carCompany" type="text" name="company"></div>
+                    <div><label>Reg Year : </label><input id="carYr" type="number" name="Year"></div>
+                    <div><label>Model : </label><input id="carModel" type="text" name="model"></div>
+                    <div><label>Name : </label><input id="carName" type="text" name="name"></div>
+                    <div><label>Rate : </label><input id="carRate" type="number" name="rate"></div>
+                    <div><label>Price : </label><input id="carPrice" type="number" name="price"></div>
+                    <div><label>Discount : </label><input id="carOfr" type="number" name="stri"></div>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="../script/carAdmin.js">
+</script>
+</html>

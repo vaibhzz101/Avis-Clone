@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bookAdmin.css">
+    <title>Bookings Access</title>
+</head>
+<body>
+    <div id="burgerMenu">
+        <aside>
+            <div class="top">
+                <div class="">
+                    <img src="" alt="">
+                </div>
+                <div class="close" id="clBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div>
+                <a class="brgrMenus" href="admin.html">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Dashboard</h4>
+                </a>
+                <a class="brgrMenus" href="carAdmin.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <h4>Cars</h4>
+                </a>
+                <a class="brgrMenus" href="bookAdmin.html">
+                    <i class="fa-solid fa-percent"></i>
+                    <h4>Bookings</h4>
+                </a>
+                <a class="brgrMenus" href="userAdmin.html">
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h4>Users</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-blog"></i>
+                    <h4>Sales</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h4>Offers</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>Support</h4>
+                </a>
+                <a class="brgrMenus" href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    <h4>Emergency No.</h4>
+                </a>
+            </div>
+        </aside>
+    </div>
+    <div class="navDiv">
+        <nav>
+            <div id="adminNav">
+                <div id="burgerBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div>
+                    
+                </div>
+                <div id="searchBar">
+                    <input type="text">
+                    <button id="searchBtn">Search</button>
+                </div>
+                <button id="logoutBtn">Log Out</button>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <section>
+            <table>
+                <thead>
+                    <tr><th colspan="4">ALL Booking Details</th></tr>
+                    <tr>
+                        <th>USER</th>
+                        <th>Car Model</th>
+                        <th>Booking Amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="carTable">
+                    
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+<script src="../script/bookAdmin.js"></script>
+</html>

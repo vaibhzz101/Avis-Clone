@@ -6,6 +6,7 @@
     outline: none;
     box-sizing: border-box;
 }
+/* BURGER START */
 .top{
     background-color: #ce2127;
     display: flex;
@@ -16,7 +17,7 @@
 }
 .close i{
     font-size: 42px;
-    color: white;
+    color:white;
     cursor: pointer;
 }
 #burgerMenu{
@@ -51,19 +52,22 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 43px;
-    background-color: cadetblue;
+    background-color: #ce2127;
     height: 70px;
     position: relative;
 }
 #burgerBtn{
-    font-size: 24px;
+    font-size: 29px;
+    color: white;
 }
+/* BURGER END */
 #searchBar{
     display: flex;
     margin: auto;
     border: 1px solid gray;
     border-radius: 30px;
     align-items: center;
+    width: 40%;
     height: 32px;
     background-color: #fff;
 }
@@ -71,12 +75,14 @@
     border: none;
     margin-left: 8px;
     font-size: 17px;
+    width: 80%;
 }
 #searchBtn{
+    width: 20%;
     border: none;
     font-weight: 700;
     color: white;
-    background-color: #ce2127;
+    background-color: dodgerblue;
     padding: 8px;
     border-radius: 0px 29px 29px 0px;
 }
@@ -107,12 +113,17 @@ main{
 .countCard{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
     padding: 25px 10px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 15%;
+}
+.countCard:hover{
+    transition: 0.4s;
+    background-color: gold;
 }
 .countCard i{
     font-size: 25px;
@@ -125,4 +136,8 @@ main{
 }
 .countCard h3{
     color: cornflowerblue;
+}
+
+@media all {
+    
 }
