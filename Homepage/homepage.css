@@ -15,22 +15,29 @@
     /* border: 1px solid red; */
     display: flex;
 }
-.avis_logo{
-    display: flex;
-    justify-content: center;
+.avis_logo {
+    
+    text-align: center;
     margin: auto;
     width: 20%;
-    color: white;
-}
-#logores{
-    width: 60px;
-    height: 100%;
-    border-radius: 50%;
     
-}
-#contacts{
 
 }
+.avis_logo a{
+    font-size: 25px;
+    font-family:sans-serif;
+    color: white;
+    text-decoration: none;
+
+}
+#logores{
+
+    width: 65%;
+    height: 45%;
+    border-radius: 20%;
+    
+}
+
 .nav_options{
    
     
@@ -205,6 +212,7 @@
     
 }
 #inner_search_func {
+    padding-bottom: 10px;
     background-color: #000000B3;
     
     
@@ -252,20 +260,20 @@ border: 0px
     padding: 5px 20px 5px 5px;
 }
 #airport{
-    display: none;
+    display: block;
 }
 #actual_search span{
     font-size: 12px;
     display: block;
     text-align: center;
-    color: #FFFFFF;
-    margin: auto;
+    /* color: #FFFFFF; */
+    padding: 5px;
 }
 #withincity{
     display: none;
 }
 #outstation{
-    display: block;
+    display: none;
 }
 #onewaytransfer{
     display: none;
@@ -285,6 +293,21 @@ border: 0px
         padding: 5px 20px 5px 8px;
     }
    
+}
+@media screen and (max-width:767px){
+    #actual_search ul input{
+        
+        border-radius: 5px;
+        width: 50px;
+        height: 30px;
+        padding: 5px 20px 5px 8px;
+    }
+    #actual_search ul select{
+        
+        width: 50px;
+        height: 30px;
+        padding: 5px 20px 5px 8px;
+    }
 }
 #actual_search p{
     color: #FFFFFF;
@@ -371,6 +394,10 @@ border: 0px
     color: #FFFFFF;
     text-decoration: none;
 }
+#home_footer a:hover{
+    text-decoration: underline;
+    padding: 5px;
+}
 #home_footer span{
     font-size: 12px;
     color: #FFFFFF;
@@ -385,5 +412,57 @@ border: 0px
     
 }
 #Get_in_touch{
-    padding: 6px 12px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px 12px;
 }
+#appsection{
+    /* padding: 50px; */
+    padding-top: 50px;
+    width: 100%;
+    height: 600px;
+    background-image: url("https://www.avis.co.in/images/appbg.jpg");
+}
+#appsection>div{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 100%;
+    padding:0px 80px;
+    
+    
+    
+    
+
+}
+#appsection div a{
+    text-decoration: none;
+    color: #CE2127;
+}
+#appsection>div div{
+  width: 20%;
+}
+#appsection>div div span{
+   
+    
+}
+#appsection>div div:nth-child(1){
+
+margin-top: 30px;
+}
+#appsection>div div:nth-child(3){
+   
+    margin-top: 30px;
+    width: 15%;
+}
+#imagegif{
+    width:90%
+
+}
+#blackcar{
+    align-items: center;
+
+    width: 150%;
+}
+
