@@ -54,111 +54,8 @@
     <!-- NAVBAR -->
     <nav>
    
-    <!-- sign up -->
-    <!-- <div class="popup" id="popup">
-        <div id="head">
-            <div id="signUp_head">
-                <h1>SIGN UP</h1>
-                <h3>ALREADY REGISTERED?</h3>
-                <a href="#" onclick="log_openPopup()" >LOG IN</a>
-            </div>
-            <div id="cross-cont">
-             <p id="cross" onclick="closePopup()">⨉</p>
-            </div>
-        </div>
-      
-     
-        <form action="" id="form">
+   
 
-            <input type="text" placeholder="FIRST NAME" name="ffirst_name" id="firstname"><span id="first_error"></span>
-
-            <input type="text" placeholder="LAST NAME" name="flast_name" id="lastname"><span id="last_error"></span>
-
-            <input type="email" placeholder="EMAIL" name="femail" id="email"><span id="email_error"></span>
-
-            <input type="number" placeholder="MOBILE NO." name="fmobile" id="mobile"><span id="mobile_error"></span>
-
-            <input type="date" placeholder="DOB" name="fbirth_date" id="birthdate"><span id="date_error"></span> <br>
-
-            <input type="radio" name="gender" id="gender" value="male"><label for="">MALE</label><br>
-            <input type="radio" name="gender" id="gender" value="female"><label for="">FEMALE</label><br>
-            <span id="gender_error"></span>
-
-            <input type="password" placeholder="PASSWORD" name="fpassword" id="password"><span
-                id="password_error"></span>
-
-            <input type="password" placeholder="CONFIRM PASSWORD" name="fcpasspwrd" id="cpassword"><span
-                id="cpassword_error"></span>
-
-            <input id="signup_but" type="submit" value="SIGN UP">
-        </form>
-        <h3 id="or">---OR---</h3>
-        <div id="Fb_Gog_but">
-
-            <button id="google">
-                <div>
-                    <b>
-                        <p>G</p>
-                    </b>
-                </div>
-                <div class="anchor"><a href="">LOG IN WITH GOOGLE</a></div>
-            </button>
-            <button id="facebook">
-                <div>
-                    <b>
-                        <p>f</p>
-                    </b>
-                </div>
-                <div class="anchor"><a href="">LOG IN WITH FACEBOOK</a></div>
-            </button>
-        </div>
-
-
-    </div> -->
-
-  <!-- //login -->
-    <!-- <div class="log_popup" id="log_popup">
-        <div id="log_head">
-            <div id="log_signIn_head">
-                <h1>LOG IN</h1>
-                <h3>NEW TO AVIS?</h3>
-                <a href="#" onclick="openPopup()" >SIGN UP</a>
-            </div>
-            <div id="log_cross-cont">
-                <p id="log_cross" onclick="log_closePopup()">⨉</p>
-            </div>
-        </div>
-
-        <form action="" id="log_form">
-            <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS" name="femail" id="log_email"><span id="log_email_error"></span>
-
-            <input type="password" placeholder="ENTER YOUR PASSWORD" name="fpassword" id="log_password"><span
-                id="log_password_error"></span>
-
-            <input id="log_Login_but" type="submit" value="LOG IN">
-        </form>
-        <h3 id="log_or">---OR---</h3>
-        <div id="log_Fb_Gog_but">
-
-            <button id="log_google">
-                <div>
-                    <b>
-                        <p>G</p>
-                    </b>
-                </div>
-                <div class="log_anchor"><a href="">LOG IN WITH GOOGLE</a></div>
-            </button>
-            <button id="log_facebook">
-                <div>
-                    <b>
-                        <p>f</p>
-                    </b>
-                </div>
-                <div class="log_anchor"><a href="">LOG IN WITH FACEBOOK</a></div>
-            </button>
-        </div>
-
-    </div> -->
 <!-- homepage starts -->
     <div class="header_login_signup maincolor">
         <div class="avis_logo">
@@ -189,8 +86,8 @@
                 
                
             </div>
-            <div class="LOGIN_SIGNUP"><a href="#" onclick="openPopup()">SIGN UP</a>
-            <a href="#" onclick="log_openPopup()">/LOG IN</a></div>
+            <div class="LOGIN_SIGNUP"><a href="#">SIGN UP</a>
+            <a href="#" >/LOG IN</a></div>
             
             
             
@@ -269,9 +166,9 @@
        
        <!--******************************************FILTER********************************************************* -->
      <div class="filter-condition">
-        <span>View As a</span>
+        <!-- <span>View As a</span> -->
         <select id="select">
-            <option value="Default">Default</option>
+            <option value="">Sort by Prices</option>
             <option value="HighToLow">High to Low</option>
             <option value="LowToHigh">Low to High</option>
         </select>
@@ -541,23 +438,30 @@ function displayData(storedCar){
     });
 //   filterSorting
 let sort=document.getElementById("select");
-sort.addEventListener("change", function(event){
+sort.addEventListener("change", function(){
 
     // let selectedsort = document.querySelector("#select1").value;
 selectedsort=sort.value;
-console.log(selectedsort)
-    if(selectedsort !== 'Default'){
+// console.log(selectedsort)
+
+    if(selectedsort !== ""){
+
         if(selectedsort == 'LowToHigh'){
-            storedCar.sort(function(a,b){
-                return +a.price - +b.price;
-            })
+          storedCar.sort((a,b)=>{
+           return (+a.price) -(+b.price)
+          })
+          displayData(storedCar)
         }
         else if(selectedsort == 'HighToLow'){
             storedCar.sort(function(a,b){
                 return +b.price - +a.price;
             })
+            displayData(storedCar)
         }
+        
     }
+
+   
     localStorage.setItem("cars", JSON.stringify(carData))
 })
 
@@ -579,8 +483,11 @@ let data  = JSON.parse(localStorage.getItem("loginUser")) ||null;
 let login_name = document.querySelector(".LOGIN_SIGNUP")
 
 if(data!=null){
-    login_name.innerHTML=`Welcome, ${data.firstname} ${data.lastname}`;
+    login_name.innerHTML=`Hey, ${data.firstname} ${data.lastname}
+    <i id="pro" class="fa-solid fa-user"></i>`;
 }
+
+document.getElementById("pro").addEventListener("click",()=>window.location.href="../html/profile.html")
 
 
 
