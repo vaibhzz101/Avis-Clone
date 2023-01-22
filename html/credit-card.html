@@ -89,6 +89,25 @@
     document.getElementById("payment-button").innerText=`Pay ${price}`
     let paymentMethod =  document.querySelectorAll('input[name="radio"]');
     
+// ......... data for admin page...  
+
+
+let bookingDetail = JSON.parse(localStorage.getItem("book")) || [];
+let userQ = JSON.parse(localStorage.getItem("rentalcarquery")) || [];
+let loginUser = JSON.parse(localStorage.getItem("loginUser")) || [];
+console.log(bookingDetail,userQ,loginUser)
+let obj  ={
+    name:loginUser.firstname+" " +loginUser.lastname,
+    car_model:bookingDetail.name,
+    pik_up:userQ.pickupadd,
+    drop:userQ.rentaltype,
+    amount:price,
+    date:userQ.startdate
+
+}
+console.log(obj)
+let arr = JSON.parse(localStorage.getItem("bookings")) || [];
+
    paymentMethod.forEach(payment =>{
        payment.addEventListener("change", function(){
            let selected = document.querySelector("input[name='radio']:checked")
@@ -130,7 +149,7 @@
        else{
         //   generating random 4 digit number
         var otp = Math.floor(100000 + Math.random() * 900000);   
-            otp = String(otp);
+            otp = String(otp);  
             otp = otp.substring(0,4);
            setTimeout(function(){
             alert(`Your OTP for Payment of ${price} is ${otp}`)
@@ -143,6 +162,13 @@
           validateOtp.addEventListener("click",function(){
             let enteredOtp = document.getElementById("inter-otp").value;
             if(enteredOtp == otp){
+
+               
+                arr.push(obj)
+                localStorage.setItem("bookings",JSON.stringify(arr))
+                
+        
+
              
                 // alert("Payment Successfull")
                 swal({
@@ -155,7 +181,8 @@
                   setTimeout(()=>{
                     window.location.href="successful.html"
                   },2000)
-               
+
+           
            
          }
          else{

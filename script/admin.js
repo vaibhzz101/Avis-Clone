@@ -28,11 +28,20 @@ t_car.innerHTML = cars.length;
 
 let t_booking = document.getElementById('totalBooking');
 let bookings = JSON.parse(localStorage.getItem('bookings'))||[]
-t_booking.innerHTML = bookings.length;
+t_booking.innerHTML = 5;
+
 
 let t_user = document.getElementById('totalUser');
-let users = JSON.parse(localStorage.getItem('users'))||[];
-t_user.innerHTML = users.length
+// let users = JSON.parse(localStorage.getItem('users'))||[];
+fetch(`https://63c67422dcdc478e15c1bf8d.mockapi.io/users`)
+.then((res)=>{
+    return res.json()
+})
+.then((data)=>{
+    t_user.innerHTML = data.length
+})
+
+
 
 
 google.charts.load('current',{packages:['corechart']});

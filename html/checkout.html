@@ -338,17 +338,19 @@
       let finalBookedPrice = document.getElementById(
         "final-booking-price"
       ).innerText;
-      localStorage.setItem("purchace", JSON.stringify(finalBookedPrice));
-      window.location.href="credit-card.html";
+     
+     
 
 
-      //by shubhangi
-      // if(data != null){
-      //   localStorage.setItem("purchace", JSON.stringify(finalBookedPrice));
-      // window.location.href="credit-card.html";
-      // }else{
-      //   alert("You have to login first")
-      // }
+      // by shubhangi
+      if(data != null){
+        
+        
+         window.location.href="credit-card.html";
+      }
+      else{
+        alert("You have to login first")
+      }
 
 
     });

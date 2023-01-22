@@ -141,19 +141,19 @@ let carData = [
         strikedoffprice: 1440,
     },
  ];
-
+let getdata = JSON.parse(localStorage.getItem("bookings"));
 let carTable = document.getElementById('carTable')
 display(carData)
 function display(data){
     let a = data.map((ele)=>{
         return `
         <tr>
-            <td class='CD'>${'User Name'}</td>
-            <td class='CD'>${'car Model'}</td>
-            <td class='CD'>${'from add'}</td>
-            <td class='CD'>${'to add'}</td>
-            <td class='CD'>${'Amount'}</td>
-            <td class='CD'>${'DATE'}</td>
+            <td class='CD'>${getdata.name}</td>
+            <td class='CD'>${getdata.car_model}</td>
+            <td class='CD'>${getdata.pik_up}</td>
+            <td class='CD'>${getdata.drop}</td>
+            <td class='CD'>${getdata.price}</td>
+            <td class='CD'>${getdata.date}</td>
         </tr>`
     }).join('')
     carTable.innerHTML = a
