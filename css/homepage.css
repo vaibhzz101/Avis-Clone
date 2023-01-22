@@ -71,13 +71,14 @@
     position: relative;
     font-family: 'Times New Roman', Times, serif;
     padding: 12px 0px 11px;
+  
 
     
 }
 
 .nav_options>div a:hover{
     color:#FFFFFF;
-    font-weight: bold;
+    /* font-weight: bold; */
 
 }
 .nav_options>div a::after{
@@ -87,7 +88,7 @@
  height: 3px;
  width: 0%;
  left: 0;
- bottom: -5px;
+ bottom: -2px;
  transition: 0.3s;
 }
 .nav_options>div a:hover::after{
