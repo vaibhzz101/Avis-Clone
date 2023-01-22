@@ -325,12 +325,16 @@ button:hover{
 .filter-condition select{
     width: 120px;
     padding: 0 0 0 10px;
+    margin-left:2%;
     border: none;
     outline: none;
     font-weight: bold;
     color: #ce2127;
     background: transparent;
     cursor: pointer;
+}
+#pro{
+    font-size: 1.8rem;
 }
 /* signup */
 #cross-cont{
