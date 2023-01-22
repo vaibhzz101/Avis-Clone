@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="payment-upper-design">
-        <div onclick="window.location.href='index.html' ">
+        <div onclick="window.location.href='homechauff.html' ">
             <img src="https://as1.ftcdn.net/v2/jpg/01/98/91/58/1000_F_198915888_OpYSQ0FvfA6z85cWPJnUFp5jiJkfdhur.jpg" alt="">
         </div>
         <div></div>
@@ -83,9 +83,8 @@
 </body>
 </html>
 <script type="module">
-   
-   let price=98767;
-   document.getElementById("payment-button").innerText=`Pay ${price}`
+  let price=JSON.parse(localStorage.getItem("purchace"));
+    document.getElementById("payment-button").innerText=`Pay ${price}`
     let paymentMethod =  document.querySelectorAll('input[name="radio"]');
     
    paymentMethod.forEach(payment =>{
@@ -93,7 +92,6 @@
            let selected = document.querySelector("input[name='radio']:checked")
            if(selected.value=="credit"){
              window.location.href="credit-card.html"
-                  
            }
           else if(selected.value=="debit"){
              window.location.href="debit-card.html"
@@ -109,7 +107,7 @@
           
    })
    })
- 
+
    document.getElementById("payment-button").addEventListener("click",function(){
          let cNumber = document.getElementById("card-number").value;
          let cvv = document.getElementById("cvv").value;
@@ -121,10 +119,10 @@
         if(cNumber.length != 16){
             alert("Please Enter a Valid Card Number")
         }
-        if(cvv.length  != 3){
+       else if(cvv.length  != 3){
             alert("Please Enter a Valid CVV")
          }
-       if((year < today.getFullYear() ) || month<today.getMonth()){
+      else if((year < today.getFullYear() ) || month<today.getMonth()){
            alert("Your Card Is Expired")
        }
        else{
@@ -133,17 +131,23 @@
             otp = String(otp);
             otp = otp.substring(0,4);
            setTimeout(function(){
-            alert(`Your One Time Password OTP is ${otp}`)
+            alert(`Your OTP for Payment of ${price} is ${otp}`)
            },2000)
           document.getElementById("otp-box").style.visibility="visible"
           
-          
-          document.getElementById("validate-otp").addEventListener("click",function(){
+          let validateOtp = document.getElementById("validate-otp");
+          validateOtp.innerText=` Pay ${price}`
+          document.getElementById("payment-button").style.visibility="hidden"
+          validateOtp.addEventListener("click",function(){
             let enteredOtp = document.getElementById("inter-otp").value;
             if(enteredOtp == otp){
              
-                alert("Payment Successfull You will be redirected to home page")
+                alert("Payment Successfull")
+                window.location.href="successful.html"
            
+         }
+         else{
+            alert("Wrong OTP")
          }
           })
        
