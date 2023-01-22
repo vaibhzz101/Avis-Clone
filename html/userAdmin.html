@@ -13,16 +13,20 @@
     <div id="burgerMenu">
         <aside>
             <div class="top">
-                <div class="">
-                    <img src="" alt="">
+                <div class="logo">
+                    <a href="#"><h1 class="logoF">GhumoCar</h1></a>
                 </div>
                 <div class="close" id="clBtn">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
             </div>
             <div>
-                <a class="brgrMenus" href="admin.html">
+                <a class="brgrMenus" href="homechauff.html">
                     <i class="fa-solid fa-house"></i>
+                    <h4>Home</h4>
+                </a>
+                <a class="brgrMenus" href="admin.html">
+                    <i class="fa-solid fa-house-circle-exclamation"></i>
                     <h4>Dashboard</h4>
                 </a>
                 <a class="brgrMenus" href="carAdmin.html">
@@ -63,10 +67,13 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <!-- BURGER END -->
-                <div id="searchBar">
+                <div class="logo">
+                    <a href="admin.html"><h1 class="logoF">GhumoCar</h1></a>
+                </div>
+                <!-- <div id="searchBar">
                     <input type="text">
                     <button id="searchBtn">Search</button>
-                </div>
+                </div> -->
                 <button id="logoutBtn">Log Out</button>
             </div>
         </nav>
@@ -87,15 +94,16 @@
             </tbody>
         </table>
         <div class="frm">
-            <form id="carForm" action="">
+            <form id="userForm" action="">
                 <h1>Add New User</h1>
                 <div><label>ID : </label><input id="userID" type="number" name="id" required></div>
-                <div><label>First Name : </label><input id="carImg" type="url" name="fName" required></div>
-                <div><label>Last Name : </label><input id="carCompany" type="text" name="lName"></div>
-                <div><label>Email : </label><input id="carYr" type="number" name="email" required></div>
-                <div><label>Mobile : </label><input id="carModel" type="text" name="mobile"></div>
-                <div><label>DOB : </label><input id="carName" type="text" name="dob"></div>
-                <div><label>Gender : </label><input id="carRate" type="number" name="gender"></div>
+                <div><label>First Name : </label><input id="fName" type="text" name="fName" required></div>
+                <div><label>Last Name : </label><input id="lName" type="text" name="lName"></div>
+                <div><label>Email : </label><input id="email" type="email" name="email" required></div>
+                <div><label>Password : </label><input id="pass" type="password" name="pass" required></div>
+                <div><label>Mobile : </label><input id="mobile" type="number" name="mobile"></div>
+                <div><label>DOB : </label><input id="dob" type="date" name="dob"></div>
+                <div><label>Gender : </label><input id="gender" type="text" name="gender"></div>
                 <input class="submit" type="submit" value="submit">
             </form>
         </div>

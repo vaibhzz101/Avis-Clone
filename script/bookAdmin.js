@@ -16,7 +16,7 @@ closeBtn.addEventListener('click', ()=>{
 
 let logOut = document.getElementById('logoutBtn')
 logOut.addEventListener('click', ()=>{
-  window.location = 'homepage.html'
+  window.location = 'homechauff.html'
   
 })
 
@@ -148,11 +148,12 @@ function display(data){
     let a = data.map((ele)=>{
         return `
         <tr>
-            <td class='CD'>${ele.company}</td>
-            <td class='CD'>${ele.model}</td>
-            <td class='CD'>${ele.reg}</td>
-            <td class='CD'>${ele.rate}</td>
-            <td class='CD'><button onclick='delF()'>Delete</button></td>
+            <td class='CD'>${'User Name'}</td>
+            <td class='CD'>${'car Model'}</td>
+            <td class='CD'>${'from add'}</td>
+            <td class='CD'>${'to add'}</td>
+            <td class='CD'>${'Amount'}</td>
+            <td class='CD'>${'DATE'}</td>
         </tr>`
     }).join('')
     carTable.innerHTML = a
