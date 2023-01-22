@@ -74,7 +74,7 @@
               <div id="otp-box">
                 <p>OTP Sent Successfully</p>
                 <input type="text" id="inter-otp" placeholder="Enter OTP" value="" >
-                <button id="validate-otp">Validate OTP</button>
+                <button id="validate-otp">Validate OTP & Pay</button>
               </div>
               <button id="payment-button">Pay ${price}</button>
         </div>
@@ -83,7 +83,7 @@
 </body>
 </html>
 <script>
-    let price=98767;
+    let price=JSON.parse(localStorage.getItem("purchace"));
     document.getElementById("payment-button").innerText=`Pay ${price}`
     let paymentMethod =  document.querySelectorAll('input[name="radio"]');
     
@@ -119,10 +119,10 @@
         if(cNumber.length != 16){
             alert("Please Enter a Valid Card Number")
         }
-        if(cvv.length  != 3){
+       else if(cvv.length  != 3){
             alert("Please Enter a Valid CVV")
          }
-       if((year < today.getFullYear() ) || month<today.getMonth()){
+      else if((year < today.getFullYear() ) || month<today.getMonth()){
            alert("Your Card Is Expired")
        }
        else{
@@ -131,17 +131,23 @@
             otp = String(otp);
             otp = otp.substring(0,4);
            setTimeout(function(){
-            alert(`Your One Time Password OTP is ${otp}`)
+            alert(`Your OTP for Payment of ${price} is ${otp}`)
            },2000)
           document.getElementById("otp-box").style.visibility="visible"
           
-          
-          document.getElementById("validate-otp").addEventListener("click",function(){
+          let validateOtp = document.getElementById("validate-otp");
+          validateOtp.innerText=` Pay ${price}`
+          document.getElementById("payment-button").style.visibility="hidden"
+          validateOtp.addEventListener("click",function(){
             let enteredOtp = document.getElementById("inter-otp").value;
             if(enteredOtp == otp){
              
-                alert("Payment Successfull You will be redirected to home page")
+                alert("Payment Successfull")
+                window.location.href="successful.html"
            
+         }
+         else{
+            alert("Wrong OTP")
          }
           })
        
