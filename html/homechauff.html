@@ -9,8 +9,11 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> 
     <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="../css/Login.css">
     <link rel="stylesheet" href="../css/signup.css">
+   
+    <!-- <link rel="import" href="../html/profile.html"> -->
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmnHBNW3DDxmN1WeCmkMh9c6EelomWa3Y&libraries=places&callback=Autocomplete"></script> -->
@@ -124,10 +127,66 @@
         </div>
 
     </div>
+    <!-- burger menu -->
+    
 <!-- homepage starts -->
+<!-- <div id="wholebody"> -->
+
+
     <div class="header_login_signup maincolor">
+        <div id="burgerMenu">
+            <aside>
+                <div class="top">
+                    <div class="">
+                        <img src="" alt="">
+                    </div>
+                    <div class="close" id="clBtn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div id="side">
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <h4>Home</h4>
+                    </a>
+                    <a class="brgrMenus"  href="#">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <h4>Sign In / Sign Up</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-percent"></i>
+                        <h4>Offers</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h4>Preferred</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-blog"></i>
+                        <h4>Travel Blogs</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h4>Refer And Earn</h4>
+                    </a>
+                    <a class="brgrMenus" href="#">
+                        <i class="fa-solid fa-headset"></i>
+                        <h4>Support</h4>
+                    </a>
+
+                </div>
+            </aside>
+        </div>
+
+        <div class="nav_options2">
+
+            <span id="burgerbtn" class="two">
+                <i class="fa-solid fa-bars"></i>
+            </span>
+
+        </div>
         <div class="avis_logo">
-            <a href="#">GHUMOOCAR</a>
+            <a href="./homechauff.html">GHUMOOCAR</a>
 
         </div>
         <div class="nav_options ">
@@ -189,7 +248,7 @@
             </div>
             <div id="below_choose_drive">
                 <div>
-                    <ul>
+                    <ul id="radiotags">
                         <li><a role="tab" href="#"><input class="radio1" name="CHAUFFEUR" value="A" type="radio" checked>AIRPORT AND RAILWAY TRANSFERS</a></li>
                         <li><a role="tab" href="#"><input class="radio1" name="CHAUFFEUR" value="B" type="radio" >WITHIN CITY</a></li>
                         <li><a role="tab" href="#"><input class="radio1" name="CHAUFFEUR" value="C" type="radio" >OUTSTATION</a></li>
@@ -617,7 +676,7 @@
          </div>
     </div>
 
-
+</div>
 </body>
 </html>
 
