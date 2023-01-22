@@ -825,7 +825,7 @@ to{-webkit-transform:rotate(0deg);}
     transform: translateY(0)
   }
   20% {
-    transform: translateY(-50px)
+    transform: translateY(-100px)
   }
 }
 
@@ -903,7 +903,8 @@ to{-webkit-transform:rotate(0deg);}
 </body>
 </html>
 <script>
-    setTimeout(()=>{
-        location.href="homechauff.html"
-    },10000)
+    setTimeout(myGreeting, 10000);
+    function myGreeting(){
+        window.location.href="homechauff.html"
+    }
 </script>

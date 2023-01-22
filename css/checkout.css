@@ -97,8 +97,7 @@ transition: 0.3s;
 .givespace{
   
   display: flex;
-  
-  justify-content: space-evenly;
+  gap: 20px;
 }
 @media screen and (min-width:768px)  and (max-width:980px) {
   .nav_options>div{
@@ -427,6 +426,7 @@ transition: 0.3s;
 /* ..............css nedia query..............  */
 
 @media  only screen and (max-width:500px) {
+  
   .checkout-top {
     display: flex;
     flex-direction: column;
@@ -563,6 +563,22 @@ transition: 0.3s;
   .car-upgrad-image > div:nth-child(2) {
     width: 100%;
   }
+
+.booking-detail{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.booking-detail>div:nth-child(1){
+  width: 100%;
+}
+.booking-detail>div:nth-child(2){
+  width: 100%;
+}
+.booking-detail>div:nth-child(3){
+  width: 100%;
+}
+
 }
 
 
