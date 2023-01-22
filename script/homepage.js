@@ -230,6 +230,12 @@ for(let element of radios){
             let DROP_ADDRESS=document.getElementById("DROP_ADDRESS");
             let START_DATE=document.getElementById("START_DATE");
             let airportSEARCH=document.getElementById("airportSEARCH");
+            // let prob=document.getElementById("prob");
+            // prob.addEventListener("submit",()=>{
+            //     e.preventDefault();
+            //     window.location.href = 'booking.html'
+            //     console.log("clickedme");
+            // })
             airportSEARCH.onclick=function AS(){
                 console.log("hello")
                 let obj={
@@ -401,5 +407,24 @@ for(let element of radios){
 
 
 let fromcity=document.getElementById("origin_city");
+
+
+//burger menu
+let closeBtn = document.getElementById('clBtn');
+    let burgerBtn = document.getElementById('burgerBtn')
+    let burgerMenu = document.getElementById('burgerMenu')
+    burgerMenu.style.display = 'none'
+
+    if (burgerMenu.style.display == 'none') {
+        burgerbtn.addEventListener('click', () => {
+            // burgerBtn.style.display = 'none'
+            burgerMenu.style.display = 'block'
+        })
+    }
+    closeBtn.addEventListener('click', () => {
+        console.log("OK")
+        burgerMenu.style.display = 'none'
+        // burgerBtn.style.display = 'block'
+    })
 
 

@@ -1,3 +1,115 @@
+
+.maincolor{
+  background-color: #CE2127;
+  color:white
+}
+.header_login_signup{
+
+  
+  height: 70px;
+  /* border: 1px solid red; */
+  display: flex;
+}
+.avis_logo {
+  
+  text-align: center;
+  margin: auto;
+  width: 20%;
+  
+
+}
+.avis_logo a{
+  font-size: 25px;
+  font-family:sans-serif;
+  color: white;
+  text-decoration: none;
+
+}
+#logores{
+
+  width: 65%;
+  height: 45%;
+  border-radius: 20%;
+  
+}
+
+.nav_options{
+ 
+  
+  
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  
+
+  
+}
+.nav_options>div{
+  padding: 0px 23px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  font-size: 13px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  
+  
+}
+
+
+.nav_options>div a{
+  
+  text-decoration: none;
+  color: white;
+  
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 12px 0px 11px;
+
+  
+}
+
+.nav_options>div a:hover{
+  color:#FFFFFF;
+  font-weight: bold;
+
+}
+.nav_options>div a::after{
+  content: "";
+position: absolute;
+background-color: #FFFFFF;   
+height: 3px;
+width: 0%;
+left: 0;
+bottom: -5px;
+transition: 0.3s;
+}
+.nav_options>div a:hover::after{
+  width: 100%;
+}
+.LOGIN_SIGNUP{
+  background-color: #a40c12;
+}
+#contacts a{
+  display: block;
+}
+.givespace{
+  
+  display: flex;
+  
+  justify-content: space-evenly;
+}
+@media screen and (min-width:768px)  and (max-width:980px) {
+  .nav_options>div{
+      font-size: 10px;
+  }
+ 
+}
+
+
+
+
 .home-car-info {
   display: flex;
   gap: 10px;
@@ -451,4 +563,59 @@
   .car-upgrad-image > div:nth-child(2) {
     width: 100%;
   }
+}
+
+
+
+
+/* ........... footer css   ............  */
+
+
+#home_footer{
+  display: flex;
+  justify-content: center;
+ 
+  width: 100%;
+  height: 400px;
+  background-color: #CE2127;
+  /* border: 1px solid red; */
+}
+#home_footer>div{
+  padding: 60px 20px;
+  width: 27%;
+  
+  display: flex;
+  flex-direction: column;
+ 
+}
+#home_footer>div div{
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+#home_footer a{
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#home_footer a:hover{
+  text-decoration: underline;
+  padding: 5px;
+}
+#home_footer span{
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#home_footer>div:nth-child(3){
+ text-align: center;
+ box-shadow: none;
+}
+#home_footer>div:nth-child(3) i{
+  font-size: 20px;
+  
+}
+#Get_in_touch{
+  border: 0px;
+  border-radius: 5px;
+  padding: 8px 12px;
 }

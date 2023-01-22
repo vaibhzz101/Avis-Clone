@@ -99,7 +99,7 @@
 </body>
 </html>
 <script type="module">
-     let price=98767;
+     let price=JSON.parse(localStorage.getItem("purchace"));
      document.getElementById("payment-button").innerText=`Pay ${price}`
     let paymentMethod =  document.querySelectorAll('input[name="radio"]');
     
