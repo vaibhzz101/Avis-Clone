@@ -12,12 +12,12 @@ body {
     /* border:1px solid red; */
   width:10%;
   display: flex;
-  justify-content: right;
+  justify-content: left;
 
 }
 
 #log_cross {
-    font-size: 40px;
+    font-size: 50px;
     color: rgb(41, 39, 39);
     cursor: pointer;
 }
