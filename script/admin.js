@@ -18,7 +18,7 @@ closeBtn.addEventListener('click', ()=>{
 
 let logOut = document.getElementById('logoutBtn')
 logOut.addEventListener('click', ()=>{
-  window.location = 'homepage.html'
+  window.location = 'homechauff.html'
   
 })
 
@@ -34,14 +34,9 @@ let t_user = document.getElementById('totalUser');
 let users = JSON.parse(localStorage.getItem('users'))||[];
 t_user.innerHTML = users.length
 
-let t_sale = document.getElementById('totalSale');
-let sales = JSON.parse(localStorage.getItem('sales'))||[];
-t_sale.innerHTML = sales.length
 
 google.charts.load('current',{packages:['corechart']});
-
 google.charts.setOnLoadCallback(drawChart);
-
 type="text/javascript"
 google.charts.load("current", {packages:["corechart"]});
 google.charts.setOnLoadCallback(drawChart);
@@ -51,7 +46,7 @@ function drawChart() {
     ["2019", 8.94, "dodgerblue"],
     ["2020", 10.49, "dodgerblue"],
     ["2021", 19.30, "dodgerblue"],
-    ["2022", 21.45, "dodgerblue"]
+    ["2022", 21.38, "dodgerblue"]
   ]);
 
   var view = new google.visualization.DataView(data);
@@ -73,6 +68,7 @@ function drawChart() {
   chart.draw(view, options);
 }
 
+
 window.onpopstate = ()=>{
-  window.location = "admin.html"
+  window.location.href = "carAdmin.html"
 }

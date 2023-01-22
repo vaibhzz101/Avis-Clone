@@ -1,18 +1,29 @@
 section{
+    width: 80%;
     display: flex;
-    width: 75%;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     justify-content: space-between;
 }
 table{
+    margin-top: 35px;
+    border-radius: 20px;
     width: 100%;
-    /* margin-left: 40px; */
+    background-color: rgba(255, 255, 255, 0.644);
+}
+.head{
+    padding-top: 25px;
+    font-size: 28px;
+    color: rgb(56, 56, 56);
 }
 th{
     font-size: 22px;
     padding: 10px 4px;
     word-spacing: 5px;
     letter-spacing: 2px;
+    color: rgb(56, 56, 56);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .CD{
     padding: 12px;
@@ -20,4 +31,11 @@ th{
     font-weight: 600;
     color:crimson;
     letter-spacing: 1px;
+}
+.CD button{
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background-color: rgb(0, 127, 253);
 }

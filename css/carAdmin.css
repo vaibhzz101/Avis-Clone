@@ -4,20 +4,22 @@
     z-index: 2;
     position: absolute;
     background-color: #fff;
+    height: 100vh;
 }
 #adminNav_2{
+    background-color: #ce2127;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 12px 43px;
-    background-color: dodgerblue;
-    height: 70px;
+    height: 80px;
     position: relative;
 }
 #burgerBtn_2{
-    font-size: 24px;
+    font-size: 29px;
+    color: #fff;
 }
-#searchBar_2{
+/* #searchBar_2{
     display: flex;
     margin: auto;
     border: 1px solid gray;
@@ -41,26 +43,33 @@
     background-color: #ce2127;
     padding: 8px;
     border-radius: 0px 29px 29px 0px;
-}
+} */
 #logoutBtn_2{
     border: none;
-    background-color:rgb(182, 132, 97);
-    font-size: 17px;
+    background-color:midnightblue;
+    font-size: 15px;
+    cursor: pointer;
     padding: 7px 15px;
-    border-radius: 30px;
+    border-radius: 10px;
     color: #fff;
     align-items: center;
 }
+#logoutBtn_2:hover{
+    background-color: rgb(56, 56, 111);
+    transition: 0.3s;
+}
 section{
-    margin-top: 20px;
     display: flex;
-    width: 92%;
+    width: 99%;
     margin: auto;
     justify-content: space-between;
+    margin-top: 20px;
 }
 table{
     width: 70%;
-    /* margin-left: 40px; */
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.597);
+    border-radius: 20px;
 }
 th{
     font-size: 22px;
@@ -82,9 +91,23 @@ th{
     padding: 6px;
     text-align: center;
     border-radius: 6px;
+    border: none;
 }
 .frm{
-    width: 25%;
+    width: 27%;
+    margin: auto;
+    border-radius: 10px;
+    background-color:rgba(179, 199, 236, 0.771);
+    padding: 30px 20px;
+}
+.frm h1{
+    margin: auto;
+    margin-bottom: 20px;
+    color: rgb(60, 60, 60);
+}
+.frm label{
+    font-weight: 700;
+    color: rgb(60, 60, 60);
 }
 form{
     display: flex;
@@ -98,4 +121,24 @@ form div{
 }
 form input{
     width: 60%;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 2px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.submit{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.submit:hover{
+    background-color: rgb(235, 71, 104);
+    cursor: pointer;
 }
