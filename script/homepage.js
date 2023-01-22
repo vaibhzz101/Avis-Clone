@@ -84,6 +84,7 @@ let log_popup = document.getElementById("log_popup");
 
 function log_openPopup() {
     log_popup.classList.add("log_open-popup");
+    popup.classList.remove("open-popup");
 }
 function log_closePopup() {
     log_popup.classList.remove("log_open-popup");
@@ -183,9 +184,13 @@ let popup = document.getElementById("popup");
 
 function openPopup() {
   popup.classList.add("open-popup");
+  log_popup.classList.remove("log_open-popup");
+//   document.getElementById("wholebody").style.position="fixed"
+  document.getElementById("sliding_message").style.display="none";
 }
 function closePopup() {
   popup.classList.remove("open-popup");
+  document.getElementById("sliding_message").style.display="block";
 }
 
 
@@ -245,7 +250,8 @@ for(let element of radios){
                     origincity: airport_origin_city.value,
                     pickupadd:PICKUP_ADDRESS.value,
                     dropadd:DROP_ADDRESS.value,
-                    startdate:START_DATE.value,    
+                    startdate:START_DATE.value,
+                    tocity:"Airport Service"    
                 };
                 console.log(obj)
                 localStorage.setItem("rentalcarquery",JSON.stringify(obj));
@@ -293,7 +299,8 @@ for(let element of radios){
                     pickupadd:WITHINCITY_PICKUP_ADDRESS.value,
                     startdate:WITHINCITY_START_DATE.value,
                     end_date:WITHINCITY_END_DATE.value,
-                    rentduration:rentduration+" days"
+                    rentduration:rentduration+" days",
+                   
                     
                 };
                 console.log(obj)
