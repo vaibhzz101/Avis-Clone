@@ -17,6 +17,11 @@ log_myform.addEventListener("submit", (e) => {
         password: log_myform.log_password.value,
     }
 
+    var admin={
+        email:"admin",
+        password:"admin1",
+    }
+
     //    validation of form
 
     if (userData.email !== "" && userData.password.length !== 0) {
@@ -41,18 +46,31 @@ function login_User(obj) {
             //   console.log(data)
             let flag = false;
             var element = "";
+
             data.forEach((item) => {
+                if(obj.email=="admin@gmail.com" && obj.password=="admin1"){
+                    window.location.href= "../html/admin.html"
+                }
+                else
                 if (item.email == obj.email && item.password == obj.password) {
                     element = item;
                     flag = true;
 
                 }
+
             })
             if (flag == true) {
                  localStorage.setItem("loginUser",JSON.stringify(element))
-                alert(`Congratulation ${element.firstname} ${element.lastname}, Explore your dream journey with GhumOCaR`)
+                // alert(`Congratulation ${element.firstname} ${element.lastname}, Explore your dream journey with GhumooCaR`)
+                swal({
+                    title: `Welcome To GhumooCar`,
+                    text: "Explore you dream journey!",
+                    icon: "success",
+                    button:"Go"
+                  });
                 log_closePopup()
-                login_name.innerHTML=`Welcome, ${element.firstname} ${element.lastname}`;
+                login_name.innerHTML=`Hey, ${element.firstname} ${element.lastname}
+                <i id="pro" class="fa-solid fa-user"></i>`;
 
             } else {
                 log_password_error.innerHTML = "Username and password may be incorrect!"
@@ -106,8 +124,14 @@ myform.addEventListener("submit", (e) => {
         last_name_error.innerHTML = null; password_error.innerHTML = null; cpassword_error.innerHTML = null;
         email_error.innerHTML = null; mobile_error.innerHTML = null;
 
-        alert(`Hey ${userData.firstname} ${userData.lastname}! You Signed Up Successfully.`)
-        SignUp_user(userData)
+        // alert(`Hey ${userData.firstname} ${userData.lastname}! You Signed Up Successfully.`)
+        swal({
+            title: `Congrats! ${userData.firstname} ${userData.lastname}`,
+            text: "You succefully registered!",
+            icon: "success",
+          });
+
+        SignUp_user(userData);
 
     } else {
         userData.firstname == "" ? first_name_error.innerHTML = "*Enter First Name!"
@@ -149,7 +173,7 @@ function SignUp_user(obj) {
         .then(responseObject => responseObject.json())
         .then((data) => {
             console.log(data)
-            // location.href = "./home.html"
+            location.href = "../html/homechauff.html"
         })
 }
 
@@ -171,8 +195,12 @@ let data  = JSON.parse(localStorage.getItem("loginUser")) ||null;
 let login_name = document.querySelector(".LOGIN_SIGNUP")
 
 if(data!=null){
-    login_name.innerHTML=`Welcome, ${data.firstname} ${data.lastname}`;
+    login_name.innerHTML=`Hey, ${data.firstname} ${data.lastname}
+    <i id="pro" class="fa-solid fa-user"></i>`;
+    document.getElementById("pro").addEventListener("click",()=>window.location.href="../html/profile.html")
 }
+
+
 
 
 //------------------------------------------------------------------------------------------------------------------------------//
@@ -373,4 +401,5 @@ for(let element of radios){
 
 
 let fromcity=document.getElementById("origin_city");
+
 

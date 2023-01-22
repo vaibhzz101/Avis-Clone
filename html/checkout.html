@@ -468,6 +468,9 @@ function discountFn() {
 
 
 
+
+  let data  = JSON.parse(localStorage.getItem("loginUser")) // by shubhangi
+
   document
     .getElementById("confirm-booking-btn")
     .addEventListener("click", function () {
@@ -476,5 +479,17 @@ function discountFn() {
       ).innerText;
       localStorage.setItem("purchace", JSON.stringify(finalBookedPrice));
       window.location.href="credit-card.html";
+
+
+      //by shubhangi
+      // if(data != null){
+      //   localStorage.setItem("purchace", JSON.stringify(finalBookedPrice));
+      // window.location.href="credit-card.html";
+      // }else{
+      //   alert("You have to login first")
+      // }
+
+
     });
+    
 </script>

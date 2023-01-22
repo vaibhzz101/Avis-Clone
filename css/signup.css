@@ -11,12 +11,12 @@ body {
 #cross-cont{
   width:10%;
   display: flex;
-  justify-content: right;
+  justify-content: left;
 
 }
 
 #cross {
-    font-size: 40px;
+    font-size: 50px;
     color: rgb(41, 39, 39);
     cursor: pointer;
 }
@@ -104,6 +104,11 @@ body {
     width: 10%;
     display: inline;
 
+}
+#form #gender2 {
+    height: 1rem;
+    width: 10%;
+    display: inline;
 }
 
 #form #signup_but {
