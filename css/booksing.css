@@ -60,6 +60,15 @@
 #menuid>li{
 text-decoration: none;
 }
+.home-car-info {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  .home-car-info > i:nth-child(3) {
+    color: red;
+  }
 /* ********************************************************************************************************************** */
 .menu ul {
     display: inline-flex;
@@ -92,7 +101,7 @@ text-decoration: none;
 }
 .menu ul li a:hover{
     color:#FFFFFF;
-    font-weight: bold;
+   
 
 }
 .menu ul li a::after{

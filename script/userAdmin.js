@@ -14,14 +14,28 @@ closeBtn.addEventListener('click', ()=>{
     burgerBtn.style.display = 'block'
 })
 
+let logOut = document.getElementById('logoutBtn')
+logOut.addEventListener('click', ()=>{
+  window.location = 'homechauff.html'
+})
+
+let b = [];
 fetch(`https://63c67422dcdc478e15c1bf8d.mockapi.io/users`)
 .then((res)=>{
     return res.json()
 })
 .then((data)=>{
+    b = data
     display(data)
+    localStorage.setItem('users', JSON.stringify(b))
+    console.log(b)
 })
 
+// window.onload = function(){
+//     localStorage.setItem("users", JSON.stringify(a))
+// }
+
+// let a = JSON.parse(localStorage.getItem('users'))||[]
 let allUserTable = document.getElementById('allUserTable')
 function display(data){
     allUserTable.innerHTML = null;
@@ -53,34 +67,69 @@ function display(data){
         let delBtn = document.createElement('button')
         delBtn.innerHTML = 'DELETE'
         delBtn.addEventListener('click', ()=>{
+            del(element.id)
+            localStorage.setItem('users', JSON.stringify(data))
             data.splice(index,1)
             display(data)
         })
+        // a.push(data)
+        // localStorage.setItem('users', JSON.stringify(a))
         td6.append(delBtn)
         tr.append(td1,td2,td3,td4,td5,td6)
         allUserTable.append(tr)
     });
 }
 
-let carForm = document.getElementById('carForm')
+function del(x){
+    fetch(`https://63c67422dcdc478e15c1bf8d.mockapi.io/users/${x}`,{
+        method:'DELETE'
+    })
+}
+
+let userID = document.getElementById('userID')
+let fName = document.getElementById('fName')
+let lName = document.getElementById('lName')
+let email = document.getElementById('email')
+let mobile = document.getElementById('mobile')
+let pass = document.getElementById('pass')
+let dob = document.getElementById('dob')
+let gender = document.getElementById('gender')
+
+let carForm = document.getElementById('userForm')
 carForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    let exData = JSON.parse(localStorage.getItem('cars'))||[]
-    let obj = {
-        id: carID.value,
-      image_url: carImg.value,
-        company: carCompany.value,
-        reg: carYr.value,
-        model: carModel.value,
-        name: carName.value,
-        rate: carRate.value,
-        price: carPrice.value,
-        strikedoffprice: carOfr.value,
-    }
-    exData.push(obj)
-    localStorage.setItem('cars', JSON.stringify(exData))
+    console.log(email.value)
+    fetch('https://63c67422dcdc478e15c1bf8d.mockapi.io/users', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body:{
+            id: userID.value,
+            firstname: fName.value,
+            lastname: lName.value,
+            email: email.value,
+            mobile: mobile.value,
+            password: pass.value,
+            DOB: dob.value,
+            gender: gender.value
+        }
+    })
+    .then((res)=>{
+        return res.json()
+    })
+    .then((data)=>{
+        display(data)
+    })
+    // let exData = JSON.parse(localStorage.getItem('cars'))||[]
+    // let obj = {
+    //     id: userID.value,
+    //     firstname: carImg.value,
+    //     lastname: carCompany.value,
+    //     email: carYr.value,
+    //     mobile: carModel.value,
+    //     password: carName.value,
+    //     DOB: carRate.value,
+    //     gender: carPrice.value
+    // }
+    // exData.push(obj)
+    // localStorage.setItem('cars', JSON.stringify(exData))
 })
-
-// function dl(){
-
-// }

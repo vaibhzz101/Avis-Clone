@@ -2,8 +2,10 @@
     background-color: rgb(185, 207, 248);
 } */
 table{
-    width: 70%;
+    width: 67%;
     margin: auto;
+    background-color: rgba(255, 255, 255, 0.597);
+    border-radius: 20px;
     /* margin-left: 40px; */
 }
 th{
@@ -29,12 +31,16 @@ th{
     border-radius: 6px;
     border: none;
 }
+.CD button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 50, 91);
+    transition: 0.2s;
+}
 .frm{
-    width: 27%;
+    width: 28%;
     margin: auto;
-    margin-top: 80px;
     border-radius: 10px;
-    background-color:rgb(179, 199, 236);
+    background-color:rgba(179, 199, 236, 0.771);
     padding: 30px 20px;
 }
 .frm h1{
@@ -82,5 +88,8 @@ form input{
 }
 .flex{
     display: flex;
-    width: 100%;
+    width: 97%;
+    margin: auto;
+    margin-top: 35px;
+    justify-content: space-between;
 }

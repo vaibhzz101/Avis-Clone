@@ -35,6 +35,8 @@
 @media screen and (min-width: 601px) and (max-width: 900px){
     #car_container{
         grid-template-columns: repeat(2,1fr);
+     
+        
     }
 }
 @media screen and (min-width: 100px) and (max-width: 600px) {
@@ -101,7 +103,7 @@
         <div class="menu">
             <ul class="press">
                 <li>
-                   <a href="./Homepage/homepage.html"> <i class="fa-solid fa-house-chimney"></i></a>
+                   <a href="./homechauff.html"> <i class="fa-solid fa-house-chimney"></i></a>
                 </li>
                 <li>
                     <a href="#">SELF-DRIVE INDIA </a>
@@ -162,7 +164,12 @@
             <input type="submit" name="SEARCH" id="" class="btn">
         </form>
      </div>
-       
+
+     <div class="home-car-info">
+        <i onclick="window.location.href='.. /html/homechauff.html'">HOME</i>
+        <i>/</i>
+        <i>Available Cars</i>
+      </div>
        
        <!--******************************************FILTER********************************************************* -->
      <div class="filter-condition">
@@ -447,10 +454,16 @@ selectedsort=sort.value;
     if(selectedsort !== ""){
 
         if(selectedsort == 'LowToHigh'){
+
+            storedCar.sort(function(a,b){
+                return +a.price - +b.price;
+            })
+            displayData(storedCar)
           storedCar.sort((a,b)=>{
            return (+a.price) -(+b.price)
           })
           displayData(storedCar)
+
         }
         else if(selectedsort == 'HighToLow'){
             storedCar.sort(function(a,b){

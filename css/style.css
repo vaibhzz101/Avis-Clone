@@ -6,12 +6,22 @@
     outline: none;
     box-sizing: border-box;
 }
-/* BURGER START */
+body{
+    width: 100vw;
+    background-image: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* filter: blur(4px); */
+}
+.navDiv{
+    width: 100%;
+}
 .top{
     background-color: #ce2127;
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    height: 80px;
     align-items: center;
     padding: 0px 20px;
 }
@@ -22,6 +32,7 @@
 }
 #burgerMenu{
     width: 70%;
+    height: 100vh;
     transition: 0.3s ease-in-out;
     z-index: 2;
     position: absolute;
@@ -48,20 +59,31 @@
     font-size: 23px;
 }
 #adminNav{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 43px;
+    padding: 10px 43px;
     background-color: #ce2127;
-    height: 70px;
+    height: 80px;
     position: relative;
 }
 #burgerBtn{
     font-size: 29px;
     color: white;
 }
+.logo{
+    /* color: #fff; */
+    font-weight: 900;
+    font-size: 25px;
+}
+.logoF{
+    color: #fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
 /* BURGER END */
-#searchBar{
+/* #searchBar{
     display: flex;
     margin: auto;
     border: 1px solid gray;
@@ -84,21 +106,26 @@
     color: white;
     background-color: dodgerblue;
     padding: 8px;
-    border-radius: 0px 29px 29px 0px;
-}
+    border-radius: 0px 29px 29px 0px; */
+/* } */
 #logoutBtn{
     border: none;
-    background-color:rgb(182, 132, 97);
-    font-size: 17px;
+    background-color:midnightblue;
+    font-size: 15px;
+    cursor: pointer;
     padding: 7px 15px;
-    border-radius: 30px;
+    border-radius: 10px;
     color: #fff;
     align-items: center;
+}
+#logoutBtn:hover{
+    background-color: rgb(56, 56, 111);
+    transition: 0.3s;
 }
 main{
     align-items: center;
     width: 80%;
-    margin-left: 150px;
+    margin: auto;
 }
 #adminHeading{
     font-size: 40px;
@@ -107,6 +134,7 @@ main{
 }
 .allCard{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     margin: 30px 0px;
 }
@@ -114,19 +142,21 @@ main{
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* align-items: center;
-    justify-content: center; */
     padding: 25px 10px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 15%;
+    min-width: 20%;
+    background-color: rgba(255, 255, 255, 0.593);
+}
+.countCard:nth-child(4){
+    background-color: rgba(255, 255, 255, 0.701);
 }
 .countCard:hover{
-    transition: 0.4s;
+    transition: 0.3s;
     background-color: gold;
 }
 .countCard i{
-    font-size: 25px;
+    font-size: 26px;
     color: cornflowerblue;
 }
 .t_nums{
@@ -137,7 +167,45 @@ main{
 .countCard h3{
     color: cornflowerblue;
 }
-
-@media all {
-    
+@media screen and (max-width:920px) and (min-width:641px) {
+    /* main{
+        width: 80%;
+        margin: auto;
+    } */
+    .allCard{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+    .countCard{
+        margin: auto;
+        width: 230px;
+    }
+    .countCard:nth-child(4){
+        background-color: rgba(255, 255, 255, 0.593);
+    }
+    .countCard:hover{
+        transition: 0.3s;
+        background-color: gold;
+    }
+}
+@media screen and (max-width: 640px) {
+    .allCard{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+    .countCard{
+        width: 300px;
+        margin: auto;
+    }
+    .countCard:nth-child(4){
+        background-color: rgba(255, 255, 255, 0.593);
+    }
+    .countCard:hover{
+        transition: 0.3s;
+        background-color: gold;
+    }
 }
