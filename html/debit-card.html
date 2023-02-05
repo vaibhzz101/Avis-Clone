@@ -78,7 +78,7 @@
                 <input type="text" id="inter-otp" placeholder="Enter OTP" value="" >
                 <button id="validate-otp">Validate OTP</button>
               </div>
-              <button id="payment-button">Pay ${price}</button>
+              <button id="payment-button"></button>
         </div>
     </div>
    
@@ -109,8 +109,9 @@
           
    })
    })
-
-   document.getElementById("payment-button").addEventListener("click",function(){
+   let paymenButton =  document.getElementById("payment-button")
+    paymenButton.innerText=`Pay ${price}`
+   paymenButton.addEventListener("click",function(){
          let cNumber = document.getElementById("card-number").value;
          let cvv = document.getElementById("cvv").value;
          let expDate = document.getElementById("exp-date").value;

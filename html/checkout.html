@@ -220,7 +220,22 @@
   let upgradCarLugg = document.getElementById("upgrad-car-luggage");
   upgradCarLugg.innerText = upgradeCar.luggage;
 
-  let disPrice = bookedCar.price;
+ 
+   
+   // appendeing data to new booking details
+   document.getElementById("booked-car-name").innerText = bookedCar.name;
+  document.getElementById("booked-car-image").setAttribute("src", bookedCar.image_url);
+  document.getElementById("final-rental-price").innerText = `₹ ${bookedCar.price} X ${noOfDays}`;
+  document.getElementById("gst-price").innerText = `+  ₹${gstCalculator(bookedCar.price
+  )}`;
+  document.getElementById("final-booking-price").innerText = `₹ ${(bookedCar.price*noOfDays) + gstCalculator(bookedCar.price)}`;
+
+  
+ 
+
+
+
+
   let upgradCar = document.querySelector("#upgrad-car");
   let selectedCar = document.querySelector("#selected-car1");
   upgradCar.addEventListener("click", function () {
@@ -243,16 +258,11 @@
       upgradeCar.price
     )}`;
 
-    if (temp) {
-      document.getElementById("discount-price").innerText = `- ₹${discountCal(
-        disPrice
-      )}`;
-    } else {
-      document.getElementById("discount-price").innerText = `- ₹0`;
-    }
-    document.getElementById("final-booking-price").innerText = `₹ ${
-      upgradeCar.price + gstCalculator(upgradeCar.price) - discountCal(disPrice)
-    }`;
+    
+    document.getElementById("final-booking-price").innerText = `₹ ${upgradeCar.price*noOfDays + gstCalculator(upgradeCar.price)}`
+
+
+
   });
 
   selectedCar.addEventListener("click", function () {
@@ -275,57 +285,42 @@
     document.getElementById("gst-price").innerText = ` + ₹${gstCalculator(
       bookedCar.price
     )}`;
-    if (temp) {
-      document.getElementById("discount-price").innerText = `- ₹${discountCal(
-        disPrice
-      )}`;
-    } else {
-      document.getElementById("discount-price").innerText = `- ₹0`;
-    }
-    document.getElementById("final-booking-price").innerText = `₹ ${
-      bookedCar.price + gstCalculator(bookedCar.price - discountCal(disPrice))
-    }`;
+
+    document.getElementById("final-booking-price").innerText = `₹ ${bookedCar.price*noOfDays + gstCalculator(bookedCar.price)}`;
   });
 
-  // appendeing data to new booking details
-  document.getElementById("booked-car-name").innerText = bookedCar.name;
-  document
-    .getElementById("booked-car-image")
-    .setAttribute("src", bookedCar.image_url);
-  document.getElementById(
-    "final-rental-price"
-  ).innerText = `₹ ${bookedCar.price}`;
-  document.getElementById("gst-price").innerText = `+  ₹${gstCalculator(
-    bookedCar.price
-  )}`;
-  document.getElementById("final-booking-price").innerText = `₹ ${
-    bookedCar.price + gstCalculator(bookedCar.price)
-  }`;
-
   function gstCalculator(x) {
-    return Math.ceil(x * 0.12);
+    return Math.ceil(x*0.12*noOfDays );
+
   }
 
   function discountCal(x) {
     return Math.floor(x * 0.2);
   }
-  let temp = false;
 
-  function discountFn() {
+// ..............discount system ...... 
+function discountFn() {
     let discount = document.getElementById("discount").value;
     if (discount == "masai20") {
+      
+      if(selectedCar.innerText == "SELECTED"){
+        alert(
+        `CongraTulation ! You Got A Discount of ₹ ${discountCal(bookedCar.price)}`
+      );
+        document.getElementById("discount-price").innerText=` -₹${discountCal(bookedCar.price)}`
+        document.getElementById("final-booking-price").innerText = `₹ ${bookedCar.price *noOfDays+ gstCalculator(bookedCar.price) - discountCal(bookedCar.price)}`
+      }
+     else if(upgradCar.innerText == "SELECTED"){
+
       alert(
         `CongraTulation ! You Got A Discount of ₹ ${discountCal(disPrice)}`
       );
-      document.getElementById("discount-price").innerText = `- ₹ ${discountCal(
-        disPrice
-      )}`;
-      document.getElementById("final-booking-price").innerText = `₹ ${
-        bookedCar.price +
-        gstCalculator(bookedCar.price) -
-        discountCal(bookedCar.price)
-      }`;
-      temp = true;
+
+       document.getElementById("discount-price").innerText=`-₹${discountCal(upgradeCar.price)}`
+        document.getElementById("final-booking-price").innerText = `₹ ${(upgradeCar.price*noOfDays) + gstCalculator(upgradeCar.price) - discountCal(upgradeCar.price)}`
+      }
+   
+
     } else {
       alert("Envalid Promocode");
     }
@@ -345,7 +340,7 @@
       // by shubhangi
       if(data != null){
         
-        
+        localStorage.setItem("purchace",JSON.stringify(finalBookedPrice))
          window.location.href="credit-card.html";
       }
       else{
