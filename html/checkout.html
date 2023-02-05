@@ -6,57 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GhumoCar | Checkout</title>
     <link rel="stylesheet" href="../css/checkout.css" />
- 
-    
-    <script src="https://kit.fontawesome.com/1dcb2e4769.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-
-    <div class="header_login_signup maincolor">
-      <div class="avis_logo">
-          <a href="./homechauff.html">GHOOMOCAR
-              <!-- <img id="logores" src="https://i.ibb.co/CtxTp8s/ghumocar-1.jpg" alt="ghumocar-1" border="0"> -->
-          </a>
-
-      </div>
-      <div class="nav_options ">
-          <div><a href="#">TRAVEL BLOG</a></div>
-          <div><a href="#">BLOGGERS</a></div>
-          <div><a href="#">AVIS PREFERRED</a></div>
-          <div><a href="#">AVIS SAFETY</a></div>
-          <div id="contacts">
-              <div>
-                  <a href="#">+91 124 4724 850</a>
-              </div>
-              
-              
-          </div>
-          <div class="givespace">
-              <div>
-                  <a href="#" alt=""> <img src="https://www.avis.co.in/images/android.png" alt=""></a>
-              </div>
-              <div>
-                  <a href="#"  alt=""> <img src="https://www.avis.co.in/images/apple.png" alt=""></a>
-              </div>
-              
-             
-          </div>
-          <div class="LOGIN_SIGNUP"><a href="#" onclick="openPopup()">SIGN UP</a>
-          <a href="#" onclick="log_openPopup()">/LOG IN</a></div>
-          
-          
-          
-          
-      </div>
-  </div>
-
-
-
-
-    <!-- ...........................................................................   -->
     <div class="home-car-info">
-      <i onclick="window.location.href='homechauff.html'">HOME</i>
+      <i onclick="window.location.href='index.html'">HOME</i>
       <i>/</i>
       <i>Car Information</i>
     </div>
@@ -176,12 +130,12 @@
             <p>
               <span id="start-date">Start Date</span>
               <br />
-              
+              <span id="start-time">Start Time</span>
             </p>
             <p>
               <span id="end-date">End Date</span>
               <br />
-              
+              <span id="end-time">End Time</span>
             </p>
           </div>
         </div>
@@ -210,100 +164,6 @@
         </div>
       </div>
     </div>
-
-
-
-    <!-- ...................................................................................   -->
-
-
-
-    <div id="home_footer">
-      <div>
-         <div>
-             <a href="#">SELF DRIVE CAR RENTALS</a>
-         </div>
-         <div>
-             <a href="#">CHAUFFEUR DRIVE CAR RENTALS
-                 <i class="fa fa-angle-down"> </i>
-             </a>
-         </div>
-         <div>
-             <a href="#">SELF DRIVE INTERNATIONAL
-                 <i class="fa fa-angle-down"> </i>
-             </a>
-         </div>
-         <div>
-             <a href="#">CORPORATE INFORMATION
-                 <i class="fa fa-angle-down"> </i>
-             </a>
-         </div>
-         <div>
-             <a href="#">GHUMOCAR SERVICES
-                 <i class="fa fa-angle-down"> </i>
-             </a>
-         </div>
-         <div>
-             <a href="#">OFFERS</a>
-         </div>
-      </div>
-      <div>
-         <div>
-             <a href="#">WE ARE AVAILABLE HERE
-                 <i class="fa fa-angle-down"> </i>
-             </a>
-         </div>
-         <div>
-             <a href="#">GHUMOCAR VACATIONS
-                 <i class="fa fa-angle-down"> </i>
-             </a>
-         </div>
-         <div>
-             <a href="#">TERMS AND CONDITIONS</a>
-         </div>
-         <div>
-             <a href="#">SELF DRIVE FAQS</a>
-         </div>
-         <div>
-             <a href="#">SITEMAP</a>
-         </div>
-         <div>
-             <a href="#">WHY GHUMOCAR
-                 <i class="fa fa-angle-down"> </i>
-             </a>
-         </div>
-         <div>
-             <a href="#">PARTNER WITH US</a>
-         </div>
-         
-      </div>
-      <div>
-         <div>  
-             <a href="#">
-                 <i class="fab fa-twitter lil"> </i>
-             </a>
-             <a href="#">
-                 <i class="fab fa-facebook lil"> </i>
-             </a>
-             <a href="#">
-                 <i class="fab fa-linkedin lil"> </i>
-             </a>
-             <a href="#">
-                 <i class="fab fa-youtube lil"> </i>
-             </a>
-             <a href="#">
-                 <i class="fab fa-instagram lil"> </i>
-             </a>
-         </div>
-         <div>
-             <span> 
-                 <i class="fa fa-phone"> </i>
-                 +91 124 4724 850,+91 882 6782 828</span>
-         </div>
-         <div>
-             <input type="submit" name="Getintouch" id="Get_in_touch" value="Get In Touch">
-         </div>
-      </div>
-    </div>
   </body>
 </html>
 <script src="checkout.js"></script>
@@ -313,14 +173,8 @@
   let randomImage = bookedCar.id;
   console.log(randomImage)
   let upgradeCar = uCar[randomImage];
-
-let rentalQu=JSON.parse(localStorage.getItem("rentalcarquery"))
-document.getElementById("start-date").innerText=rentalQu.startdate
-document.getElementById("end-date").innerText=rentalQu.end_date;
-let nodays = rentalQu.rentduration.split(" ")
-let noOfDays=+nodays[0];
-
-
+  console.log(upgradeCar);
+  console.log(bookedCar);
 
   let rentCarImage = document.getElementById("rental-car-image");
   rentCarImage.setAttribute("src", bookedCar.image_url);
@@ -365,6 +219,7 @@ let noOfDays=+nodays[0];
 
   let upgradCarLugg = document.getElementById("upgrad-car-luggage");
   upgradCarLugg.innerText = upgradeCar.luggage;
+
  
    
    // appendeing data to new booking details
@@ -380,11 +235,10 @@ let noOfDays=+nodays[0];
 
 
 
-  
+
   let upgradCar = document.querySelector("#upgrad-car");
   let selectedCar = document.querySelector("#selected-car1");
   upgradCar.addEventListener("click", function () {
-    nowCar = true;
     upgradCar.style.backgroundColor = "red";
     upgradCar.innerText = "SELECTED";
     selectedCar.innerText = "UPGRADE";
@@ -398,17 +252,20 @@ let noOfDays=+nodays[0];
       .setAttribute("src", upgradeCar.image_url);
     document.getElementById(
       "final-rental-price"
-    ).innerText = `₹ ${upgradeCar.price} X ${noOfDays}`;
-    document.getElementById("discount-price").innerText=`₹ 0`
+    ).innerText = `₹ ${upgradeCar.price}`;
+    disPrice = upgradeCar.price;
     document.getElementById("gst-price").innerText = `+ ₹${gstCalculator(
       upgradeCar.price
     )}`;
+
     
     document.getElementById("final-booking-price").innerText = `₹ ${upgradeCar.price*noOfDays + gstCalculator(upgradeCar.price)}`
+
+
+
   });
 
   selectedCar.addEventListener("click", function () {
-    nowCar=false;
     selectedCar.style.backgroundColor = "red";
     document.querySelector(".car-information-image").style.border =
       "3px solid red";
@@ -423,22 +280,24 @@ let noOfDays=+nodays[0];
       .setAttribute("src", bookedCar.image_url);
     document.getElementById(
       "final-rental-price"
-    ).innerText = `₹ ${bookedCar.price} X ${noOfDays}`;
-    document.getElementById("discount-price").innerText=`₹ 0`
-   
+    ).innerText = `₹ ${bookedCar.price}`;
+    disPrice = bookedCar.price;
     document.getElementById("gst-price").innerText = ` + ₹${gstCalculator(
       bookedCar.price
     )}`;
+
     document.getElementById("final-booking-price").innerText = `₹ ${bookedCar.price*noOfDays + gstCalculator(bookedCar.price)}`;
   });
 
   function gstCalculator(x) {
     return Math.ceil(x*0.12*noOfDays );
+
   }
 
   function discountCal(x) {
     return Math.floor(x * 0.2);
   }
+
 // ..............discount system ...... 
 function discountFn() {
     let discount = document.getElementById("discount").value;
@@ -452,25 +311,22 @@ function discountFn() {
         document.getElementById("final-booking-price").innerText = `₹ ${bookedCar.price *noOfDays+ gstCalculator(bookedCar.price) - discountCal(bookedCar.price)}`
       }
      else if(upgradCar.innerText == "SELECTED"){
+
       alert(
-        `CongraTulation ! You Got A Discount of ₹ ${discountCal(upgradeCar.price)}`
+        `CongraTulation ! You Got A Discount of ₹ ${discountCal(disPrice)}`
       );
+
        document.getElementById("discount-price").innerText=`-₹${discountCal(upgradeCar.price)}`
         document.getElementById("final-booking-price").innerText = `₹ ${(upgradeCar.price*noOfDays) + gstCalculator(upgradeCar.price) - discountCal(upgradeCar.price)}`
       }
    
+
     } else {
       alert("Envalid Promocode");
     }
     document.getElementById("discount").value = "";
   }
-
-
-
-
-
   let data  = JSON.parse(localStorage.getItem("loginUser")) // by shubhangi
-
   document
     .getElementById("confirm-booking-btn")
     .addEventListener("click", function () {

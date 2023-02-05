@@ -8,6 +8,8 @@
       GhumoCar | Payment
     </title>
     <link rel="stylesheet" href="../css/payment.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     
 </head>
 <body>
@@ -143,8 +145,16 @@
             let enteredOtp = document.getElementById("inter-otp").value;
             if(enteredOtp == otp){
              
-                alert("Payment Successfull")
-                window.location.href="successful.html"
+                // alert("Payment Successfull")
+                swal({
+                    title: `Payment successfull`,
+                    text: "Explore you dream journey!",
+                    icon: "success",
+                    button:"OK"
+                  });
+                  setTimeout(()=>{
+                    window.location.href="successful.html"
+                  },2000)
            
          }
          else{
