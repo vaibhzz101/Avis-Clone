@@ -27,8 +27,9 @@ let t_car = document.getElementById('totalCar');
 t_car.innerHTML = cars.length;
 
 let t_booking = document.getElementById('totalBooking');
-let bookings = JSON.parse(localStorage.getItem('bookings'))||[]
-t_booking.innerHTML = 5;
+let bookings = JSON.parse(localStorage.getItem('bookings'));
+t_booking.innerText = bookings.length;
+console.log(bookings)
 
 
 let t_user = document.getElementById('totalUser');
@@ -81,3 +82,11 @@ function drawChart() {
 window.onpopstate = ()=>{
   window.location.href = "carAdmin.html"
 }
+let totalPrice = 0;
+for(i=0;i<bookings.length;i++){
+  let x = bookings[i].amount.split(" ").map(Number)
+  totalPrice+=x[1]
+
+   
+}
+document.getElementById("totalSale").innerText=totalPrice;
